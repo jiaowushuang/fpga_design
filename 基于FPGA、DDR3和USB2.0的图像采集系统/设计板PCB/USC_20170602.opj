@@ -1,0 +1,57 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\usc_20170602.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\usc_20170602.dsn")
+      (Path "Design Resources" ".\usc_20170602.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\usc_20170602.dsn" "SCHEMATIC1"
+         "USB2.0+RS232_BANK1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 446"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1212 52 318")
+        (Scroll "308 221")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path "C:\USERS\JIAOWUSHUANG\DESKTOP\设计板PCB\USC_20170602.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "CMOS_BANK0"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 78 909 78 340")
+        (Scroll "0 111")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\JIAOWUSHUANG\DESKTOP\设计板PCB\USC_20170602.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "DDR3_BANK3"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 104 935 104 366")
+        (Scroll "0 193")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\JIAOWUSHUANG\DESKTOP\设计板PCB\USC_20170602.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "USB2.0+RS232_BANK1")))
+  (MPSSessionName "jiaowushuang"))
