@@ -55,7 +55,7 @@ Color Filter Array for the Pixel Array： a Bayer RGB color pattern
 	P2−SN/SE: 72 Mhz
 	P3−SN/SE/FN: 2 x 720 Mbps (10−bit)
 
-. LVDS output driver :288 MHz
+. LVDS output driver :288 MHz{分频4路 288/4=72}
 	
 
 . I/O − P1−SN/SE/FN, P3−SN/SE/FN LVDS (EIA/TIA−644): Conforming to standard/additional specifications and deviations listed
