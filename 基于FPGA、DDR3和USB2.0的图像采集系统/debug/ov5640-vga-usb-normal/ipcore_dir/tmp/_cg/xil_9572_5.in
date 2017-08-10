@@ -1,0 +1,36 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE TRUE
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE verilogsim true
+SET_PREFERENCE vhdlsim false
+SET_PREFERENCE formalverification false
+SET_PREFERENCE subworkingdirectory ./tmp/_cg/
+SET_PREFERENCE speedgrade -2
+SET_PREFERENCE asysymbol true
+SET_PREFERENCE addpads false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE device xc6slx45
+SET_PREFERENCE projectname ffgg
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE devicefamily spartan6
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE package csg324
+SET_PREFERENCE createndf false
+SET_PREFERENCE simulationfiles Behavioral
+SET_PREFERENCE outputdirectory ./
+SET_PREFERENCE designentry Verilog
+SET_PREFERENCE workingdirectory .\tmp\
+SET_PREFERENCE removerpms false
+SET_PARAMETER component_name ffgg
+SET_CORE_CLASS com.xilinx.ip.mig_v3_92.bin.nt64.mig
+SET_CORE_PATH C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\
+SET_CORE_GUIPATH com\xilinx\ip\mig_v3_92\bin\%platform%\gui\mig_v3_92.tcl
+SET_CORE_NAME MIG Virtex-6 and Spartan-6
+SET_CORE_VERSION 3.92
+SET_CORE_VLNV xilinx.com:ip:mig:3.92
+ADD_CORE_DOCUMENT <C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\data\docs\Version_Info.pdf><Version Information>
+ADD_CORE_DOCUMENT <C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\data\docs\ug416.pdf><Spartan-6 FPGA Memory Interface Solutions User Guide>
+ADD_CORE_DOCUMENT <C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\data\docs\ug388.pdf><Spartan-6 FPGA Memory Controller User Guide>
+ADD_CORE_DOCUMENT <C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\data\docs\ug406.pdf><Virtex-6 FPGA Memory Interface Solutions User Guide>
+ADD_CORE_DOCUMENT <C:\Xilinx14_7\14.7\ISE_DS\ISE\coregen\ip\xilinx\other\com\xilinx\ip\mig_v3_92\data\docs\ds186.pdf><Virtex-6 FPGA Memory Interface Solutions Datasheet>

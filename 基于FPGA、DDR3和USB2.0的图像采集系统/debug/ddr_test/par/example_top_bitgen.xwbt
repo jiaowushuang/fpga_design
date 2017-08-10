@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\fpga-design\11_ddr3_test\mig_39_2\example_design\par\example_top.ncd
+OUTFILE=G:\fpga-design\11_ddr3_test\mig_39_2\example_design\par\example_top.bit
+FAMILY=Spartan6
+PART=xc6slx45-2csg324
+WORKINGDIR=G:\fpga-design\11_ddr3_test\mig_39_2\example_design\par
+LICENSE=WebPack
+USER_INFO=__0_0_0

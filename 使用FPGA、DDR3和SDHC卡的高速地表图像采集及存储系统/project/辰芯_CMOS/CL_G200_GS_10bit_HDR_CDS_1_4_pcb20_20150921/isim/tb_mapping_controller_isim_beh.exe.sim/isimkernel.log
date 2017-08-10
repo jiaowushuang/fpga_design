@@ -1,0 +1,10 @@
+Command line:
+   tb_mapping_controller_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65460
+
+Wed Mar 04 13:02:27 2015
+
+
+ Elaboration Time: 0.078 sec

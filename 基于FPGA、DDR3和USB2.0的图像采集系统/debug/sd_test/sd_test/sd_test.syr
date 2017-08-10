@@ -1,0 +1,723 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: sd_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sd_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sd_test"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-csg324
+
+---- Source Options
+Top Module Name                    : sd_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_write.v" into library work
+Parsing module <sd_write>.
+Analyzing Verilog file "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_initial.v" into library work
+Parsing module <sd_initial>.
+WARNING:HDLCompiler:751 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_initial.v" Line 29: Redeclaration of ansi port rx is not allowed
+Analyzing Verilog file "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" into library work
+Parsing module <sd_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 131: Port PSDONE is not connected to this instance
+
+Elaborating module <sd_test>.
+
+Elaborating module <sd_initial>.
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 97: Assignment to rx ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 99: Assignment to rx_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 100: Assignment to initial_state ignored, since the identifier is never used
+
+Elaborating module <sd_write>.
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 114: Assignment to write_state ignored, since the identifier is never used
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2,CLKFX_DIVIDE=4,CLKFX_MULTIPLY=2,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DFS_FREQUENCY_MODE="LOW",DLL_FREQUENCY_MODE="LOW",DSS_MODE="NONE",DUTY_CYCLE_CORRECTION="TRUE",FACTORY_JF=16'b1100000010000000,PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 151: Assignment to CLK180 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 152: Assignment to CLK270 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 154: Assignment to CLK2X180 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 155: Assignment to CLK90 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 157: Assignment to CLKFX ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 158: Assignment to CLKFX180 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 159: Assignment to LOCKED ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" Line 179: Assignment to clock100M ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sd_test>.
+    Related source file is "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v".
+        STATUS_INITIAL = 4'b0000
+        STATUS_WRITE = 4'b0001
+        STATUS_IDLE = 4'b0010
+WARNING:Xst:647 - Input <COMS_SD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" line 91: Output port <rx> of the instance <sd_initial_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" line 91: Output port <state> of the instance <sd_initial_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" line 91: Output port <rx_valid> of the instance <sd_initial_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" line 105: Output port <mystate> of the instance <sd_write_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_test.v" line 105: Output port <rx_valid> of the instance <sd_write_inst> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <write_sec>.
+    Found 4-bit register for signal <sd_state>.
+    Found 1-bit register for signal <write_req>.
+    Found finite state machine <FSM_0> for signal <sd_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | SD_clk (rising_edge)                           |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <sd_test> synthesized.
+
+Synthesizing Unit <sd_initial>.
+    Related source file is "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_initial.v".
+        idle = 4'b0000
+        send_cmd0 = 4'b0001
+        wait_01 = 4'b0010
+        waitb = 4'b0011
+        send_cmd8 = 4'b0100
+        waita = 4'b0101
+        send_cmd55 = 4'b0110
+        send_acmd41 = 4'b0111
+        init_done = 4'b1000
+        init_fail = 4'b1001
+    Found 1-bit register for signal <reset>.
+    Found 10-bit register for signal <counter>.
+    Found 1-bit register for signal <rx_valid>.
+    Found 6-bit register for signal <aa>.
+    Found 1-bit register for signal <en>.
+    Found 1-bit register for signal <SD_cs>.
+    Found 1-bit register for signal <SD_datain>.
+    Found 1-bit register for signal <init_o>.
+    Found 4-bit register for signal <state>.
+    Found 10-bit register for signal <cnt>.
+    Found 48-bit register for signal <ACMD41>.
+    Found 48-bit register for signal <CMD55>.
+    Found 48-bit register for signal <CMD8>.
+    Found 48-bit register for signal <CMD0>.
+    Found 48-bit register for signal <rx>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 27                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 5                                              |
+    | Clock              | SD_clk (falling_edge)                          |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <aa[5]_GND_2_o_add_4_OUT> created at line 68.
+    Found 10-bit adder for signal <counter[9]_GND_2_o_add_10_OUT> created at line 93.
+    Found 10-bit adder for signal <cnt[9]_GND_2_o_add_51_OUT> created at line 232.
+    Found 6-bit comparator greater for signal <aa[5]_PWR_2_o_LessThan_4_o> created at line 67
+    Found 10-bit comparator greater for signal <counter[9]_PWR_2_o_LessThan_10_o> created at line 92
+    Found 10-bit comparator lessequal for signal <counter[9]_PWR_2_o_LessThan_16_o> created at line 106
+    Found 10-bit comparator greater for signal <cnt[9]_PWR_2_o_LessThan_24_o> created at line 159
+    Found 10-bit comparator greater for signal <cnt[9]_GND_2_o_LessThan_51_o> created at line 231
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 272 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  27 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <sd_initial> synthesized.
+
+Synthesizing Unit <sd_write>.
+    Related source file is "G:\fpga-design\debug\sd_test\sd_test\rtl\sd_write.v".
+        idle = 4'b0000
+        write_cmd = 4'b0001
+        wait_8clk = 4'b0010
+        start_taken = 4'b0011
+        writea = 4'b0100
+        write_crc = 4'b0101
+        write_wait = 4'b0110
+        write_done = 4'b0111
+    Found 1-bit register for signal <rx_valid>.
+    Found 6-bit register for signal <aa>.
+    Found 1-bit register for signal <en>.
+    Found 4-bit register for signal <mystate>.
+    Found 48-bit register for signal <CMD24>.
+    Found 1-bit register for signal <write_o>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <SD_cs>.
+    Found 1-bit register for signal <SD_datain>.
+    Found 22-bit register for signal <cnt>.
+    Found 8-bit register for signal <Sblock_token>.
+    Found 3-bit register for signal <cnta>.
+    Found 8-bit register for signal <rx>.
+    Found finite state machine <FSM_2> for signal <mystate>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 11                                             |
+    | Clock              | SD_clk (falling_edge)                          |
+    | Reset              | init_INV_25_o (positive)                       |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <cnta[2]_GND_4_o_sub_21_OUT> created at line 130.
+    Found 6-bit adder for signal <aa[5]_GND_4_o_add_4_OUT> created at line 73.
+    Found 22-bit adder for signal <cnt[21]_GND_4_o_add_33_OUT> created at line 171.
+    Found 1-bit 8-to-1 multiplexer for signal <cnta[2]_Sblock_token[7]_Mux_25_o> created at line 146.
+    Found 1-bit 8-to-1 multiplexer for signal <cnta[2]_rx[7]_Mux_39_o> created at line 180.
+    Found 6-bit comparator greater for signal <aa[5]_GND_4_o_LessThan_4_o> created at line 72
+    Found 22-bit comparator greater for signal <cnt[21]_GND_4_o_LessThan_30_o> created at line 161
+    Found 22-bit comparator greater for signal <cnt[21]_GND_4_o_LessThan_47_o> created at line 192
+    Found 22-bit comparator greater for signal <cnt[21]_GND_4_o_LessThan_54_o> created at line 213
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 101 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  30 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <sd_write> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 22-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+# Registers                                            : 28
+ 1-bit register                                        : 13
+ 10-bit register                                       : 2
+ 22-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 48-bit register                                       : 6
+ 6-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 1
+ 22-bit comparator greater                             : 3
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 59
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 5
+ 22-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 3
+ 48-bit 2-to-1 multiplexer                             : 7
+ 6-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <Sblock_token_1> in Unit <sd_write_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <Sblock_token_2> <Sblock_token_3> <Sblock_token_4> <Sblock_token_5> <Sblock_token_6> <Sblock_token_7> 
+WARNING:Xst:1710 - FF/Latch <write_sec_31> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_30> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_29> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_28> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_27> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_26> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_25> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_24> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_23> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_22> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_21> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_20> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_19> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_18> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_17> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_16> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_15> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_13> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_12> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_11> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_10> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_9> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_8> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_7> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_6> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_5> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_4> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_2> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_1> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_0> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Sblock_token_1> has a constant value of 1 in block <sd_write_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Sblock_token_0> has a constant value of 0 in block <sd_write_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <write_sec<31:15>> (without init value) have a constant value of 0 in block <sd_test>.
+
+Synthesizing (advanced) Unit <sd_initial>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <sd_initial> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 10-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 379
+ Flip-Flops                                            : 379
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 1
+ 22-bit comparator greater                             : 3
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 59
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 5
+ 22-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 3
+ 48-bit 2-to-1 multiplexer                             : 7
+ 6-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <Sblock_token_0> has a constant value of 0 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_1> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_2> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_3> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_4> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_5> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_6> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sblock_token_7> has a constant value of 1 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_0> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_1> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_2> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_4> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_5> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_6> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_7> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_8> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_9> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_10> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_11> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_12> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <write_sec_13> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <write_sec_3> in Unit <sd_test> is equivalent to the following FF/Latch, which will be removed : <write_sec_14> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <sd_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00
+ 0001  | 01
+ 0010  | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sd_initial_inst/FSM_1> on signal <state[1:4]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0011
+ 0011  | 0010
+ 0100  | 0110
+ 0101  | 0111
+ 1001  | 0101
+ 0110  | 0100
+ 0111  | 1100
+ 1000  | 1101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sd_write_inst/FSM_2> on signal <mystate[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 011
+ 0011  | 010
+ 0100  | 110
+ 0101  | 111
+ 0110  | 101
+ 0111  | 100
+-------------------
+
+Optimizing unit <sd_test> ...
+
+Optimizing unit <sd_initial> ...
+
+Optimizing unit <sd_write> ...
+WARNING:Xst:1710 - FF/Latch <aa_5> (without init value) has a constant value of 0 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <aa_3> (without init value) has a constant value of 0 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <aa_4> (without init value) has a constant value of 0 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <aa_5> (without init value) has a constant value of 0 in block <sd_write>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_21> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_20> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_19> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_18> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_17> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_16> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_15> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_14> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_13> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_12> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_11> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sd_write_inst/cnt_10> (without init value) has a constant value of 0 in block <sd_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sd_state_FSM_FFd2> in Unit <sd_test> is equivalent to the following FF/Latch, which will be removed : <write_sec_3> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sd_test, actual ratio is 2.
+
+Final Macro Processing ...
+
+Processing Unit <sd_test> :
+	Found 21-bit shift register for signal <sd_initial_inst/rx_40>.
+	Found 17-bit shift register for signal <sd_initial_inst/rx_16>.
+Unit <sd_test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 322
+ Flip-Flops                                            : 322
+# Shift Registers                                      : 2
+ 17-bit shift register                                 : 1
+ 21-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sd_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 631
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 18
+#      LUT2                        : 12
+#      LUT3                        : 108
+#      LUT4                        : 30
+#      LUT5                        : 259
+#      LUT6                        : 109
+#      MUXCY                       : 63
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 324
+#      FD                          : 20
+#      FD_1                        : 1
+#      FDC                         : 3
+#      FDCE                        : 10
+#      FDE                         : 2
+#      FDE_1                       : 265
+#      FDP_1                       : 1
+#      FDR                         : 11
+#      FDR_1                       : 10
+#      FDS_1                       : 1
+# Shift Registers                  : 2
+#      SRLC16E                     : 1
+#      SRLC32E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 3
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             324  out of  54576     0%  
+ Number of Slice LUTs:                  544  out of  27288     1%  
+    Number used as Logic:               542  out of  27288     1%  
+    Number used as Memory:                2  out of   6408     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    558
+   Number with an unused Flip Flop:     234  out of    558    41%  
+   Number with an unused LUT:            14  out of    558     2%  
+   Number of fully used LUT-FF pairs:   310  out of    558    55%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   6  out of    218     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | DCM_SP:CLKDV           | 326   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.222ns (Maximum Frequency: 191.498MHz)
+   Minimum input arrival time before clock: 4.322ns
+   Maximum output required time after clock: 5.558ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.222ns (frequency: 191.498MHz)
+  Total number of paths / destination ports: 18119 / 621
+-------------------------------------------------------------------------
+Delay:               5.222ns (Levels of Logic = 4)
+  Source:            sd_initial_inst/rx_45 (FF)
+  Destination:       sd_initial_inst/cnt_7 (FF)
+  Source Clock:      clk rising 0.5X
+  Destination Clock: clk falling 0.5X
+
+  Data Path: sd_initial_inst/rx_45 to sd_initial_inst/cnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.834  sd_initial_inst/rx_45 (sd_initial_inst/rx_45)
+     LUT2:I0->O            4   0.250   0.912  sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW0 (N14)
+     LUT6:I4->O           11   0.250   1.147  sd_initial_inst/_n0229_inv21 (sd_initial_inst/_n0229_inv2)
+     LUT6:I4->O            2   0.250   0.726  sd_initial_inst/_n0229_inv4_rstpot (sd_initial_inst/_n0229_inv4_rstpot)
+     LUT6:I5->O            1   0.254   0.000  sd_initial_inst/cnt_2_dpot (sd_initial_inst/cnt_2_dpot)
+     FDE_1:D                   0.074          sd_initial_inst/cnt_2
+    ----------------------------------------
+    Total                      5.222ns (1.603ns logic, 3.619ns route)
+                                       (30.7% logic, 69.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              4.322ns (Levels of Logic = 3)
+  Source:            SD_dataout (PAD)
+  Destination:       sd_initial_inst/aa_2 (FF)
+  Destination Clock: clk rising 0.5X
+
+  Data Path: SD_dataout to sd_initial_inst/aa_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.328   1.235  SD_dataout_IBUF (SD_dataout_IBUF)
+     LUT2:I0->O            2   0.250   1.181  sd_initial_inst/SD_dataout_en_AND_8_o1 (sd_initial_inst/SD_dataout_en_AND_8_o)
+     LUT6:I0->O            1   0.254   0.000  sd_initial_inst/Mmux_GND_2_o_GND_2_o_mux_7_OUT31 (sd_initial_inst/GND_2_o_GND_2_o_mux_7_OUT<2>)
+     FDR:D                     0.074          sd_initial_inst/aa_2
+    ----------------------------------------
+    Total                      4.322ns (1.906ns logic, 2.416ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 2
+-------------------------------------------------------------------------
+Offset:              5.558ns (Levels of Logic = 2)
+  Source:            sd_state_FSM_FFd2 (FF)
+  Destination:       SD_cs (PAD)
+  Source Clock:      clk rising 0.5X
+
+  Data Path: sd_state_FSM_FFd2 to SD_cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.525   1.186  sd_state_FSM_FFd2 (sd_state_FSM_FFd2)
+     LUT4:I0->O            1   0.254   0.681  SD_cs1 (SD_cs_OBUF)
+     OBUF:I->O                 2.912          SD_cs_OBUF (SD_cs)
+    ----------------------------------------
+    Total                      5.558ns (3.691ns logic, 1.867ns route)
+                                       (66.4% logic, 33.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.731|    2.937|    7.893|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.45 secs
+ 
+--> 
+
+Total memory usage is 294908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   85 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

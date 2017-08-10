@@ -1,0 +1,47 @@
+//! **************************************************************************
+// Written by: Map O.40d on Fri Nov 23 18:13:03 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "USB_SLCS" LOCATE = SITE "T6" LEVEL 1;
+COMP "USB_FD<2>" LOCATE = SITE "U8" LEVEL 1;
+COMP "USB_FD<3>" LOCATE = SITE "T8" LEVEL 1;
+COMP "USB_FD<4>" LOCATE = SITE "R8" LEVEL 1;
+COMP "USB_FD<5>" LOCATE = SITE "P8" LEVEL 1;
+COMP "USB_FD<6>" LOCATE = SITE "N8" LEVEL 1;
+COMP "USB_SLOE" LOCATE = SITE "R7" LEVEL 1;
+COMP "CPU_RESET" LOCATE = SITE "N4" LEVEL 1;
+COMP "USB_FD<7>" LOCATE = SITE "N9" LEVEL 1;
+COMP "USB_FD<8>" LOCATE = SITE "P6" LEVEL 1;
+COMP "USB_FD<9>" LOCATE = SITE "N6" LEVEL 1;
+COMP "USB_SLRD" LOCATE = SITE "N5" LEVEL 1;
+COMP "USB_FIFOADR<0>" LOCATE = SITE "P7" LEVEL 1;
+COMP "USB_FIFOADR<1>" LOCATE = SITE "N7" LEVEL 1;
+COMP "USB_FLAGA" LOCATE = SITE "V7" LEVEL 1;
+COMP "USB_FLAGB" LOCATE = SITE "U7" LEVEL 1;
+COMP "USB_FLAGC" LOCATE = SITE "T7" LEVEL 1;
+COMP "USB_FD<10>" LOCATE = SITE "V5" LEVEL 1;
+COMP "USB_FD<11>" LOCATE = SITE "U5" LEVEL 1;
+COMP "USB_FD<12>" LOCATE = SITE "V4" LEVEL 1;
+COMP "USB_FD<13>" LOCATE = SITE "T5" LEVEL 1;
+COMP "USB_SLWR" LOCATE = SITE "R3" LEVEL 1;
+COMP "USB_FD<14>" LOCATE = SITE "R5" LEVEL 1;
+COMP "USB_FD<15>" LOCATE = SITE "T4" LEVEL 1;
+COMP "FPGA_GCLK1" LOCATE = SITE "V10" LEVEL 1;
+COMP "USB_FD<0>" LOCATE = SITE "V9" LEVEL 1;
+COMP "USB_FD<1>" LOCATE = SITE "V8" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "USB_SLOE_REG" BEL "USB_FD_EN" BEL "access_req" BEL
+        "USB_SLWR_REG" BEL "USB_SLRD_REG" BEL "USB_FIFOADR_REG_1" BEL
+        "Data_reg_0" BEL "Data_reg_1" BEL "Data_reg_2" BEL "Data_reg_3" BEL
+        "Data_reg_4" BEL "Data_reg_5" BEL "Data_reg_6" BEL "Data_reg_7" BEL
+        "Data_reg_8" BEL "Data_reg_9" BEL "Data_reg_10" BEL "Data_reg_11" BEL
+        "Data_reg_12" BEL "Data_reg_13" BEL "Data_reg_14" BEL "Data_reg_15"
+        BEL "access_sequence_0" BEL "access_sequence_1" BEL
+        "access_sequence_2" BEL "access_sequence_3" BEL "access_sequence_4"
+        BEL "access_sequence_5" BEL "access_sequence_6" BEL
+        "access_sequence_7" BEL "access_sequence_8" BEL "access_sequence_9"
+        BEL "access_sequence_10" BEL "access_sequence_11" BEL "bus_busy" BEL
+        "FPGA_GCLK1_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

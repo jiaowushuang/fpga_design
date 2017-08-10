@@ -1,0 +1,8 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "ipcore_dir/fifo_8_1024.v"
+verilog work "fifo_map.v"
+verilog work "cl_serial_out.v"
+verilog work "cl_serial_in.v"
+verilog work "cl_protocol_decoder.v"
+verilog work "cl_serial.v"
+verilog work "D:/Xilinx/ISE_DS/ISE//verilog/src/glbl.v"

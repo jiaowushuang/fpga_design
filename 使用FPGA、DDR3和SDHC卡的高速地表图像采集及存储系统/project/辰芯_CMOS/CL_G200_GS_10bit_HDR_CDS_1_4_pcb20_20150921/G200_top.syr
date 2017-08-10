@@ -1,0 +1,2447 @@
+Release 13.1 - xst O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: G200_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "G200_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "G200_top"
+Output Format                      : NGC
+Target Device                      : xc6slx150-3-fgg900
+
+---- Source Options
+Top Module Name                    : G200_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\bram_28_1024.v\" into library work
+Parsing module <bram_28_1024>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\iserdes_1_to_6_data_diff.v\" into library work
+Parsing module <iserdes_1_to_6_data_diff>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\shifter_var_w12_d16.v\" into library work
+Parsing module <shifter_var_w12_d16>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\gearbox_2_to_1.v\" into library work
+Parsing module <gearbox_2_to_1>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\iserdes_1_to_12_data_diff.v\" into library work
+Parsing module <iserdes_1_to_12_data_diff>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\simple_dual_ram_w24_d512.v\" into library work
+Parsing module <simple_dual_ram_w24_d512>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\shift_register_1_var.v\" into library work
+Parsing module <shift_register_1_var>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fot_sig_bram.v\" into library work
+Parsing module <fot_sig_bram>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fot_rst_bram.v\" into library work
+Parsing module <fot_rst_bram>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fifo_8_1024.v\" into library work
+Parsing module <fifo_8_1024>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\training.v\" into library work
+Parsing module <training>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\odes2ser_7_to_1.v\" into library work
+Parsing module <odes2ser_7_to_1>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\mult.v\" into library work
+Parsing module <mult>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\image_buffer.v\" into library work
+Parsing module <image_buffer>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\gen_image_val.v\" into library work
+Parsing module <gen_image_val>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\gclk_2_sdr_2.v\" into library work
+Parsing module <gclk_2_sdr_2>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\gclk_2_gpio.v\" into library work
+Parsing module <gclk_2_gpio>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\fifo_map.v\" into library work
+Parsing module <fifo_mapping>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_serial_out.v\" into library work
+Parsing module <cl_serial_out>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_serial_in.v\" into library work
+Parsing module <cl_serial_in>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_protocol_decoder.v\" into library work
+Parsing module <cl_protocol_decoder>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clock_generator_pll_b1.v\" into library work
+Parsing module <clock_generator_pll_b1>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\test_io_module.v\" into library work
+Parsing module <test_io_module>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v\" into library work
+Parsing module <sequencer_g200>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sensor_spi.v\" into library work
+Parsing module <sensor_spi>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sensor_controller.v\" into library work
+Parsing module <sensor_controller>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\image_tx.v\" into library work
+Parsing module <image_tx>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\image_rx.v\" into library work
+Parsing module <image_rx>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_serial.v\" into library work
+Parsing module <cl_serial_top>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v\" into library work
+Parsing module <clocking>.
+Analyzing Verilog file \"E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.v\" into library work
+Parsing module <G200_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <G200_top>.
+WARNING:HDLCompiler:1016 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 144: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 219: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 240: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 261: Port CLK180 is not connected to this instance
+
+Elaborating module <clocking>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <IBUFDS(DIFF_TERM="TRUE",IOSTANDARD="LVDS_33")>.
+
+Elaborating module <gclk_2_gpio>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+
+Elaborating module <OBUFDS(IOSTANDARD="LVDS_33")>.
+WARNING:HDLCompiler:604 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 133: Module instantiation should have an instance name
+
+Elaborating module <gclk_2_sdr_2>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=28,CLKFX_MULTIPLY=10,CLKIN_PERIOD=20)>.
+
+Elaborating module <BUFPLL(DIVIDE=7,ENABLE_SYNC="TRUE")>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=3,CLKIN_PERIOD=20)>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 228: Assignment to dcm_lvds_locked ignored, since the identifier is never used
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=6,CLKIN_PERIOD=20)>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\clocking.v" Line 249: Assignment to dcm_rx_locked ignored, since the identifier is never used
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=2,CLKFX_MULTIPLY=2,CLKIN_PERIOD=20)>.
+
+Elaborating module <PLL_BASE(CLKFBOUT_MULT=21,CLKOUT0_DIVIDE=2,CLKOUT1_DIVIDE=14,CLKIN_PERIOD=20,CLK_FEEDBACK="CLKFBOUT")>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.v" Line 185: Assignment to clk_lvds_ddr_out ignored, since the identifier is never used
+
+Elaborating module <cl_serial_top>.
+
+Elaborating module <cl_serial_in>.
+
+Elaborating module <cl_protocol_decoder>.
+WARNING:HDLCompiler:711 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_protocol_decoder.v" Line 54: Found more than one declaration of port <window_column_sel>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_protocol_decoder.v" Line 226: Assignment to reg_tx2 ignored, since the identifier is never used
+
+Elaborating module <bram_28_1024>.
+WARNING:HDLCompiler:1499 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\bram_28_1024.v" Line 40: Empty module <bram_28_1024> remains a black box.
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_protocol_decoder.v" Line 315: Size mismatch in connection of port <dina>. Formal port size is 21-bit while actual signal size is 18-bit.
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_protocol_decoder.v" Line 319: Size mismatch in connection of port <doutb>. Formal port size is 21-bit while actual signal size is 18-bit.
+
+Elaborating module <fot_sig_bram>.
+WARNING:HDLCompiler:1499 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fot_sig_bram.v" Line 40: Empty module <fot_sig_bram> remains a black box.
+
+Elaborating module <fot_rst_bram>.
+WARNING:HDLCompiler:1499 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fot_rst_bram.v" Line 40: Empty module <fot_rst_bram> remains a black box.
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\cl_serial.v" Line 144: Size mismatch in connection of port <timing_bram_dout>. Formal port size is 18-bit while actual signal size is 21-bit.
+
+Elaborating module <fifo_mapping>.
+
+Elaborating module <fifo_8_1024>.
+WARNING:HDLCompiler:1499 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\fifo_8_1024.v" Line 40: Empty module <fifo_8_1024> remains a black box.
+
+Elaborating module <cl_serial_out>.
+
+Elaborating module <sensor_controller>.
+
+Elaborating module <sensor_spi>.
+
+Elaborating module <sequencer_g200>.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 101: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <mult>.
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 105: Size mismatch in connection of port <a>. Formal port size is 12-bit while actual signal size is 11-bit.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 145: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 150: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 153: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 197: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 287: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 299: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 344: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 396: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 111: Assignment to timing_bram_dout_q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\sequencer.v" Line 469: Assignment to flag_q ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.v" Line 287: Size mismatch in connection of port <timing_bram_dout>. Formal port size is 18-bit while actual signal size is 21-bit.
+WARNING:HDLCompiler:189 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.v" Line 289: Size mismatch in connection of port <decoder>. Formal port size is 11-bit while actual signal size is 12-bit.
+
+Elaborating module <image_rx>.
+
+Elaborating module <clock_generator_pll_b1>.
+
+Elaborating module <PLL_BASE(CLKFBOUT_MULT=12,CLKOUT0_DIVIDE=1,CLKOUT1_DIVIDE=6,DIVCLK_DIVIDE=1,CLKIN_PERIOD=20,CLK_FEEDBACK="CLKFBOUT")>.
+
+Elaborating module <BUFPLL(DIVIDE=6,ENABLE_SYNC="TRUE")>.
+WARNING:HDLCompiler:1016 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\training.v" Line 117: Port gear_reset is not connected to this instance
+
+Elaborating module <training>.
+
+Elaborating module <iserdes_1_to_12_data_diff>.
+
+Elaborating module <iserdes_1_to_6_data_diff>.
+
+Elaborating module <IBUFDS(DIFF_TERM="TRUE")>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="WRAPAROUND",DELAY_SRC="IDATAIN",SERDES_MODE="MASTER",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <IODELAY2(DATA_RATE="SDR",IDELAY_VALUE=0,IDELAY2_VALUE=0,IDELAY_MODE="NORMAL",ODELAY_VALUE=0,IDELAY_TYPE="DIFF_PHASE_DETECTOR",COUNTER_WRAPAROUND="WRAPAROUND",DELAY_SRC="IDATAIN",SERDES_MODE="SLAVE",SIM_TAPDELAY_VALUE=49)>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=6,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="MASTER",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <ISERDES2(DATA_WIDTH=6,DATA_RATE="SDR",BITSLIP_ENABLE="TRUE",SERDES_MODE="SLAVE",INTERFACE_TYPE="RETIMED")>.
+
+Elaborating module <gearbox_2_to_1>.
+
+Elaborating module <shifter_var_w12_d16>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\training.v" Line 249: Assignment to loc_nok ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\training.v" Line 117: Input port gear_reset is not connected on this instance
+
+Elaborating module <image_buffer>.
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\image_buffer.v" Line 146: Assignment to fvals_5q ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\image_buffer.v" Line 218: Assignment to cnt_even ignored, since the identifier is never used
+
+Elaborating module <simple_dual_ram_w24_d512>.
+WARNING:HDLCompiler:1499 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\ipcore_dir\simple_dual_ram_w24_d512.v" Line 40: Empty module <simple_dual_ram_w24_d512> remains a black box.
+
+Elaborating module <gen_image_val>.
+
+Elaborating module <shift_register_1_var>.
+
+Elaborating module <image_tx>.
+
+Elaborating module <odes2ser_7_to_1>.
+
+Elaborating module <OSERDES2(DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",DATA_WIDTH=7,OUTPUT_MODE="DIFFERENTIAL",SERDES_MODE="MASTER")>.
+
+Elaborating module <OSERDES2(DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",DATA_WIDTH=7,OUTPUT_MODE="DIFFERENTIAL",SERDES_MODE="SLAVE")>.
+
+Elaborating module <test_io_module>.
+WARNING:HDLCompiler:634 - "E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.v" Line 155: Net <dval> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <G200_top>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/g200_top.v".
+INFO:Xst:3210 - "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/g200_top.v" line 167: Output port <clk_lvds_ddr_out> of the instance <clocking> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <dval> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <G200_top> synthesized.
+
+Synthesizing Unit <clocking>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/clocking.v".
+    Found 5-bit register for signal <rst_pll_n_pipe>.
+    Found 5-bit register for signal <rst_dcm3_n_pipe>.
+    Found 5-bit register for signal <rst_dcm4_n_pipe>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+Unit <clocking> synthesized.
+
+Synthesizing Unit <gclk_2_gpio>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/gclk_2_gpio.v".
+    Summary:
+	no macro.
+Unit <gclk_2_gpio> synthesized.
+
+Synthesizing Unit <gclk_2_sdr_2>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/gclk_2_sdr_2.v".
+    Summary:
+	no macro.
+Unit <gclk_2_sdr_2> synthesized.
+
+Synthesizing Unit <cl_serial_top>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/cl_serial.v".
+INFO:Xst:3210 - "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/cl_serial.v" line 116: Output port <p1> of the instance <cl_protocol_decoder> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <cl_serial_top> synthesized.
+
+Synthesizing Unit <cl_serial_in>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/cl_serial_in.v".
+        s_IDLE = 3'b000
+        s_START_BIT = 3'b001
+        s_RECEIVE_DATA = 3'b011
+        s_STORE_DATA = 3'b010
+        s_STOP_BIT = 3'b110
+    Found 4-bit register for signal <deglitch>.
+    Found 1-bit register for signal <sertc_deglitch>.
+    Found 1-bit register for signal <rb1_wen>.
+    Found 1-bit register for signal <rb2_wen>.
+    Found 1-bit register for signal <rb3_wen>.
+    Found 1-bit register for signal <rb4_wen>.
+    Found 2-bit register for signal <reg_rb>.
+    Found 1-bit register for signal <reg_addr<7>>.
+    Found 1-bit register for signal <reg_addr<6>>.
+    Found 1-bit register for signal <reg_addr<5>>.
+    Found 1-bit register for signal <reg_addr<4>>.
+    Found 1-bit register for signal <reg_addr<3>>.
+    Found 1-bit register for signal <reg_addr<2>>.
+    Found 1-bit register for signal <reg_addr<1>>.
+    Found 1-bit register for signal <reg_addr<0>>.
+    Found 1-bit register for signal <reg_data<7>>.
+    Found 1-bit register for signal <reg_data<6>>.
+    Found 1-bit register for signal <reg_data<5>>.
+    Found 1-bit register for signal <reg_data<4>>.
+    Found 1-bit register for signal <reg_data<3>>.
+    Found 1-bit register for signal <reg_data<2>>.
+    Found 1-bit register for signal <reg_data<1>>.
+    Found 1-bit register for signal <reg_data<0>>.
+    Found 8-bit register for signal <rx_byte>.
+    Found 3-bit register for signal <rx_cnt_bit>.
+    Found 2-bit register for signal <rx_cnt_byte>.
+    Found 16-bit register for signal <rx_cnt_baud>.
+    Found 16-bit register for signal <measured_baud>.
+    Found 3-bit register for signal <fsm_sertc>.
+    Found finite state machine <FSM_0> for signal <fsm_sertc>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_fix (falling_edge)                         |
+    | Reset              | rst_fix_n_INV_12_o (positive)                  |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <rx_cnt_bit[2]_GND_16_o_sub_16_OUT> created at line 159.
+    Found 16-bit subtractor for signal <rx_cnt_baud[15]_GND_16_o_sub_43_OUT> created at line 205.
+    Found 16-bit adder for signal <rx_cnt_baud[15]_GND_16_o_add_7_OUT> created at line 141.
+    Found 2-bit adder for signal <rx_cnt_byte[1]_GND_16_o_add_23_OUT> created at line 182.
+    Found 4x4-bit Read Only RAM for signal <_n0396>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred  23 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <cl_serial_in> synthesized.
+
+Synthesizing Unit <cl_protocol_decoder>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/cl_protocol_decoder.v".
+    Set property "KEEP = TRUE" for signal <fot_sig_timing_cycle>.
+WARNING:Xst:647 - Input <clk_rxg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <cmd_wr_sensor_spi>.
+    Found 1-bit register for signal <cmd_rd_sensor_spi>.
+    Found 8-bit register for signal <reg_frames>.
+    Found 1-bit register for signal <reg_test_image_enable>.
+    Found 12-bit register for signal <reg_test_image_chan_0>.
+    Found 12-bit register for signal <reg_test_image_chan_1>.
+    Found 12-bit register for signal <reg_test_image_chan_2>.
+    Found 12-bit register for signal <reg_test_image_chan_3>.
+    Found 12-bit register for signal <training_word>.
+    Found 1-bit register for signal <reg_ctrl_led>.
+    Found 2-bit register for signal <window_column_sel>.
+    Found 1-bit register for signal <pll_sel_2>.
+    Found 256-bit register for signal <spi_register>.
+    Found 24-bit register for signal <reg_integration>.
+    Found 10-bit register for signal <reg_cnt_timing_cycle>.
+    Found 1-bit register for signal <hdr_enable>.
+    Found 10-bit register for signal <reg_timing_addr>.
+    Found 12-bit register for signal <reg_window_row_start>.
+    Found 12-bit register for signal <reg_window_row_length>.
+    Found 10-bit register for signal <timing_bram_wr_addr>.
+    Found 18-bit register for signal <timing_bram_din>.
+    Found 11-bit register for signal <fot_sig_bram_wr_addr>.
+    Found 5-bit register for signal <fot_sig_bram_din>.
+    Found 11-bit register for signal <reg_fot_sig_wr_addr>.
+    Found 11-bit register for signal <fot_sig_timing_cycle>.
+    Found 11-bit register for signal <fot_rst_bram_wr_addr>.
+    Found 5-bit register for signal <fot_rst_bram_din>.
+    Found 11-bit register for signal <reg_fot_rst_wr_addr>.
+    Found 11-bit register for signal <fot_rst_timing_cycle>.
+    Found 8-bit register for signal <cnt_t3>.
+    Found 8-bit register for signal <reg_camera_control>.
+    Found 256-bit 32-to-1 multiplexer for signal <_n0567> created at line 187.
+    Summary:
+	inferred 520 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <cl_protocol_decoder> synthesized.
+
+Synthesizing Unit <fifo_mapping>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/fifo_map.v".
+INFO:Xst:3210 - "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/fifo_map.v" line 51: Output port <full> of the instance <fifo_train> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/fifo_map.v" line 65: Output port <full> of the instance <fifo_sensor> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <fifo_sensor_ren>.
+    Found 1-bit register for signal <fifo_train_ren>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <fifo_mapping> synthesized.
+
+Synthesizing Unit <cl_serial_out>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/cl_serial_out.v".
+        s_IDLE = 2'b00
+        s_START_BIT = 2'b01
+        s_DATA_BITS = 2'b11
+        s_STOP_BIT = 2'b10
+    Found 16-bit register for signal <tx_cnt_baud>.
+    Found 3-bit register for signal <tx_cnt_bit>.
+    Found 1-bit register for signal <fifo_ren>.
+    Found 1-bit register for signal <cl_sertfg>.
+    Found 2-bit register for signal <fsm_sertfg>.
+    Found finite state machine <FSM_1> for signal <fsm_sertfg>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_fix (rising_edge)                          |
+    | Reset              | rst_fix_n_INV_53_o (positive)                  |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <tx_cnt_baud[15]_GND_26_o_sub_17_OUT> created at line 102.
+    Found 3-bit adder for signal <tx_cnt_bit[2]_GND_26_o_add_13_OUT> created at line 98.
+    Found 1-bit 8-to-1 multiplexer for signal <tx_cnt_bit[2]_fifo_dout[7]_Mux_10_o> created at line 91.
+    Found 16-bit 4-to-1 multiplexer for signal <fsm_sertfg[1]_tx_cnt_baud[15]_wide_mux_25_OUT> created at line 71.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <cl_serial_out> synthesized.
+
+Synthesizing Unit <sensor_controller>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/sensor_controller.v".
+        s_IDLE = 8'b00000001
+        s_RESET = 8'b00000010
+        s_TRAINING = 8'b00000100
+        s_GRAB = 8'b00001000
+WARNING:Xst:647 - Input <reg_camera_control<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <cmd_start_training>.
+    Found 1-bit register for signal <cmd_gen_test_image>.
+    Found 1-bit register for signal <sensor_reset_n>.
+    Found 1-bit register for signal <frame_req>.
+    Found 8-bit register for signal <reg_camera_control_q>.
+    Found 1-bit register for signal <training_done_q>.
+    Found 1-bit register for signal <training_done_qq>.
+    Found 8-bit register for signal <cnt_reset>.
+    Found 10-bit register for signal <cnt_frame_req>.
+    Found 8-bit register for signal <fsm_controller>.
+    Found finite state machine <FSM_2> for signal <fsm_controller>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 41                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk_rxg (rising_edge)                          |
+    | Reset              | rst_rx_n (negative)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000001                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit subtractor for signal <cnt_reset[7]_GND_27_o_sub_23_OUT> created at line 131.
+    Found 10-bit adder for signal <cnt_frame_req[9]_GND_27_o_add_30_OUT> created at line 151.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <sensor_controller> synthesized.
+
+Synthesizing Unit <sensor_spi>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/sensor_spi.v".
+        s_GEN_CLK_IDLE = 4'b0001
+        s_GEN_CLK_WR = 4'b0010
+        s_GEN_CLK_RD = 4'b0100
+        s_GEN_CLK_FINISH = 4'b1000
+        s_IDLE = 5'b00001
+        s_TRANSMITTER = 5'b00010
+        s_RECEIVER = 5'b00100
+        s_WRITE_ZERO = 5'b01000
+        s_FINISH = 5'b10000
+    Found 1-bit register for signal <spi_clk_out>.
+    Found 1-bit register for signal <cmd_wr_sensor_spi_q>.
+    Found 1-bit register for signal <cmd_rd_sensor_spi_q>.
+    Found 4-bit register for signal <fsm_gen_spi_clk>.
+    Found 1-bit register for signal <wr_flag>.
+    Found 1-bit register for signal <rd_flag>.
+    Found 5-bit register for signal <fsm_sensor_spi>.
+    Found 1-bit register for signal <spi_write>.
+    Found 1-bit register for signal <spi_read>.
+    Found 1-bit register for signal <spi_in>.
+    Found 3-bit register for signal <reg_cnt_bit>.
+    Found 6-bit register for signal <reg_cnt_byte>.
+    Found 8-bit register for signal <reg_spi_dout>.
+    Found 1-bit register for signal <reg_rd_flag>.
+    Found 1-bit register for signal <fifo_sensor_wen>.
+    Found 8-bit register for signal <fifo_sensor_din>.
+    Found 10-bit register for signal <cnt_spi_clk>.
+    Found finite state machine <FSM_3> for signal <fsm_gen_spi_clk>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_fix (rising_edge)                          |
+    | Reset              | rst_fix_n (negative)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0001                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_4> for signal <fsm_sensor_spi>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | spi_clk_out (falling_edge)                     |
+    | Reset              | rst_fix_n (negative)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00001                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit subtractor for signal <reg_cnt_byte[5]_GND_28_o_sub_77_OUT> created at line 206.
+    Found 3-bit subtractor for signal <reg_cnt_bit[2]_GND_28_o_sub_97_OUT> created at line 209.
+    Found 10-bit adder for signal <cnt_spi_clk[9]_GND_28_o_add_42_OUT> created at line 126.
+    Found 5-bit subtractor for signal <GND_28_o_GND_28_o_sub_80_OUT<4:0>> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][7]_Mux_80_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][6]_Mux_82_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][5]_Mux_84_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][4]_Mux_86_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][3]_Mux_88_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][2]_Mux_90_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][1]_Mux_92_o> created at line 208.
+    Found 1-bit 32-to-1 multiplexer for signal <GND_28_o_rb2[31][0]_Mux_94_o> created at line 208.
+    Found 1-bit 8-to-1 multiplexer for signal <reg_cnt_bit[2]_GND_28_o_Mux_95_o> created at line 208.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  45 D-type flip-flop(s).
+	inferred  33 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <sensor_spi> synthesized.
+
+Synthesizing Unit <sequencer_g200>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/sequencer.v".
+        s_IDLE = 4'b0000
+        s_T3 = 4'b0001
+        s_RD_RST = 4'b0011
+        s_FOT_SIG = 4'b0100
+        s_RD_SIG = 4'b0101
+        s_GEN_TX2 = 4'b0110
+    Set property "KEEP = TRUE" for signal <fot_sig_timing_cycle>.
+    Set property "KEEP = TRUE" for signal <cnt_tx2>.
+    Set property "KEEP = TRUE" for signal <fsm_global>.
+WARNING:Xst:647 - Input <reg_window_row_start<11:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <timing_bram_dout<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <fot_rst_bram_dout<4:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <fot_rst_timing_cycle<10:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hdr_enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <pixel_read_timing<4:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <frame_req_q>.
+    Found 1-bit register for signal <frame_req_qq>.
+    Found 24-bit register for signal <t3_length>.
+    Found 12-bit register for signal <cnt_fot_rst>.
+    Found 11-bit register for signal <decoder_r>.
+    Found 24-bit register for signal <cnt_exp>.
+    Found 10-bit register for signal <cnt_timing_cycle>.
+    Found 11-bit register for signal <cnt_decoder>.
+    Found 11-bit register for signal <cnt_fot_sig>.
+    Found 1-bit register for signal <tx2_r>.
+    Found 8-bit register for signal <cnt_frames>.
+    Found 4-bit register for signal <flag>.
+    Found 12-bit register for signal <cnt_tx2>.
+    Found 1-bit register for signal <flag_tx2>.
+    Found 3-bit register for signal <flag_cho>.
+    Found 1-bit register for signal <at_begining>.
+    Found 8-bit register for signal <cnt_fot>.
+    Found 11-bit register for signal <decoder>.
+    Found 8-bit register for signal <remainder_1>.
+    Found 24-bit register for signal <remainder_2>.
+    Found 24-bit register for signal <inte_new>.
+    Found 12-bit register for signal <cnt_tx2_1>.
+    Found 1-bit register for signal <pixel_read_timing<17>>.
+    Found 1-bit register for signal <pixel_read_timing<16>>.
+    Found 1-bit register for signal <pixel_read_timing<15>>.
+    Found 1-bit register for signal <pixel_read_timing<14>>.
+    Found 1-bit register for signal <pixel_read_timing<13>>.
+    Found 1-bit register for signal <pixel_read_timing<12>>.
+    Found 1-bit register for signal <pixel_read_timing<11>>.
+    Found 1-bit register for signal <pixel_read_timing<10>>.
+    Found 1-bit register for signal <pixel_read_timing<9>>.
+    Found 1-bit register for signal <pixel_read_timing<8>>.
+    Found 1-bit register for signal <pixel_read_timing<7>>.
+    Found 1-bit register for signal <pixel_read_timing<6>>.
+    Found 1-bit register for signal <pixel_read_timing<5>>.
+    Found 5-bit register for signal <fot_dout>.
+    Found 1-bit register for signal <tx2>.
+    Found 4-bit register for signal <fsm_global>.
+    Found finite state machine <FSM_5> for signal <flag_cho>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 86                                             |
+    | Inputs             | 15                                             |
+    | Outputs            | 12                                             |
+    | Clock              | clk_rxg (rising_edge)                          |
+    | Reset              | rst_rx_n_INV_94_o (positive)                   |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit subtractor for signal <PWR_31_o_cnt_t3[7]_sub_6_OUT> created at line 137.
+    Found 25-bit subtractor for signal <GND_29_o_GND_29_o_sub_10_OUT> created at line 145.
+    Found 24-bit subtractor for signal <rd_length[23]_GND_29_o_sub_21_OUT> created at line 168.
+    Found 24-bit subtractor for signal <inte_new[23]_rd_length[23]_sub_23_OUT> created at line 169.
+    Found 24-bit subtractor for signal <inte_new[23]_GND_29_o_sub_24_OUT> created at line 169.
+    Found 24-bit subtractor for signal <t3_length[23]_GND_29_o_sub_45_OUT> created at line 203.
+    Found 24-bit subtractor for signal <cnt_exp[23]_GND_29_o_sub_56_OUT> created at line 215.
+    Found 12-bit subtractor for signal <reg_window_row_length[11]_GND_29_o_sub_76_OUT> created at line 256.
+    Found 12-bit subtractor for signal <GND_29_o_GND_29_o_sub_110_OUT> created at line 271.
+    Found 24-bit subtractor for signal <inte_new[23]_GND_29_o_sub_113_OUT> created at line 275.
+    Found 24-bit subtractor for signal <rd_length[23]_GND_29_o_sub_146_OUT> created at line 309.
+    Found 24-bit subtractor for signal <inte_new[23]_rd_length[23]_sub_149_OUT> created at line 310.
+    Found 24-bit subtractor for signal <inte_new[23]_GND_29_o_sub_150_OUT> created at line 310.
+    Found 10-bit subtractor for signal <reg_cnt_timing_cycle[9]_GND_29_o_sub_157_OUT> created at line 320.
+    Found 8-bit subtractor for signal <reg_frames[7]_GND_29_o_sub_160_OUT> created at line 323.
+    Found 14-bit subtractor for signal <GND_29_o_GND_29_o_sub_212_OUT> created at line 376.
+    Found 12-bit adder for signal <reg_window_row_length[11]_GND_29_o_add_3_OUT> created at line 106.
+    Found 10-bit adder for signal <cnt_timing_cycle[9]_GND_29_o_add_41_OUT> created at line 189.
+    Found 11-bit adder for signal <cnt_decoder[10]_GND_29_o_add_74_OUT> created at line 255.
+    Found 11-bit adder for signal <decoder_r[10]_GND_29_o_add_77_OUT> created at line 260.
+    Found 8-bit adder for signal <cnt_fot[7]_GND_29_o_add_121_OUT> created at line 294.
+    Found 11-bit adder for signal <cnt_fot_sig[10]_GND_29_o_add_130_OUT> created at line 299.
+    Found 8-bit adder for signal <cnt_frames[7]_GND_29_o_add_161_OUT> created at line 332.
+    Found 12-bit adder for signal <cnt_tx2[11]_GND_29_o_add_250_OUT> created at line 423.
+    Found 12-bit adder for signal <cnt_tx2_1[11]_GND_29_o_add_263_OUT> created at line 452.
+    Found 24-bit subtractor for signal <GND_29_o_GND_29_o_sub_11_OUT<23:0>> created at line 145.
+    Found 24-bit subtractor for signal <GND_29_o_GND_29_o_sub_14_OUT<23:0>> created at line 150.
+    Found 24-bit subtractor for signal <GND_29_o_GND_29_o_sub_15_OUT<23:0>> created at line 153.
+    Found 3x10-bit multiplier for signal <PWR_31_o_reg_cnt_timing_cycle[9]_MuLt_65_OUT> created at line 238.
+    Found 3x10-bit multiplier for signal <PWR_31_o_reg_cnt_timing_cycle[9]_MuLt_210_OUT> created at line 376.
+    Found 24-bit comparator greater for signal <rd_length[23]_inte_new[23]_LessThan_22_o> created at line 168
+    Found 24-bit comparator greater for signal <reg_integration[23]_GND_29_o_LessThan_67_o> created at line 238
+    Found 24-bit comparator greater for signal <cnt_exp[23]_inte_new[23]_LessThan_73_o> created at line 248
+    Found 12-bit comparator lessequal for signal <n0057> created at line 256
+    Found 12-bit comparator equal for signal <GND_29_o_GND_29_o_equal_111_o> created at line 271
+    Found 24-bit comparator equal for signal <cnt_exp[23]_inte_new[23]_equal_114_o> created at line 275
+    Found 24-bit comparator greater for signal <rd_length[23]_inte_new[23]_LessThan_165_o> created at line 309
+    Found 10-bit comparator equal for signal <cnt_timing_cycle[9]_reg_cnt_timing_cycle[9]_equal_158_o> created at line 320
+    Found 12-bit comparator equal for signal <GND_29_o_reg_window_row_length[11]_equal_159_o> created at line 322
+    Found 8-bit comparator equal for signal <cnt_frames[7]_reg_frames[7]_equal_161_o> created at line 323
+    Found 32-bit comparator equal for signal <GND_29_o_GND_29_o_equal_213_o> created at line 376
+    Found 12-bit comparator greater for signal <n0206> created at line 426
+    Found 12-bit comparator lessequal for signal <GND_29_o_cnt_tx2[11]_LessThan_260_o> created at line 437
+    Found 24-bit comparator greater for signal <n0214> created at line 446
+    Found 12-bit comparator greater for signal <GND_29_o_cnt_tx2_1[11]_LessThan_263_o> created at line 447
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal cnt_tx2 may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal fsm_global may hinder XST clustering optimizations.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred  27 Adder/Subtractor(s).
+	inferred 242 D-type flip-flop(s).
+	inferred  15 Comparator(s).
+	inferred  72 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <sequencer_g200> synthesized.
+
+Synthesizing Unit <image_rx>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/image_rx.v".
+WARNING:Xst:647 - Input <reg_test_image_chan_0<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reg_test_image_chan_1<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reg_test_image_chan_2<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reg_test_image_chan_3<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk_rxio> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk_fix> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst_tx_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cmd_gen_test_image> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 12-bit register for signal <data_trained1>.
+    Found 12-bit register for signal <data_trained2>.
+    Found 12-bit register for signal <data_trained3>.
+    Found 12-bit register for signal <data_trained4>.
+    Found 12-bit register for signal <data_trained5>.
+    Found 12-bit register for signal <data_trained6>.
+    Found 12-bit register for signal <data_trained7>.
+    Found 1-bit register for signal <fval_qq>.
+    Found 1-bit register for signal <lval_qq>.
+    Found 12-bit register for signal <data_trained0>.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained0[11]_data_par_trained[155]_mux_29_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained1[11]_data_par_trained[167]_mux_30_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained2[11]_data_par_trained[179]_mux_31_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained3[11]_data_par_trained[191]_mux_32_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained4[11]_data_par_trained[347]_mux_33_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained5[11]_data_par_trained[359]_mux_34_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained6[11]_data_par_trained[371]_mux_35_OUT> created at line 154.
+    Found 12-bit 4-to-1 multiplexer for signal <data_trained7[11]_data_par_trained[383]_mux_36_OUT> created at line 154.
+    Summary:
+	inferred  98 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <image_rx> synthesized.
+
+Synthesizing Unit <clock_generator_pll_b1>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/clock_generator_pll_b1.v".
+    Found 5-bit register for signal <rst_pll_pipe>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <clock_generator_pll_b1> synthesized.
+
+Synthesizing Unit <training>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/training.v".
+        s_IDLE = 4'b0000
+        s_BIT_ALIGN = 4'b0001
+        s_WORD_ALIGN = 4'b0010
+        s_STATIC = 4'b0011
+        s_WRITE_START = 4'b0101
+        s_WRITE_MID = 4'b0110
+        s_WRITE_END = 4'b0111
+        s_WRITE_WORD = 4'b1000
+        s_WRITE_CHAN = 4'b1001
+        s_WRITE_OK = 4'b1010
+        s_WRITE_ZERO = 4'b1011
+        s_FINISH = 4'b1100
+        s_CTRL_IDLE = 3'b001
+        s_START_ALIGN = 3'b010
+        s_ALIGN = 3'b100
+    Set property "KEEP = TRUE" for signal <data_par_2D<31>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<30>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<29>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<28>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<27>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<26>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<25>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<24>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<23>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<22>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<21>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<20>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<19>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<18>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<17>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<16>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<15>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<14>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<13>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<12>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<11>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<10>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<9>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<8>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<7>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<6>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<5>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<4>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<3>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<2>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<1>>.
+    Set property "KEEP = TRUE" for signal <data_par_2D<0>>.
+    Set property "KEEP = TRUE" for signal <fsm_align>.
+    Set property "KEEP = TRUE" for signal <fsm_align_ctrl>.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[0].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[1].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[2].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[3].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[4].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[5].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[6].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[7].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[8].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[9].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[10].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[11].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[12].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[13].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[14].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[15].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[16].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[17].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[18].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[19].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[20].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[21].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[22].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[23].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[24].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[25].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[26].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[27].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[28].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[29].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[30].receiver_iserdes_bank1', is tied to GND.
+WARNING:Xst:2898 - Port 'gear_reset', unconnected in block instance 'loop1[31].receiver_iserdes_bank1', is tied to GND.
+    Found 1-bit register for signal <training_done>.
+    Found 32-bit register for signal <reset>.
+    Found 12-bit register for signal <data_curr>.
+    Found 5-bit register for signal <chan_sel>.
+    Found 3-bit register for signal <fsm_align_ctrl>.
+    Found 1-bit register for signal <cmd_start_training_q>.
+    Found 1-bit register for signal <cmd_start_training_qq>.
+    Found 4-bit register for signal <fsm_align>.
+    Found 5-bit register for signal <cnt_align>.
+    Found 1-bit register for signal <align_done>.
+    Found 128-bit register for signal <n0434[127:0]>.
+    Found 1-bit register for signal <bitslip<31>>.
+    Found 1-bit register for signal <bitslip<30>>.
+    Found 1-bit register for signal <bitslip<29>>.
+    Found 1-bit register for signal <bitslip<28>>.
+    Found 1-bit register for signal <bitslip<27>>.
+    Found 1-bit register for signal <bitslip<26>>.
+    Found 1-bit register for signal <bitslip<25>>.
+    Found 1-bit register for signal <bitslip<24>>.
+    Found 1-bit register for signal <bitslip<23>>.
+    Found 1-bit register for signal <bitslip<22>>.
+    Found 1-bit register for signal <bitslip<21>>.
+    Found 1-bit register for signal <bitslip<20>>.
+    Found 1-bit register for signal <bitslip<19>>.
+    Found 1-bit register for signal <bitslip<18>>.
+    Found 1-bit register for signal <bitslip<17>>.
+    Found 1-bit register for signal <bitslip<16>>.
+    Found 1-bit register for signal <bitslip<15>>.
+    Found 1-bit register for signal <bitslip<14>>.
+    Found 1-bit register for signal <bitslip<13>>.
+    Found 1-bit register for signal <bitslip<12>>.
+    Found 1-bit register for signal <bitslip<11>>.
+    Found 1-bit register for signal <bitslip<10>>.
+    Found 1-bit register for signal <bitslip<9>>.
+    Found 1-bit register for signal <bitslip<8>>.
+    Found 1-bit register for signal <bitslip<7>>.
+    Found 1-bit register for signal <bitslip<6>>.
+    Found 1-bit register for signal <bitslip<5>>.
+    Found 1-bit register for signal <bitslip<4>>.
+    Found 1-bit register for signal <bitslip<3>>.
+    Found 1-bit register for signal <bitslip<2>>.
+    Found 1-bit register for signal <bitslip<1>>.
+    Found 1-bit register for signal <bitslip<0>>.
+    Found 4-bit register for signal <loc_word>.
+    Found 4-bit register for signal <loc_chan>.
+    Found 1-bit register for signal <loc_ok>.
+    Found 1-bit register for signal <fifo_train_wen>.
+    Found 8-bit register for signal <fifo_train_din>.
+    Found 16-bit register for signal <cnt_bitalign>.
+    Found 32-bit register for signal <align_en>.
+    Found 16-bit register for signal <cnt_static>.
+    Found 16-bit register for signal <cnt_static_err>.
+    Found 3-bit register for signal <cnt_timeout1>.
+    Found 3-bit register for signal <cnt_timeout2>.
+    Found 1-bit register for signal <start_align>.
+    Found 16-bit subtractor for signal <cnt_bitalign[15]_GND_37_o_sub_111_OUT> created at line 337.
+    Found 5-bit adder for signal <chan_sel[4]_GND_37_o_add_40_OUT> created at line 220.
+    Found 3-bit adder for signal <cnt_timeout1[2]_GND_37_o_add_121_OUT> created at line 367.
+    Found 4-bit adder for signal <loc_word[3]_GND_37_o_add_130_OUT> created at line 372.
+    Found 5-bit adder for signal <cnt_align[4]_GND_37_o_add_147_OUT> created at line 377.
+    Found 3-bit adder for signal <cnt_timeout2[2]_GND_37_o_add_161_OUT> created at line 400.
+    Found 16-bit adder for signal <cnt_static[15]_GND_37_o_add_170_OUT> created at line 405.
+    Found 16-bit adder for signal <cnt_static_err[15]_GND_37_o_add_177_OUT> created at line 409.
+    Found 16x2-bit Read Only RAM for signal <_n1233>
+    Found 12-bit 32-to-1 multiplexer for signal <chan_sel[4]_data_par_2D[31][11]_wide_mux_33_OUT> created at line 193.
+    Found 12-bit comparator equal for signal <data_curr[11]_training_word[11]_equal_118_o> created at line 344
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal fsm_align_ctrl may hinder XST clustering optimizations.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 326 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 394 Multiplexer(s).
+Unit <training> synthesized.
+
+Synthesizing Unit <iserdes_1_to_12_data_diff>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/iserdes_1_to_12_data_diff.v".
+WARNING:Xst:647 - Input <gear_reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <bitslip_r>.
+    Found 3-bit register for signal <cnt_bitslip>.
+    Found 1-bit register for signal <rev_en>.
+    Found 1-bit register for signal <bitslip_q>.
+    Found 3-bit adder for signal <cnt_bitslip[2]_GND_38_o_add_6_OUT> created at line 86.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <iserdes_1_to_12_data_diff> synthesized.
+
+Synthesizing Unit <iserdes_1_to_6_data_diff>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/iserdes_1_to_6_data_diff.v".
+        SIM_TAP_DELAY = 49
+    Found 9-bit register for signal <counter>.
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <cal_data_master>.
+    Found 1-bit register for signal <cal_data_slave>.
+    Found 1-bit register for signal <rst_data>.
+    Found 5-bit register for signal <pdcounter>.
+    Found 1-bit register for signal <ce_data>.
+    Found 1-bit register for signal <inc_data>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_6> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 17                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 13                                             |
+    | Clock              | gclk (rising_edge)                             |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit subtractor for signal <pdcounter[4]_GND_39_o_sub_60_OUT> created at line 314.
+    Found 9-bit adder for signal <counter[8]_GND_39_o_add_3_OUT> created at line 212.
+    Found 5-bit adder for signal <pdcounter[4]_GND_39_o_add_55_OUT> created at line 311.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <iserdes_1_to_6_data_diff> synthesized.
+
+Synthesizing Unit <gearbox_2_to_1>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/gearbox_2_to_1.v".
+    Found 6-bit register for signal <data_t1>.
+    Found 6-bit register for signal <data_q1>.
+    Found 6-bit register for signal <data_q2>.
+    Found 12-bit register for signal <data_q>.
+    Found 1-bit register for signal <datain_even>.
+    Summary:
+	inferred  31 D-type flip-flop(s).
+Unit <gearbox_2_to_1> synthesized.
+
+Synthesizing Unit <image_buffer>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/image_buffer.v".
+        s_IDLE_EVEN = 2'b00
+        s_GEN = 2'b01
+        s_IDLE_RD = 3'b000
+        s_FIRST8 = 3'b001
+        s_MID8 = 3'b010
+        s_LAST8 = 3'b011
+        s_IDLE_GEN = 3'b000
+        s_GEN_LVAL = 3'b001
+        s_WAIT_GEN = 3'b010
+    Set property "KEEP = TRUE" for signal <fsm_rd>.
+    Found 1-bit register for signal <fvals_qq>.
+    Found 1-bit register for signal <fvals_qqq>.
+    Found 1-bit register for signal <fvals_4q>.
+    Found 1-bit register for signal <lvals_q>.
+    Found 1-bit register for signal <lvals_qq>.
+    Found 1-bit register for signal <lvals_qqq>.
+    Found 1-bit register for signal <lvals_4q>.
+    Found 3-bit register for signal <fsm_gen_lval>.
+    Found 12-bit register for signal <cnt_lval>.
+    Found 1-bit register for signal <lval_image>.
+    Found 1-bit register for signal <fval_image>.
+    Found 1-bit register for signal <even>.
+    Found 24-bit register for signal <reg_din0>.
+    Found 24-bit register for signal <reg_din1>.
+    Found 24-bit register for signal <reg_din2>.
+    Found 24-bit register for signal <reg_din3>.
+    Found 24-bit register for signal <reg_din4>.
+    Found 24-bit register for signal <reg_din5>.
+    Found 24-bit register for signal <reg_din6>.
+    Found 24-bit register for signal <reg_din7>.
+    Found 12-bit register for signal <datapar_out0_q>.
+    Found 12-bit register for signal <datapar_out1_q>.
+    Found 12-bit register for signal <datapar_out2_q>.
+    Found 12-bit register for signal <datapar_out3_q>.
+    Found 12-bit register for signal <datapar_out4_q>.
+    Found 12-bit register for signal <datapar_out5_q>.
+    Found 12-bit register for signal <datapar_out6_q>.
+    Found 12-bit register for signal <datapar_out7_q>.
+    Found 2-bit register for signal <fsm_even>.
+    Found 8-bit register for signal <wr_addr>.
+    Found 2-bit register for signal <cnt_wr>.
+    Found 1-bit register for signal <lval_image_q>.
+    Found 1-bit register for signal <lval>.
+    Found 1-bit register for signal <fval>.
+    Found 1-bit register for signal <fval_image_q>.
+    Found 8-bit register for signal <rd_addr>.
+    Found 3-bit register for signal <flag_2>.
+    Found 3-bit register for signal <fsm_rd>.
+    Found 8-bit register for signal <chan_0>.
+    Found 8-bit register for signal <chan_1>.
+    Found 8-bit register for signal <chan_2>.
+    Found 8-bit register for signal <chan_3>.
+    Found 8-bit register for signal <chan_4>.
+    Found 8-bit register for signal <chan_5>.
+    Found 8-bit register for signal <chan_6>.
+    Found 8-bit register for signal <chan_7>.
+    Found 1-bit register for signal <fvals_q>.
+    Found finite state machine <FSM_8> for signal <fsm_even>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_rxg (rising_edge)                          |
+    | Reset              | rst_rx_n_INV_253_o (positive)                  |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_7> for signal <fsm_gen_lval>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk_txg (rising_edge)                          |
+    | Reset              | rst_tx_n_INV_258_o (positive)                  |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit adder for signal <cnt_lval[11]_GND_47_o_add_8_OUT> created at line 202.
+    Found 8-bit adder for signal <wr_addr[7]_GND_47_o_add_90_OUT> created at line 298.
+    Found 2-bit adder for signal <cnt_wr[1]_GND_47_o_add_91_OUT> created at line 301.
+    Found 8-bit adder for signal <rd_addr[7]_GND_47_o_add_110_OUT> created at line 356.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0356> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0379> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0388> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0397> created at line 382.
+    Found 3-bit 4-to-1 multiplexer for signal <_n0415> created at line 334.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0433> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0442> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0451> created at line 382.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0460> created at line 382.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 403 D-type flip-flop(s).
+	inferred  22 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <image_buffer> synthesized.
+
+Synthesizing Unit <gen_image_val>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/gen_image_val.v".
+        s_IDLE = 1'b0
+        s_GEN = 1'b1
+    Set property "KEEP = TRUE" for signal <cnt_sync>.
+    Set property "KEEP = TRUE" for signal <fsm_gen>.
+    Found 10-bit register for signal <cnt_cycle>.
+    Found 12-bit register for signal <cnt_row>.
+    Found 4-bit register for signal <cnt_sync>.
+    Found 1-bit register for signal <fval>.
+    Found 1-bit register for signal <lval>.
+    Found 1-bit register for signal <fsm_gen>.
+    Found 10-bit subtractor for signal <reg_cnt_timing_cycle[9]_GND_49_o_sub_9_OUT> created at line 92.
+    Found 12-bit subtractor for signal <window_row_length[11]_GND_49_o_sub_14_OUT> created at line 102.
+    Found 4-bit adder for signal <cnt_sync[3]_GND_49_o_add_3_OUT> created at line 87.
+    Found 10-bit adder for signal <cnt_cycle[9]_GND_49_o_add_10_OUT> created at line 97.
+    Found 12-bit adder for signal <cnt_row[11]_GND_49_o_add_15_OUT> created at line 109.
+    Found 10-bit comparator equal for signal <cnt_cycle[9]_reg_cnt_timing_cycle[9]_equal_10_o> created at line 92
+    Found 12-bit comparator equal for signal <cnt_row[11]_window_row_length[11]_equal_15_o> created at line 102
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <gen_image_val> synthesized.
+
+Synthesizing Unit <image_tx>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/image_tx.v".
+    Summary:
+	no macro.
+Unit <image_tx> synthesized.
+
+Synthesizing Unit <odes2ser_7_to_1>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/odes2ser_7_to_1.v".
+    Summary:
+Unit <odes2ser_7_to_1> synthesized.
+
+Synthesizing Unit <test_io_module>.
+    Related source file is "e:/hangwang/hangwang/g200_gln_hdr_chan_cho_final_v2.0/test_io_module.v".
+    Summary:
+	no macro.
+Unit <test_io_module> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x2-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 2
+ 10x3-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 152
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 3
+ 12-bit adder                                          : 5
+ 12-bit subtractor                                     : 3
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 3
+ 2-bit adder                                           : 2
+ 24-bit subtractor                                     : 11
+ 25-bit subtractor                                     : 1
+ 3-bit adder                                           : 35
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 32
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 4
+ 8-bit subtractor                                      : 3
+ 9-bit adder                                           : 32
+# Registers                                            : 774
+ 1-bit register                                        : 427
+ 10-bit register                                       : 7
+ 11-bit register                                       : 10
+ 12-bit register                                       : 61
+ 128-bit register                                      : 1
+ 16-bit register                                       : 6
+ 18-bit register                                       : 1
+ 2-bit register                                        : 5
+ 24-bit register                                       : 13
+ 256-bit register                                      : 1
+ 3-bit register                                        : 40
+ 32-bit register                                       : 2
+ 4-bit register                                        : 6
+ 5-bit register                                        : 41
+ 6-bit register                                        : 97
+ 8-bit register                                        : 24
+ 9-bit register                                        : 32
+# Comparators                                          : 18
+ 10-bit comparator equal                               : 2
+ 12-bit comparator equal                               : 4
+ 12-bit comparator greater                             : 2
+ 12-bit comparator lessequal                           : 2
+ 24-bit comparator equal                               : 1
+ 24-bit comparator greater                             : 5
+ 32-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 1007
+ 1-bit 2-to-1 multiplexer                              : 572
+ 1-bit 32-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 13
+ 11-bit 2-to-1 multiplexer                             : 22
+ 12-bit 2-to-1 multiplexer                             : 10
+ 12-bit 32-to-1 multiplexer                            : 1
+ 12-bit 4-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 13
+ 16-bit 4-to-1 multiplexer                             : 1
+ 18-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+ 24-bit 2-to-1 multiplexer                             : 18
+ 256-bit 32-to-1 multiplexer                           : 1
+ 3-bit 2-to-1 multiplexer                              : 41
+ 3-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 61
+ 5-bit 2-to-1 multiplexer                              : 165
+ 6-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 19
+ 8-bit 4-to-1 multiplexer                              : 8
+ 9-bit 2-to-1 multiplexer                              : 32
+# FSMs                                                 : 40
+# Xors                                                 : 17
+ 1-bit xor2                                            : 17
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/shifter_var_w12_d16.ngc>.
+Reading core <ipcore_dir/shift_register_1_var.ngc>.
+Reading core <ipcore_dir/simple_dual_ram_w24_d512.ngc>.
+Reading core <ipcore_dir/fifo_8_1024.ngc>.
+Reading core <ipcore_dir/bram_28_1024.ngc>.
+Reading core <ipcore_dir/fot_rst_bram.ngc>.
+Reading core <ipcore_dir/fot_sig_bram.ngc>.
+Reading core <ipcore_dir/mult.ngc>.
+Loading core <shifter_var_w12_d16> for timing and area information for instance <shifter_var>.
+Loading core <shift_register_1_var> for timing and area information for instance <shift_sync>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram0>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram1>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram2>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram3>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram4>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram5>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram6>.
+Loading core <simple_dual_ram_w24_d512> for timing and area information for instance <dram7>.
+Loading core <fifo_8_1024> for timing and area information for instance <fifo_train>.
+Loading core <fifo_8_1024> for timing and area information for instance <fifo_sensor>.
+Loading core <bram_28_1024> for timing and area information for instance <timing_bram>.
+Loading core <fot_rst_bram> for timing and area information for instance <fot_rst_timing>.
+Loading core <fot_sig_bram> for timing and area information for instance <fot_sig_timing>.
+Loading core <mult> for timing and area information for instance <mult_rd_length>.
+INFO:Xst:2261 - The FF/Latch <reg_camera_control_0> in Unit <cl_protocol_decoder> is equivalent to the following FF/Latch, which will be removed : <reg_camera_control_1> 
+WARNING:Xst:1710 - FF/Latch <flag_2_2> (without init value) has a constant value of 0 in block <image_buffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pll_sel_2> (without init value) has a constant value of 0 in block <cl_protocol_decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_0> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_1> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_2> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_3> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_4> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_5> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_6> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_7> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_8> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_9> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_10> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <reg_camera_control_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_camera_control_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_camera_control_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_0> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_1> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_5> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_6> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <cnt_fot_rst_11> of sequential type is unconnected in block <sequencer>.
+WARNING:Xst:2404 -  FFs/Latches <flag_2<2:2>> (without init value) have a constant value of 0 in block <image_buffer>.
+
+Synthesizing (advanced) Unit <cl_serial_in>.
+The following registers are absorbed into counter <rx_cnt_bit>: 1 register on signal <rx_cnt_bit>.
+INFO:Xst:3231 - The small RAM <Mram__n0396> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <reg_rb>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <cl_serial_in> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cl_serial_out>.
+The following registers are absorbed into counter <tx_cnt_bit>: 1 register on signal <tx_cnt_bit>.
+Unit <cl_serial_out> synthesized (advanced).
+
+Synthesizing (advanced) Unit <gen_image_val>.
+The following registers are absorbed into counter <cnt_row>: 1 register on signal <cnt_row>.
+Unit <gen_image_val> synthesized (advanced).
+
+Synthesizing (advanced) Unit <image_buffer>.
+The following registers are absorbed into counter <cnt_wr>: 1 register on signal <cnt_wr>.
+The following registers are absorbed into counter <rd_addr>: 1 register on signal <rd_addr>.
+Unit <image_buffer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <iserdes_1_to_12_data_diff>.
+The following registers are absorbed into counter <cnt_bitslip>: 1 register on signal <cnt_bitslip>.
+Unit <iserdes_1_to_12_data_diff> synthesized (advanced).
+
+Synthesizing (advanced) Unit <iserdes_1_to_6_data_diff>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <iserdes_1_to_6_data_diff> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sensor_controller>.
+The following registers are absorbed into counter <cnt_frame_req>: 1 register on signal <cnt_frame_req>.
+Unit <sensor_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sequencer_g200>.
+The following registers are absorbed into counter <cnt_frames>: 1 register on signal <cnt_frames>.
+The following registers are absorbed into counter <cnt_tx2_1>: 1 register on signal <cnt_tx2_1>.
+The following registers are absorbed into counter <cnt_fot>: 1 register on signal <cnt_fot>.
+	Multiplier <Mmult_PWR_31_o_reg_cnt_timing_cycle[9]_MuLt_210_OUT> in block <sequencer_g200> and adder/subtractor <Msub_GND_29_o_GND_29_o_sub_212_OUT> in block <sequencer_g200> are combined into a MAC<Maddsub_PWR_31_o_reg_cnt_timing_cycle[9]_MuLt_210_OUT>.
+Unit <sequencer_g200> synthesized (advanced).
+
+Synthesizing (advanced) Unit <training>.
+The following registers are absorbed into counter <cnt_static_err>: 1 register on signal <cnt_static_err>.
+The following registers are absorbed into counter <cnt_static>: 1 register on signal <cnt_static>.
+The following registers are absorbed into counter <cnt_timeout1>: 1 register on signal <cnt_timeout1>.
+The following registers are absorbed into counter <cnt_timeout2>: 1 register on signal <cnt_timeout2>.
+INFO:Xst:3231 - The small RAM <Mram__n1233> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 2-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <fsm_align>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <training> synthesized (advanced).
+WARNING:Xst:2677 - Node <reg_camera_control_q_0> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_1> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_5> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <reg_camera_control_q_6> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:2677 - Node <cnt_fot_rst_11> of sequential type is unconnected in block <sequencer_g200>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x2-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 10x3-to-14-bit MAC                                    : 1
+# Multipliers                                          : 1
+ 10x3-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 73
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 3
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 3
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 3
+ 2-bit adder                                           : 1
+ 24-bit subtractor                                     : 10
+ 24-bit subtractor borrow in                           : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 32
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 3
+# Counters                                             : 77
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 2
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 3-bit down counter                                    : 1
+ 3-bit up counter                                      : 35
+ 8-bit up counter                                      : 3
+ 9-bit up counter                                      : 32
+# Registers                                            : 3140
+ Flip-Flops                                            : 3140
+# Comparators                                          : 18
+ 10-bit comparator equal                               : 2
+ 12-bit comparator equal                               : 4
+ 12-bit comparator greater                             : 2
+ 12-bit comparator lessequal                           : 2
+ 24-bit comparator equal                               : 1
+ 24-bit comparator greater                             : 5
+ 32-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 928
+ 1-bit 2-to-1 multiplexer                              : 568
+ 1-bit 32-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 13
+ 11-bit 2-to-1 multiplexer                             : 22
+ 12-bit 2-to-1 multiplexer                             : 9
+ 12-bit 32-to-1 multiplexer                            : 1
+ 12-bit 4-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 11
+ 16-bit 4-to-1 multiplexer                             : 1
+ 18-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 24-bit 2-to-1 multiplexer                             : 18
+ 256-bit 32-to-1 multiplexer                           : 1
+ 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 61
+ 5-bit 2-to-1 multiplexer                              : 165
+ 6-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 16
+ 8-bit 4-to-1 multiplexer                              : 8
+# FSMs                                                 : 40
+# Xors                                                 : 17
+ 1-bit xor2                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <pll_sel_2> (without init value) has a constant value of 0 in block <cl_protocol_decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_camera_control_0> (without init value) has a constant value of 0 in block <cl_protocol_decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_camera_control_1> (without init value) has a constant value of 0 in block <cl_protocol_decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_rst_0> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_1> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_2> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_3> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_4> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_5> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_6> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_7> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_8> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_9> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_fot_rst_10> (without init value) has a constant value of 0 in block <sequencer_g200>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <image_rx/training/loop1[0].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[1].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[2].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[3].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[4].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[5].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[6].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[7].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[8].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[9].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[10].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[11].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[12].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[13].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[14].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[15].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[16].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[17].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[18].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[19].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[20].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[21].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[22].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[23].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[24].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[25].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[26].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[27].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[28].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[29].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[30].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/FSM_6> on signal <state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 010
+ 0011  | 011
+ 0100  | 100
+ 0101  | 101
+ 0110  | 110
+ 0111  | 111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <image_rx/image_buffer/FSM_8> on signal <fsm_even[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <image_rx/image_buffer/FSM_7> on signal <fsm_gen_lval[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <cl_serial/cl_serial_in/FSM_0> on signal <fsm_sertc[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 110   | 110
+ 010   | 010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <cl_serial/cl_serial_out/FSM_1> on signal <fsm_sertfg[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 11    | 11
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sensor_spi/FSM_3> on signal <fsm_gen_spi_clk[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0001  | 00
+ 0010  | 01
+ 0100  | 10
+ 1000  | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sensor_spi/FSM_4> on signal <fsm_sensor_spi[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 000
+ 00010 | 001
+ 00100 | 010
+ 01000 | 011
+ 10000 | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sensor_controller/FSM_2> on signal <fsm_controller[1:2]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000001 | 00
+ 00000010 | 01
+ 00000100 | 10
+ 00001000 | 11
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <sequencer/FSM_5> on signal <flag_cho[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 001
+ 100   | 010
+ 101   | 011
+ 001   | 100
+-------------------
+WARNING:Xst:1710 - FF/Latch <shifter_addr_0_95> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_94> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_93> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_92> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_91> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_90> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_89> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_88> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_87> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_86> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_85> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_84> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_83> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_82> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_81> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_80> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_79> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_78> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_77> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_76> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_75> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_74> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_73> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_72> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_71> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_70> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_69> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_68> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_67> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_66> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_65> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_64> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_127> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_126> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_125> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_124> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_123> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_122> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_121> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_120> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_119> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_118> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_117> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_116> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_115> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_114> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_113> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_112> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_111> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_110> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_109> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_108> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_107> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_106> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_105> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_104> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_103> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_102> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_101> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_100> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_99> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_98> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_97> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_96> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_31> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_30> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_29> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_28> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_27> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_26> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_25> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_24> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_23> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_22> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_21> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_20> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_19> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_18> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_17> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_16> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_15> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_14> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_13> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_12> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_11> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_10> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_9> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_8> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_7> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_6> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_5> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_4> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_3> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_2> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_1> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_0> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_63> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_62> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_61> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_60> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_59> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_58> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_57> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_56> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_55> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_54> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_53> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_52> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_51> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_50> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_49> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_48> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_47> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_46> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_45> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_44> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_43> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_42> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_41> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_40> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_39> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_38> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_37> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_36> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_35> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_34> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_33> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shifter_addr_0_32> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance PLL_BASE_INST in unit PLL_BASE_INST of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance PLL_BASE_INST in unit PLL_BASE_INST of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <fifo_train_din_4> in Unit <training> is equivalent to the following 3 FFs/Latches, which will be removed : <fifo_train_din_5> <fifo_train_din_6> <fifo_train_din_7> 
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'clk_rxg_x2_inv:O'
+Last warning will be issued only once.
+
+Optimizing unit <cl_serial_top> ...
+
+Optimizing unit <test_io_module> ...
+
+Optimizing unit <G200_top> ...
+
+Optimizing unit <image_rx> ...
+
+Optimizing unit <training> ...
+
+Optimizing unit <iserdes_1_to_12_data_diff> ...
+
+Optimizing unit <gearbox_2_to_1> ...
+
+Optimizing unit <iserdes_1_to_6_data_diff> ...
+
+Optimizing unit <gen_image_val> ...
+
+Optimizing unit <clock_generator_pll_b1> ...
+
+Optimizing unit <image_buffer> ...
+WARNING:Xst:1710 - FF/Latch <cnt_wr_1> (without init value) has a constant value of 0 in block <image_buffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_wr_1> (without init value) has a constant value of 0 in block <image_buffer>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <clocking> ...
+
+Optimizing unit <gclk_2_gpio> ...
+
+Optimizing unit <gclk_2_sdr_2> ...
+
+Optimizing unit <fifo_mapping> ...
+
+Optimizing unit <cl_protocol_decoder> ...
+
+Optimizing unit <cl_serial_in> ...
+
+Optimizing unit <cl_serial_out> ...
+
+Optimizing unit <sensor_spi> ...
+
+Optimizing unit <image_tx> ...
+
+Optimizing unit <odes2ser_7_to_1> ...
+
+Optimizing unit <sensor_controller> ...
+
+Optimizing unit <sequencer_g200> ...
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_1> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_2> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_3> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_4> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_7> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_8> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_9> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_10> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_1_11> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_enable> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_1> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_2> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_3> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_4> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_7> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_8> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_9> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_10> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_0_11> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_1> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_2> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_3> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_4> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_7> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_8> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_9> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_10> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_2_11> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_1> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_2> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_3> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_4> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_7> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_8> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_9> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_10> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_test_image_chan_3_11> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <hdr_enable> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_camera_control_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_camera_control_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <reg_window_row_start_11> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_0> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_1> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_2> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_3> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_4> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_5> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_6> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_7> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_8> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_9> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <fot_rst_timing_cycle_10> of sequential type is unconnected in block <cl_protocol_decoder>.
+WARNING:Xst:2677 - Node <cmd_gen_test_image> of sequential type is unconnected in block <sensor_controller>.
+WARNING:Xst:1710 - FF/Latch <cnt_bitalign_14> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_bitalign_15> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_static_11> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_static_12> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_static_13> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_static_14> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_static_15> (without init value) has a constant value of 0 in block <training>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_rd_2> (without init value) has a constant value of 0 in block <image_buffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wr_addr_7> (without init value) has a constant value of 0 in block <image_buffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_4> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_5> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_6> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_7> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_8> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_frame_req_9> (without init value) has a constant value of 0 in block <sensor_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_tx2_1_11> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_tx2_1_10> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_tx2_1_9> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_tx2_1_8> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_7> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_6> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_5> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_4> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cnt_fot_3> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <fsm_global_3> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_23> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_22> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_21> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_20> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_19> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_18> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_17> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_16> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_15> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_14> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <remainder_2_13> (without init value) has a constant value of 0 in block <sequencer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <reset_0> in Unit <training> is equivalent to the following 31 FFs/Latches, which will be removed : <reset_1> <reset_2> <reset_3> <reset_4> <reset_5> <reset_6> <reset_7> <reset_8> <reset_9> <reset_10> <reset_11> <reset_12> <reset_13> <reset_14> <reset_15> <reset_16> <reset_17> <reset_18> <reset_19> <reset_20> <reset_21> <reset_22> <reset_23> <reset_24> <reset_25> <reset_26> <reset_27> <reset_28> <reset_29> <reset_30> <reset_31> 
+INFO:Xst:2261 - The FF/Latch <lval_image> in Unit <image_buffer> is equivalent to the following FF/Latch, which will be removed : <fsm_gen_lval_FSM_FFd2> 
+INFO:Xst:2261 - The FF/Latch <lvals_q> in Unit <image_buffer> is equivalent to the following FF/Latch, which will be removed : <fsm_even_FSM_FFd1> 
+INFO:Xst:2261 - The FF/Latch <spi_clk_out> in Unit <sensor_spi> is equivalent to the following FF/Latch, which will be removed : <cnt_spi_clk_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block G200_top, actual ratio is 1.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_sensor> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo_train> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+
+Final Macro Processing ...
+
+Processing Unit <clock_generator_b1> :
+INFO:Xst:741 - HDL ADVISOR - A 5-bit shift register was found for signal <rst_pll_pipe_0> and currently occupies 5 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <clock_generator_b1> processed.
+
+Processing Unit <clocking> :
+INFO:Xst:741 - HDL ADVISOR - A 5-bit shift register was found for signal <rst_pll_n_pipe_0> and currently occupies 5 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+INFO:Xst:741 - HDL ADVISOR - A 5-bit shift register was found for signal <rst_dcm4_n_pipe_0> and currently occupies 5 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+INFO:Xst:741 - HDL ADVISOR - A 5-bit shift register was found for signal <rst_dcm3_n_pipe_0> and currently occupies 5 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <clocking> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3461
+ Flip-Flops                                            : 3461
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : G200_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5845
+#      GND                         : 111
+#      INV                         : 425
+#      LUT1                        : 70
+#      LUT2                        : 374
+#      LUT3                        : 612
+#      LUT4                        : 724
+#      LUT5                        : 749
+#      LUT6                        : 1180
+#      MUXCY                       : 761
+#      MUXF7                       : 36
+#      VCC                         : 109
+#      XORCY                       : 694
+# FlipFlops/Latches                : 4118
+#      FD                          : 486
+#      FDC                         : 162
+#      FDCE                        : 88
+#      FDE                         : 233
+#      FDP                         : 16
+#      FDPE                        : 2
+#      FDR                         : 1461
+#      FDR_1                       : 126
+#      FDRE                        : 1424
+#      FDRE_1                      : 68
+#      FDS                         : 40
+#      FDS_1                       : 7
+#      FDSE                        : 1
+#      ODDR2                       : 4
+# RAMS                             : 14
+#      RAMB16BWER                  : 3
+#      RAMB8BWER                   : 11
+# Shift Registers                  : 385
+#      SRLC32E                     : 385
+# Clock Buffers                    : 13
+#      BUFG                        : 13
+# IO Buffers                       : 110
+#      IBUF                        : 2
+#      IBUFDS                      : 34
+#      IBUFG                       : 2
+#      OBUF                        : 55
+#      OBUFDS                      : 17
+# DCMs                             : 4
+#      DCM_SP                      : 4
+# DSPs                             : 2
+#      DSP48A1                     : 2
+# Others                           : 162
+#      BUFPLL                      : 2
+#      IODELAY2                    : 64
+#      ISERDES2                    : 64
+#      OSERDES2                    : 30
+#      PLL_ADV                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150fgg900-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4118  out of  184304     2%  
+ Number of Slice LUTs:                 4519  out of  92152     4%  
+    Number used as Logic:              4134  out of  92152     4%  
+    Number used as Memory:              385  out of  21680     1%  
+       Number used as SRL:              385
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6639
+   Number with an unused Flip Flop:    2521  out of   6639    37%  
+   Number with an unused LUT:          2120  out of   6639    31%  
+   Number of fully used LUT-FF pairs:  1998  out of   6639    30%  
+   Number of unique control sets:       409
+
+IO Utilization: 
+ Number of IOs:                         161
+ Number of bonded IOBs:                  93  out of    576    16%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                9  out of    268     3%  
+    Number using Block RAM only:          9
+ Number of BUFG/BUFGCTRLs:               13  out of     16    81%  
+ Number of DSP48A1s:                      2  out of    180     1%  
+ Number of PLL_ADVs:                      2  out of      6    33%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)                                                                                 | Load  |
+-------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------+
+clk_col_out                                      | IBUFG+BUFG                                                                                            | 2047  |
+image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1| BUFG                                                                                                  | 1536  |
+clocking/PLL_BASE_INST/CLKOUT1                   | BUFG                                                                                                  | 110   |
+clk_50M                                          | DCM_SP_DCM8:CLKFX                                                                                     | 725   |
+clk_50M                                          | DCM_SP_DCM3:CLKFX                                                                                     | 7     |
+clk_50M                                          | DCM_SP_DCM4:CLKFX                                                                                     | 2     |
+sensor_spi/spi_clk_out                           | NONE(cl_serial/fifo_mapping/fifo_sensor/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN)| 107   |
+test/test_out<4>                                 | NONE(test/gclk_2_gpio/ODDR2_INST)                                                                     | 1     |
+test/gclk_2_gpio/N0                              | NONE(test/gclk_2_gpio/ODDR2_INST)                                                                     | 1     |
+-------------------------------------------------+-------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.782ns (Maximum Frequency: 128.499MHz)
+   Minimum input arrival time before clock: 4.399ns
+   Maximum output required time after clock: 4.934ns
+   Maximum combinational path delay: 3.150ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_col_out'
+  Clock period: 7.782ns (frequency: 128.499MHz)
+  Total number of paths / destination ports: 174897 / 2828
+-------------------------------------------------------------------------
+Delay:               7.782ns (Levels of Logic = 7)
+  Source:            sequencer/t3_length_13 (FF)
+  Destination:       sequencer/cnt_decoder_3 (FF)
+  Source Clock:      clk_col_out rising
+  Destination Clock: clk_col_out rising
+
+  Data Path: sequencer/t3_length_13 to sequencer/cnt_decoder_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   1.015  t3_length_13 (t3_length_13)
+     LUT6:I0->O            1   0.203   0.827  t3_length[23]_GND_29_o_equal_44_o<23>1 (t3_length[23]_GND_29_o_equal_44_o<23>)
+     LUT4:I0->O           11   0.203   0.883  t3_length[23]_GND_29_o_equal_44_o<23>5 (t3_length[23]_GND_29_o_equal_44_o)
+     LUT4:I3->O           11   0.205   0.883  Mmux__n0691411 (Mmux__n069141)
+     LUT6:I5->O            2   0.205   0.617  _n1134_inv4 (_n1134_inv4)
+     LUT6:I5->O           10   0.205   0.961  _n1134_inv3_SW0 (N100)
+     LUT6:I4->O            2   0.203   0.617  _n1134_inv5 (_n1134_inv)
+     LUT6:I5->O            1   0.205   0.000  cnt_decoder_3_rstpot (cnt_decoder_3_rstpot)
+     FDR:D                     0.102          cnt_decoder_3
+    ----------------------------------------
+    Total                      7.782ns (1.978ns logic, 5.804ns route)
+                                       (25.4% logic, 74.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1'
+  Clock period: 5.218ns (frequency: 191.646MHz)
+  Total number of paths / destination ports: 12544 / 1760
+-------------------------------------------------------------------------
+Delay:               5.218ns (Levels of Logic = 4)
+  Source:            image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4 (FF)
+  Destination:       image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4 (FF)
+  Source Clock:      image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1 rising
+  Destination Clock: image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1 rising
+
+  Data Path: image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4 to image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.447   1.028  pdcounter_4 (pdcounter_4)
+     LUT5:I0->O           11   0.203   1.130  pdcounter[4]_GND_39_o_equal_52_o<4>1 (pdcounter[4]_GND_39_o_equal_52_o)
+     LUT5:I1->O            3   0.203   0.755  Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<1>11 (Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<1>)
+     LUT5:I3->O            1   0.203   0.944  Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<3>11 (Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<3>)
+     LUT6:I0->O            1   0.203   0.000  Mmux_PWR_45_o_PWR_45_o_mux_66_OUT5 (PWR_45_o_PWR_45_o_mux_66_OUT<4>)
+     FDE:D                     0.102          pdcounter_4
+    ----------------------------------------
+    Total                      5.218ns (1.361ns logic, 3.857ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clocking/PLL_BASE_INST/CLKOUT1'
+  Clock period: 4.922ns (frequency: 203.188MHz)
+  Total number of paths / destination ports: 964 / 183
+-------------------------------------------------------------------------
+Delay:               4.922ns (Levels of Logic = 4)
+  Source:            image_rx/image_buffer/cnt_lval_10 (FF)
+  Destination:       image_rx/image_buffer/cnt_lval_0 (FF)
+  Source Clock:      clocking/PLL_BASE_INST/CLKOUT1 rising
+  Destination Clock: clocking/PLL_BASE_INST/CLKOUT1 rising
+
+  Data Path: image_rx/image_buffer/cnt_lval_10 to image_rx/image_buffer/cnt_lval_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.981  cnt_lval_10 (cnt_lval_10)
+     LUT6:I0->O            3   0.203   1.015  cnt_lval[11]_GND_47_o_equal_12_o<11>11 (cnt_lval[11]_GND_47_o_equal_12_o<11>1)
+     LUT6:I0->O            3   0.203   0.651  cnt_lval[11]_GND_47_o_equal_8_o<11> (cnt_lval[11]_GND_47_o_equal_8_o)
+     LUT6:I5->O           12   0.205   0.909  Mmux__n036313 (Mmux__n036313)
+     LUT2:I1->O            1   0.205   0.000  Mmux__n0363121 (_n0363<9>)
+     FDRE:D                    0.102          cnt_lval_9
+    ----------------------------------------
+    Total                      4.922ns (1.365ns logic, 3.557ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50M'
+  Clock period: 5.758ns (frequency: 173.666MHz)
+  Total number of paths / destination ports: 14383 / 2052
+-------------------------------------------------------------------------
+Delay:               8.061ns (Levels of Logic = 7)
+  Source:            cl_serial/cl_serial_in/reg_addr_6 (FF)
+  Destination:       cl_serial/cl_protocol_decoder/training_word_0 (FF)
+  Source Clock:      clk_50M falling 0.4X
+  Destination Clock: clk_50M rising 0.4X
+
+  Data Path: cl_serial/cl_serial_in/reg_addr_6 to cl_serial/cl_protocol_decoder/training_word_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q          17   0.447   1.256  reg_addr_6 (reg_addr_6)
+     end scope: 'cl_serial/cl_serial_in:reg_addr<6>'
+     begin scope: 'cl_serial/cl_protocol_decoder:reg_addr<6>'
+     LUT3:I0->O           18   0.205   1.297  reg_addr[7]_GND_17_o_equal_10_o<7>11 (reg_addr[7]_GND_17_o_equal_10_o<7>1)
+     LUT6:I2->O            2   0.203   0.981  reg_addr[7]_GND_17_o_equal_16_o<7>1 (reg_addr[7]_GND_17_o_equal_16_o)
+     LUT6:I0->O            1   0.203   0.808  _n11211 (_n11211)
+     LUT6:I3->O            1   0.205   0.808  _n11213 (_n11213)
+     LUT3:I0->O           12   0.205   1.137  _n11218 (_n1121)
+     LUT6:I3->O            1   0.205   0.000  reg_addr[7]_training_word[11]_select_28_OUT<11>1 (reg_addr[7]_training_word[11]_select_28_OUT<11>)
+     FDRE:D                    0.102          training_word_11
+    ----------------------------------------
+    Total                      8.061ns (1.775ns logic, 6.286ns route)
+                                       (22.0% logic, 78.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sensor_spi/spi_clk_out'
+  Clock period: 6.200ns (frequency: 161.289MHz)
+  Total number of paths / destination ports: 968 / 159
+-------------------------------------------------------------------------
+Delay:               6.200ns (Levels of Logic = 6)
+  Source:            sensor_spi/reg_cnt_byte_1 (FF)
+  Destination:       sensor_spi/spi_in (FF)
+  Source Clock:      sensor_spi/spi_clk_out falling
+  Destination Clock: sensor_spi/spi_clk_out falling
+
+  Data Path: sensor_spi/reg_cnt_byte_1 to sensor_spi/spi_in
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q           71   0.447   1.791  reg_cnt_byte_1 (reg_cnt_byte_1)
+     LUT4:I2->O           16   0.203   1.369  GND_28_o_GND_28_o_sub_80_OUT<3>1 (GND_28_o_GND_28_o_sub_80_OUT<3>)
+     LUT6:I0->O            1   0.203   0.000  Mmux_GND_28_o_rb2[31][6]_Mux_82_o_4 (Mmux_GND_28_o_rb2[31][6]_Mux_82_o_4)
+     MUXF7:I0->O           1   0.131   0.827  Mmux_GND_28_o_rb2[31][6]_Mux_82_o_2_f7 (GND_28_o_rb2[31][6]_Mux_82_o)
+     LUT6:I2->O            1   0.203   0.000  Mmux_reg_cnt_bit[2]_GND_28_o_Mux_95_o_3 (Mmux_reg_cnt_bit[2]_GND_28_o_Mux_95_o_3)
+     MUXF7:I1->O           1   0.140   0.580  Mmux_reg_cnt_bit[2]_GND_28_o_Mux_95_o_2_f7 (reg_cnt_bit[2]_GND_28_o_Mux_95_o)
+     LUT6:I5->O            1   0.205   0.000  fsm_sensor_spi[4]_GND_28_o_Select_122_o1 (fsm_sensor_spi[4]_GND_28_o_Select_122_o)
+     FDR_1:D                   0.102          spi_in
+    ----------------------------------------
+    Total                      6.200ns (1.634ns logic, 4.566ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1'
+  Total number of paths / destination ports: 1536 / 928
+-------------------------------------------------------------------------
+Offset:              4.399ns (Levels of Logic = 4)
+  Source:            image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/iserdes_m:INCDEC (PAD)
+  Destination:       image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4 (FF)
+  Destination Clock: image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1 rising
+
+  Data Path: image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/iserdes_m:INCDEC to image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/pdcounter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    ISERDES2:INCDEC        8   0.000   1.167  iserdes_m (incdec_data)
+     LUT6:I0->O            2   0.203   0.617  incdec_data_pdcounter[4]_AND_234_o1 (incdec_data_pdcounter[4]_AND_234_o1)
+     LUT5:I4->O            3   0.205   0.755  Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<1>11 (Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<1>)
+     LUT5:I3->O            1   0.203   0.944  Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<3>11 (Maddsub_pdcounter[4]_pdcounter[4]_mux_60_OUT_cy<3>)
+     LUT6:I0->O            1   0.203   0.000  Mmux_PWR_45_o_PWR_45_o_mux_66_OUT5 (PWR_45_o_PWR_45_o_mux_66_OUT<4>)
+     FDE:D                     0.102          pdcounter_4
+    ----------------------------------------
+    Total                      4.399ns (0.916ns logic, 3.483ns route)
+                                       (20.8% logic, 79.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50M'
+  Total number of paths / destination ports: 12 / 11
+-------------------------------------------------------------------------
+Offset:              3.324ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       clocking/rst_dcm4_n_pipe_0 (FF)
+  Destination Clock: clk_50M rising 0.4X
+
+  Data Path: rst_n to clocking/rst_dcm4_n_pipe_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  rst_n_IBUF (rst_n_IBUF)
+     begin scope: 'clocking:rst_n'
+     LUT2:I0->O            5   0.203   0.714  rst_n_dcm4_locked_OR_1_o1 (rst_n_dcm4_locked_OR_1_o)
+     FDR:R                     0.430          rst_dcm4_n_pipe_0
+    ----------------------------------------
+    Total                      3.324ns (1.855ns logic, 1.469ns route)
+                                       (55.8% logic, 44.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sensor_spi/spi_clk_out'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 2)
+  Source:            spi_out (PAD)
+  Destination:       sensor_spi/reg_spi_dout_0 (FF)
+  Destination Clock: sensor_spi/spi_clk_out falling
+
+  Data Path: spi_out to sensor_spi/reg_spi_dout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  spi_out_IBUF (spi_out_IBUF)
+     begin scope: 'sensor_spi:spi_out'
+     FDRE_1:D                  0.102          reg_spi_dout_0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_col_out'
+  Total number of paths / destination ports: 94 / 94
+-------------------------------------------------------------------------
+Offset:              3.732ns (Levels of Logic = 2)
+  Source:            sequencer/fot_dout_0 (FF)
+  Destination:       fot_dout<0> (PAD)
+  Source Clock:      clk_col_out rising
+
+  Data Path: sequencer/fot_dout_0 to fot_dout<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   0.714  fot_dout_0 (fot_dout_0)
+     end scope: 'sequencer:fot_dout<0>'
+     OBUF:I->O                 2.571          fot_dout_0_OBUF (fot_dout<0>)
+    ----------------------------------------
+    Total                      3.732ns (3.018ns logic, 0.714ns route)
+                                       (80.9% logic, 19.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50M'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.934ns (Levels of Logic = 2)
+  Source:            sensor_spi/spi_clk_out (FF)
+  Destination:       spi_clk (PAD)
+  Source Clock:      clk_50M rising 0.4X
+
+  Data Path: sensor_spi/spi_clk_out to spi_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            115   0.447   1.916  spi_clk_out (spi_clk_out)
+     end scope: 'sensor_spi:spi_clk'
+     OBUF:I->O                 2.571          spi_clk_OBUF (spi_clk)
+    ----------------------------------------
+    Total                      4.934ns (3.018ns logic, 1.916ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clocking/PLL_BASE_INST/CLKOUT1'
+  Total number of paths / destination ports: 102 / 102
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 3)
+  Source:            image_rx/image_buffer/lval (FF)
+  Destination:       test_io<1> (PAD)
+  Source Clock:      clocking/PLL_BASE_INST/CLKOUT1 rising
+
+  Data Path: image_rx/image_buffer/lval to test_io<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.683  lval (lval)
+     end scope: 'image_rx/image_buffer:lval'
+     end scope: 'image_rx:lval'
+     begin scope: 'test:test_in_1'
+     end scope: 'test:test_out<1>'
+     OBUF:I->O                 2.571          test_io_1_OBUF (test_io<1>)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sensor_spi/spi_clk_out'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 2)
+  Source:            sensor_spi/spi_write (FF)
+  Destination:       spi_write (PAD)
+  Source Clock:      sensor_spi/spi_clk_out falling
+
+  Data Path: sensor_spi/spi_write to spi_write
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            2   0.447   0.616  spi_write (spi_write)
+     end scope: 'sensor_spi:spi_write'
+     OBUF:I->O                 2.571          spi_write_OBUF (spi_write)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1'
+  Total number of paths / destination ports: 320 / 320
+-------------------------------------------------------------------------
+Offset:              1.191ns (Levels of Logic = 1)
+  Source:            image_rx/training/loop1[31].receiver_iserdes_bank1/bitslip_r (FF)
+  Destination:       image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/iserdes_m:BITSLIP (PAD)
+  Source Clock:      image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1 falling
+
+  Data Path: image_rx/training/loop1[31].receiver_iserdes_bank1/bitslip_r to image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/iserdes_m:BITSLIP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            6   0.447   0.744  bitslip_r (bitslip_r)
+     begin scope: 'image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes:bitslip'
+    ISERDES2:BITSLIP           0.000          iserdes_m
+    ----------------------------------------
+    Total                      1.191ns (0.447ns logic, 0.744ns route)
+                                       (37.5% logic, 62.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 598 / 534
+-------------------------------------------------------------------------
+Delay:               3.150ns (Levels of Logic = 2)
+  Source:            image_tx/loop[4].odes2ser_inst/OSERDES2_master:OQ (PAD)
+  Destination:       cl_xdata_p<3> (PAD)
+
+  Data Path: image_tx/loop[4].odes2ser_inst/OSERDES2_master:OQ to cl_xdata_p<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    OSERDES2:OQ            1   0.000   0.579  OSERDES2_master (dataout)
+     OBUFDS:I->O               2.571          io_data_out (dataout_p)
+     end scope: 'image_tx/loop[4].odes2ser_inst:dataout_p'
+     end scope: 'image_tx:cl_x_p<3>'
+    ----------------------------------------
+    Total                      3.150ns (2.571ns logic, 0.579ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_50M
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk_50M               |    6.387|    8.061|    5.521|         |
+clk_col_out           |         |    1.128|    1.165|         |
+sensor_spi/spi_clk_out|    1.128|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_col_out
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk_50M                                          |   11.846|    1.199|    4.501|         |
+clk_col_out                                      |    7.782|    3.099|    2.992|         |
+image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1|    1.128|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clocking/PLL_BASE_INST/CLKOUT1
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+clk_col_out                   |    4.455|         |         |         |
+clocking/PLL_BASE_INST/CLKOUT1|    4.922|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk_col_out                                      |    5.327|         |    3.844|         |
+image_rx/clock_generator_b1/PLL_BASE_INST/CLKOUT1|    5.218|    1.334|    2.343|         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sensor_spi/spi_clk_out
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk_50M               |    4.721|         |    4.858|         |
+sensor_spi/spi_clk_out|    2.992|    2.786|    6.200|         |
+----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 43.91 secs
+ 
+--> 
+
+Total memory usage is 330252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  360 (   0 filtered)
+Number of infos    :   39 (   0 filtered)
+

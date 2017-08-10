@@ -1,0 +1,44 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jul 25 13:57:56 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset_n" LOCATE = SITE "N4" LEVEL 1;
+COMP "usb_flaga" LOCATE = SITE "E18" LEVEL 1;
+COMP "usb_flagb" LOCATE = SITE "F18" LEVEL 1;
+COMP "usb_flagc" LOCATE = SITE "G18" LEVEL 1;
+COMP "usb_sloe" LOCATE = SITE "H18" LEVEL 1;
+COMP "usb_fifoaddr<0>" LOCATE = SITE "H15" LEVEL 1;
+COMP "usb_fifoaddr<1>" LOCATE = SITE "K12" LEVEL 1;
+COMP "usb_fd<10>" LOCATE = SITE "L18" LEVEL 1;
+COMP "usb_fd<11>" LOCATE = SITE "N15" LEVEL 1;
+COMP "usb_fd<12>" LOCATE = SITE "M18" LEVEL 1;
+COMP "usb_fd<13>" LOCATE = SITE "H12" LEVEL 1;
+COMP "usb_fd<14>" LOCATE = SITE "N17" LEVEL 1;
+COMP "usb_fd<15>" LOCATE = SITE "H13" LEVEL 1;
+COMP "usb_fd<0>" LOCATE = SITE "D17" LEVEL 1;
+COMP "usb_fd<1>" LOCATE = SITE "H16" LEVEL 1;
+COMP "usb_fd<2>" LOCATE = SITE "D18" LEVEL 1;
+COMP "usb_fd<3>" LOCATE = SITE "J16" LEVEL 1;
+COMP "usb_fd<4>" LOCATE = SITE "E16" LEVEL 1;
+COMP "usb_fd<5>" LOCATE = SITE "H14" LEVEL 1;
+COMP "usb_fd<6>" LOCATE = SITE "J13" LEVEL 1;
+COMP "usb_fd<7>" LOCATE = SITE "F17" LEVEL 1;
+COMP "usb_slwr" LOCATE = SITE "N16" LEVEL 1;
+COMP "usb_fd<8>" LOCATE = SITE "L17" LEVEL 1;
+COMP "usb_fd<9>" LOCATE = SITE "K13" LEVEL 1;
+COMP "usb_slcs" LOCATE = SITE "K18" LEVEL 1;
+COMP "fpga_gclk" LOCATE = SITE "V10" LEVEL 1;
+COMP "usb_slrd" LOCATE = SITE "M16" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "access_req" BEL "bus_busy" BEL "data_reg_0" BEL
+        "data_reg_1" BEL "data_reg_2" BEL "data_reg_3" BEL "data_reg_4" BEL
+        "data_reg_5" BEL "data_reg_6" BEL "data_reg_7" BEL "data_reg_8" BEL
+        "data_reg_9" BEL "data_reg_10" BEL "data_reg_11" BEL "data_reg_12" BEL
+        "data_reg_13" BEL "data_reg_14" BEL "data_reg_15" BEL "i_0" BEL "i_1"
+        BEL "i_2" BEL "i_3" BEL "i_4" BEL "usb_state_FSM_FFd3" BEL
+        "usb_state_FSM_FFd2" BEL "usb_state_FSM_FFd1" BEL "usb_fd_en" BEL
+        "usb_slwr" BEL "usb_fifoaddr_1" BEL "usb_slrd" BEL "usb_sloe" BEL
+        "fpga_gclk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

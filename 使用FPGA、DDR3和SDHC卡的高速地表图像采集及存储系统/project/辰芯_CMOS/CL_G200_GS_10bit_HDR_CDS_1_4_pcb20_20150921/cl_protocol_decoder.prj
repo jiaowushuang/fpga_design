@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "cl_protocol_decoder.v"

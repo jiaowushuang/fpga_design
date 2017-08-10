@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+# Start of session at: Fri Nov 23 15:48:17 2012
+# Process ID: 2872
+# Log file: D:/project/Verilog_luo/USB_LOOP_TEST/planAhead_run_2/planAhead.log
+# Journal file: D:/project/Verilog_luo/USB_LOOP_TEST/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-Licensing 3] Your PlanAhead license expires in -603 day(s)
+INFO: [HD-ArchReader 0] Loading parts and site information from D:\Xilinx1\13.1\ISE_DS\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'D:\Xilinx1\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'D:\Xilinx1\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+start_gui -source D:/project/Verilog_luo/USB_LOOP_TEST/pa.fromNetlist.tcl
+# create_project -name USB_LOOP_TEST -dir "D:/project/Verilog_luo/USB_LOOP_TEST/planAhead_run_2" -part xc6slx16csg324-3
+Parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\verilog.xml].
+Parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [D:\Xilinx1\13.1\ISE_DS\ISE\data\projnav\templates\ucf.xml].
+Time (s): 7.922w
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/project/Verilog_luo/USB_LOOP_TEST} }
+# set_param project.paUcfFile  "USB_LOOP_TEST.ucf"
+# add_files "USB_LOOP_TEST.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Design is defaulting to constrset part: xc6slx16csg324-3
+Release 13.1 - ngc2edif O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design USB_LOOP_TEST.ngc ...
+WARNING:NetListWriters:298 - No output is written to USB_LOOP_TEST.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file USB_LOOP_TEST.edif ...
+ngc2edif: Total memory usage is 37316 kilobytes
+
+Parsing EDIF File [.\.Xil-PlanAhead-2872-dell-ae1d713e33\ngc2edif\USB_LOOP_TEST.edif]
+Finished Parsing EDIF File [.\.Xil-PlanAhead-2872-dell-ae1d713e33\ngc2edif\USB_LOOP_TEST.edif]
+INFO: [HD-Unisim Transformer 0] Analyzing Unisim elements for replacement
+INFO: [HD-Unisim Transformer 1] No Unisim elements were transformed.
+WARN: [HD-NETLIST 3] Netlist 'USB_LOOP_TEST' is not ideal for floorplanning, since the cellview 'USB_LOOP_TEST' defined in file 'USB_LOOP_TEST.ngc' contains large number of primitives. Please consider enabling hierarchy in synthesis before floorplan. You can enable hierarchy in XST by setting '-keep_hierarchy=yes' or '-netlist_hierarchy=rebuilt' flags.
+INFO: [HD-ArchReader 7] Loading clock regions from D:/Xilinx1/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from D:/Xilinx1/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+INFO: [HD-ArchReader 13] Loading package pin functions from D:/Xilinx1/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan6/PinFunctions.xml...
+INFO: [HD-ArchReader 3] Loading package from D:/Xilinx1/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from D:/Xilinx1/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan6/IOStandards.xml
+INFO: [HD-ArchReader 12] Loading device configuration modes from D:/Xilinx1/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan6/ConfigModes.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : D:/Xilinx1/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan6/drc.xml
+INFO: [HD-LIB 0] Reading timing library D:/Xilinx1/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan6/spartan6.lib .
+INFO: [HD-LIB 1] Done reading timing library D:/Xilinx1/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan6/spartan6.lib .
+Parsing UCF File [D:\project\Verilog_luo\USB_LOOP_TEST\USB_LOOP_TEST.ucf]
+Finished Parsing UCF File [D:\project\Verilog_luo\USB_LOOP_TEST\USB_LOOP_TEST.ucf]
+Time (s): 57.266w
+Time (s): 67.469w
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="usb_controller">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2017-5-31T14:12:41</timestamp>
+    <attr value="usb_controller" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-480" name="usb_clk" />
+    <pin polarity="Input" x="0" y="-416" name="flagA_EP6EF" />
+    <pin polarity="Input" x="0" y="-352" name="flagB_EP6FF" />
+    <pin polarity="Input" x="0" y="-288" name="flagC_EP8EF" />
+    <pin polarity="Input" x="0" y="-224" name="flagD_EP8FF" />
+    <pin polarity="Input" x="0" y="-160" name="nframe" />
+    <pin polarity="Input" x="0" y="-96" name="send_out" />
+    <pin polarity="Input" x="0" y="-32" name="data_in(15:0)" />
+    <pin polarity="Output" x="496" y="-480" name="PKTEND" />
+    <pin polarity="Output" x="496" y="-416" name="USB_SLWR" />
+    <pin polarity="Output" x="496" y="-352" name="USB_SLRD" />
+    <pin polarity="Output" x="496" y="-288" name="USB_SLOE" />
+    <pin polarity="Output" x="496" y="-224" name="data_pulse" />
+    <pin polarity="Output" x="496" y="-160" name="USB_DATA(15:0)" />
+    <pin polarity="Output" x="496" y="-96" name="USB_FIFO_ADR(1:0)" />
+    <graph>
+        <rect width="368" x="64" y="-512" height="512" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="248" y="-520" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin usb_clk" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin flagA_EP6EF" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin flagB_EP6FF" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin flagC_EP8EF" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin flagD_EP8FF" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin nframe" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin send_out" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin data_in(15:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-480" type="pin PKTEND" />
+        <line x2="496" y1="-480" y2="-480" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-416" type="pin USB_SLWR" />
+        <line x2="496" y1="-416" y2="-416" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-352" type="pin USB_SLRD" />
+        <line x2="496" y1="-352" y2="-352" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-288" type="pin USB_SLOE" />
+        <line x2="496" y1="-288" y2="-288" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-224" type="pin data_pulse" />
+        <line x2="496" y1="-224" y2="-224" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-160" type="pin USB_DATA(15:0)" />
+        <rect width="64" x="432" y="-172" height="24" />
+        <line x2="496" y1="-160" y2="-160" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-96" type="pin USB_FIFO_ADR(1:0)" />
+        <rect width="64" x="432" y="-108" height="24" />
+        <line x2="496" y1="-96" y2="-96" x1="432" />
+    </graph>
+</symbol>

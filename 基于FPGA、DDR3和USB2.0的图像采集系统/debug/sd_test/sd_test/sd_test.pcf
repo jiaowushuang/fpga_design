@@ -1,0 +1,185 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jul 26 13:17:36 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "SD_datain" LOCATE = SITE "P17" LEVEL 1;
+COMP "SD_cs" LOCATE = SITE "P18" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "N4" LEVEL 1;
+COMP "SD_dataout" LOCATE = SITE "T17" LEVEL 1;
+COMP "SD_clk" LOCATE = SITE "T18" LEVEL 1;
+PIN bufg_insta_pin<1> = BEL "bufg_insta" PINNAME O;
+PIN "bufg_insta_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+TIMEGRP CLKDV = BEL "write_req" BEL "sd_state_FSM_FFd2" BEL
+        "sd_state_FSM_FFd1" BEL "sd_initial_inst/counter_9" BEL
+        "sd_initial_inst/counter_8" BEL "sd_initial_inst/counter_7" BEL
+        "sd_initial_inst/counter_6" BEL "sd_initial_inst/counter_5" BEL
+        "sd_initial_inst/counter_4" BEL "sd_initial_inst/counter_3" BEL
+        "sd_initial_inst/counter_2" BEL "sd_initial_inst/counter_1" BEL
+        "sd_initial_inst/counter_0" BEL "sd_initial_inst/state_FSM_FFd2" BEL
+        "sd_initial_inst/state_FSM_FFd3" BEL "sd_initial_inst/state_FSM_FFd1"
+        BEL "sd_initial_inst/state_FSM_FFd4" BEL "sd_initial_inst/SD_datain"
+        BEL "sd_initial_inst/CMD0_47" BEL "sd_initial_inst/CMD0_46" BEL
+        "sd_initial_inst/CMD0_45" BEL "sd_initial_inst/CMD0_44" BEL
+        "sd_initial_inst/CMD0_43" BEL "sd_initial_inst/CMD0_42" BEL
+        "sd_initial_inst/CMD0_41" BEL "sd_initial_inst/CMD0_40" BEL
+        "sd_initial_inst/CMD0_39" BEL "sd_initial_inst/CMD0_38" BEL
+        "sd_initial_inst/CMD0_37" BEL "sd_initial_inst/CMD0_36" BEL
+        "sd_initial_inst/CMD0_35" BEL "sd_initial_inst/CMD0_34" BEL
+        "sd_initial_inst/CMD0_33" BEL "sd_initial_inst/CMD0_32" BEL
+        "sd_initial_inst/CMD0_31" BEL "sd_initial_inst/CMD0_30" BEL
+        "sd_initial_inst/CMD0_29" BEL "sd_initial_inst/CMD0_28" BEL
+        "sd_initial_inst/CMD0_27" BEL "sd_initial_inst/CMD0_26" BEL
+        "sd_initial_inst/CMD0_25" BEL "sd_initial_inst/CMD0_24" BEL
+        "sd_initial_inst/CMD0_23" BEL "sd_initial_inst/CMD0_22" BEL
+        "sd_initial_inst/CMD0_21" BEL "sd_initial_inst/CMD0_20" BEL
+        "sd_initial_inst/CMD0_19" BEL "sd_initial_inst/CMD0_18" BEL
+        "sd_initial_inst/CMD0_17" BEL "sd_initial_inst/CMD0_16" BEL
+        "sd_initial_inst/CMD0_15" BEL "sd_initial_inst/CMD0_14" BEL
+        "sd_initial_inst/CMD0_13" BEL "sd_initial_inst/CMD0_12" BEL
+        "sd_initial_inst/CMD0_11" BEL "sd_initial_inst/CMD0_10" BEL
+        "sd_initial_inst/CMD0_9" BEL "sd_initial_inst/CMD0_8" BEL
+        "sd_initial_inst/CMD0_7" BEL "sd_initial_inst/CMD0_6" BEL
+        "sd_initial_inst/CMD0_5" BEL "sd_initial_inst/CMD0_4" BEL
+        "sd_initial_inst/CMD0_3" BEL "sd_initial_inst/CMD0_2" BEL
+        "sd_initial_inst/CMD0_1" BEL "sd_initial_inst/CMD0_0" BEL
+        "sd_initial_inst/CMD8_47" BEL "sd_initial_inst/CMD8_46" BEL
+        "sd_initial_inst/CMD8_45" BEL "sd_initial_inst/CMD8_44" BEL
+        "sd_initial_inst/CMD8_43" BEL "sd_initial_inst/CMD8_42" BEL
+        "sd_initial_inst/CMD8_41" BEL "sd_initial_inst/CMD8_40" BEL
+        "sd_initial_inst/CMD8_39" BEL "sd_initial_inst/CMD8_38" BEL
+        "sd_initial_inst/CMD8_37" BEL "sd_initial_inst/CMD8_36" BEL
+        "sd_initial_inst/CMD8_35" BEL "sd_initial_inst/CMD8_34" BEL
+        "sd_initial_inst/CMD8_33" BEL "sd_initial_inst/CMD8_32" BEL
+        "sd_initial_inst/CMD8_31" BEL "sd_initial_inst/CMD8_30" BEL
+        "sd_initial_inst/CMD8_29" BEL "sd_initial_inst/CMD8_28" BEL
+        "sd_initial_inst/CMD8_27" BEL "sd_initial_inst/CMD8_26" BEL
+        "sd_initial_inst/CMD8_25" BEL "sd_initial_inst/CMD8_24" BEL
+        "sd_initial_inst/CMD8_23" BEL "sd_initial_inst/CMD8_22" BEL
+        "sd_initial_inst/CMD8_21" BEL "sd_initial_inst/CMD8_20" BEL
+        "sd_initial_inst/CMD8_19" BEL "sd_initial_inst/CMD8_18" BEL
+        "sd_initial_inst/CMD8_17" BEL "sd_initial_inst/CMD8_16" BEL
+        "sd_initial_inst/CMD8_15" BEL "sd_initial_inst/CMD8_14" BEL
+        "sd_initial_inst/CMD8_13" BEL "sd_initial_inst/CMD8_12" BEL
+        "sd_initial_inst/CMD8_11" BEL "sd_initial_inst/CMD8_10" BEL
+        "sd_initial_inst/CMD8_9" BEL "sd_initial_inst/CMD8_8" BEL
+        "sd_initial_inst/CMD8_7" BEL "sd_initial_inst/CMD8_6" BEL
+        "sd_initial_inst/CMD8_5" BEL "sd_initial_inst/CMD8_4" BEL
+        "sd_initial_inst/CMD8_3" BEL "sd_initial_inst/CMD8_2" BEL
+        "sd_initial_inst/CMD8_1" BEL "sd_initial_inst/CMD8_0" BEL
+        "sd_initial_inst/ACMD41_47" BEL "sd_initial_inst/ACMD41_46" BEL
+        "sd_initial_inst/ACMD41_45" BEL "sd_initial_inst/ACMD41_44" BEL
+        "sd_initial_inst/ACMD41_43" BEL "sd_initial_inst/ACMD41_42" BEL
+        "sd_initial_inst/ACMD41_41" BEL "sd_initial_inst/ACMD41_40" BEL
+        "sd_initial_inst/ACMD41_39" BEL "sd_initial_inst/ACMD41_38" BEL
+        "sd_initial_inst/ACMD41_37" BEL "sd_initial_inst/ACMD41_36" BEL
+        "sd_initial_inst/ACMD41_35" BEL "sd_initial_inst/ACMD41_34" BEL
+        "sd_initial_inst/ACMD41_33" BEL "sd_initial_inst/ACMD41_32" BEL
+        "sd_initial_inst/ACMD41_31" BEL "sd_initial_inst/ACMD41_30" BEL
+        "sd_initial_inst/ACMD41_29" BEL "sd_initial_inst/ACMD41_28" BEL
+        "sd_initial_inst/ACMD41_27" BEL "sd_initial_inst/ACMD41_26" BEL
+        "sd_initial_inst/ACMD41_25" BEL "sd_initial_inst/ACMD41_24" BEL
+        "sd_initial_inst/ACMD41_23" BEL "sd_initial_inst/ACMD41_22" BEL
+        "sd_initial_inst/ACMD41_21" BEL "sd_initial_inst/ACMD41_20" BEL
+        "sd_initial_inst/ACMD41_19" BEL "sd_initial_inst/ACMD41_18" BEL
+        "sd_initial_inst/ACMD41_17" BEL "sd_initial_inst/ACMD41_16" BEL
+        "sd_initial_inst/ACMD41_15" BEL "sd_initial_inst/ACMD41_14" BEL
+        "sd_initial_inst/ACMD41_13" BEL "sd_initial_inst/ACMD41_12" BEL
+        "sd_initial_inst/ACMD41_11" BEL "sd_initial_inst/ACMD41_10" BEL
+        "sd_initial_inst/ACMD41_9" BEL "sd_initial_inst/ACMD41_8" BEL
+        "sd_initial_inst/ACMD41_7" BEL "sd_initial_inst/ACMD41_6" BEL
+        "sd_initial_inst/ACMD41_5" BEL "sd_initial_inst/ACMD41_4" BEL
+        "sd_initial_inst/ACMD41_3" BEL "sd_initial_inst/ACMD41_2" BEL
+        "sd_initial_inst/ACMD41_1" BEL "sd_initial_inst/ACMD41_0" BEL
+        "sd_initial_inst/CMD55_47" BEL "sd_initial_inst/CMD55_46" BEL
+        "sd_initial_inst/CMD55_45" BEL "sd_initial_inst/CMD55_44" BEL
+        "sd_initial_inst/CMD55_43" BEL "sd_initial_inst/CMD55_42" BEL
+        "sd_initial_inst/CMD55_41" BEL "sd_initial_inst/CMD55_40" BEL
+        "sd_initial_inst/CMD55_39" BEL "sd_initial_inst/CMD55_38" BEL
+        "sd_initial_inst/CMD55_37" BEL "sd_initial_inst/CMD55_36" BEL
+        "sd_initial_inst/CMD55_35" BEL "sd_initial_inst/CMD55_34" BEL
+        "sd_initial_inst/CMD55_33" BEL "sd_initial_inst/CMD55_32" BEL
+        "sd_initial_inst/CMD55_31" BEL "sd_initial_inst/CMD55_30" BEL
+        "sd_initial_inst/CMD55_29" BEL "sd_initial_inst/CMD55_28" BEL
+        "sd_initial_inst/CMD55_27" BEL "sd_initial_inst/CMD55_26" BEL
+        "sd_initial_inst/CMD55_25" BEL "sd_initial_inst/CMD55_24" BEL
+        "sd_initial_inst/CMD55_23" BEL "sd_initial_inst/CMD55_22" BEL
+        "sd_initial_inst/CMD55_21" BEL "sd_initial_inst/CMD55_20" BEL
+        "sd_initial_inst/CMD55_19" BEL "sd_initial_inst/CMD55_18" BEL
+        "sd_initial_inst/CMD55_17" BEL "sd_initial_inst/CMD55_16" BEL
+        "sd_initial_inst/CMD55_15" BEL "sd_initial_inst/CMD55_14" BEL
+        "sd_initial_inst/CMD55_13" BEL "sd_initial_inst/CMD55_12" BEL
+        "sd_initial_inst/CMD55_11" BEL "sd_initial_inst/CMD55_10" BEL
+        "sd_initial_inst/CMD55_9" BEL "sd_initial_inst/CMD55_8" BEL
+        "sd_initial_inst/CMD55_7" BEL "sd_initial_inst/CMD55_6" BEL
+        "sd_initial_inst/CMD55_5" BEL "sd_initial_inst/CMD55_4" BEL
+        "sd_initial_inst/CMD55_3" BEL "sd_initial_inst/CMD55_2" BEL
+        "sd_initial_inst/CMD55_1" BEL "sd_initial_inst/CMD55_0" BEL
+        "sd_initial_inst/cnt_9" BEL "sd_initial_inst/cnt_8" BEL
+        "sd_initial_inst/cnt_7" BEL "sd_initial_inst/cnt_6" BEL
+        "sd_initial_inst/cnt_5" BEL "sd_initial_inst/cnt_4" BEL
+        "sd_initial_inst/cnt_3" BEL "sd_initial_inst/cnt_2" BEL
+        "sd_initial_inst/cnt_1" BEL "sd_initial_inst/cnt_0" BEL
+        "sd_initial_inst/SD_cs" BEL "sd_initial_inst/aa_5" BEL
+        "sd_initial_inst/aa_4" BEL "sd_initial_inst/aa_3" BEL
+        "sd_initial_inst/aa_2" BEL "sd_initial_inst/aa_1" BEL
+        "sd_initial_inst/aa_0" BEL "sd_initial_inst/reset" BEL
+        "sd_initial_inst/rx_47" BEL "sd_initial_inst/rx_46" BEL
+        "sd_initial_inst/rx_45" BEL "sd_initial_inst/rx_44" BEL
+        "sd_initial_inst/rx_43" BEL "sd_initial_inst/rx_42" BEL
+        "sd_initial_inst/rx_41" BEL "sd_initial_inst/rx_19" BEL
+        "sd_initial_inst/rx_18" BEL "sd_initial_inst/rx_17" BEL
+        "sd_write_inst/mystate_FSM_FFd1" BEL "sd_write_inst/mystate_FSM_FFd2"
+        BEL "sd_write_inst/mystate_FSM_FFd3" BEL "sd_write_inst/cnta_2" BEL
+        "sd_write_inst/cnta_1" BEL "sd_write_inst/cnta_0" BEL
+        "sd_write_inst/CMD24_47" BEL "sd_write_inst/CMD24_46" BEL
+        "sd_write_inst/CMD24_45" BEL "sd_write_inst/CMD24_44" BEL
+        "sd_write_inst/CMD24_43" BEL "sd_write_inst/CMD24_42" BEL
+        "sd_write_inst/CMD24_41" BEL "sd_write_inst/CMD24_40" BEL
+        "sd_write_inst/CMD24_39" BEL "sd_write_inst/CMD24_38" BEL
+        "sd_write_inst/CMD24_37" BEL "sd_write_inst/CMD24_36" BEL
+        "sd_write_inst/CMD24_35" BEL "sd_write_inst/CMD24_34" BEL
+        "sd_write_inst/CMD24_33" BEL "sd_write_inst/CMD24_32" BEL
+        "sd_write_inst/CMD24_31" BEL "sd_write_inst/CMD24_30" BEL
+        "sd_write_inst/CMD24_29" BEL "sd_write_inst/CMD24_28" BEL
+        "sd_write_inst/CMD24_27" BEL "sd_write_inst/CMD24_26" BEL
+        "sd_write_inst/CMD24_25" BEL "sd_write_inst/CMD24_24" BEL
+        "sd_write_inst/CMD24_23" BEL "sd_write_inst/CMD24_22" BEL
+        "sd_write_inst/CMD24_21" BEL "sd_write_inst/CMD24_20" BEL
+        "sd_write_inst/CMD24_19" BEL "sd_write_inst/CMD24_18" BEL
+        "sd_write_inst/CMD24_17" BEL "sd_write_inst/CMD24_16" BEL
+        "sd_write_inst/CMD24_15" BEL "sd_write_inst/CMD24_14" BEL
+        "sd_write_inst/CMD24_13" BEL "sd_write_inst/CMD24_12" BEL
+        "sd_write_inst/CMD24_11" BEL "sd_write_inst/CMD24_10" BEL
+        "sd_write_inst/CMD24_9" BEL "sd_write_inst/CMD24_8" BEL
+        "sd_write_inst/CMD24_7" BEL "sd_write_inst/CMD24_6" BEL
+        "sd_write_inst/CMD24_5" BEL "sd_write_inst/CMD24_4" BEL
+        "sd_write_inst/CMD24_3" BEL "sd_write_inst/CMD24_2" BEL
+        "sd_write_inst/CMD24_1" BEL "sd_write_inst/CMD24_0" BEL
+        "sd_write_inst/cnt_9" BEL "sd_write_inst/cnt_8" BEL
+        "sd_write_inst/cnt_7" BEL "sd_write_inst/cnt_6" BEL
+        "sd_write_inst/cnt_5" BEL "sd_write_inst/cnt_4" BEL
+        "sd_write_inst/cnt_3" BEL "sd_write_inst/cnt_2" BEL
+        "sd_write_inst/cnt_1" BEL "sd_write_inst/cnt_0" BEL
+        "sd_write_inst/aa_2" BEL "sd_write_inst/aa_1" BEL "sd_write_inst/aa_0"
+        BEL "sd_write_inst/rx_7" BEL "sd_write_inst/rx_6" BEL
+        "sd_write_inst/rx_5" BEL "sd_write_inst/rx_4" BEL "sd_write_inst/rx_3"
+        BEL "sd_write_inst/rx_2" BEL "sd_write_inst/rx_1" BEL
+        "sd_write_inst/rx_0" BEL "sd_write_inst/SD_datain" BEL
+        "sd_write_inst/flag" BEL "sd_write_inst/SD_cs" BEL
+        "sd_write_inst/write_o" BEL "sd_initial_inst/en" BEL
+        "sd_write_inst/en" BEL "sd_initial_inst/init_o" BEL
+        "sd_initial_inst/rx_valid" BEL "sd_write_inst/rx_valid" BEL
+        "sd_initial_inst/Mshreg_rx_40" BEL "sd_initial_inst/rx_40" BEL
+        "sd_initial_inst/Mshreg_rx_16" BEL "sd_initial_inst/rx_16" BEL
+        "SD_clk" BEL "bufg_insta";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN DCM_SP_inst_pins<3> = BEL "DCM_SP_inst" PINNAME CLKIN;
+TIMEGRP sys_clk = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "DCM_SP_inst_pins<3>";
+TS_sys_clk = PERIOD TIMEGRP "sys_clk" 50 MHz HIGH 50%;
+TS_CLKDV = PERIOD TIMEGRP "CLKDV" TS_sys_clk / 2 HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer_isim_beh.exe" -prj "E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer_beh.prj" "work.tb_image_buffer" "work.glbl" 

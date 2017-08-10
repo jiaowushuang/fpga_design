@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/G200_top.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/cl_protocol_decoder.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/cl_serial.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/cl_serial_in.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/cl_serial_out.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/clock_generator_pll_b1.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/clocking.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/fifo_map.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/gclk_2_gpio.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/gclk_2_sdr_2.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/gearbox_2_to_1.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/gen_image_val.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/image_buffer.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/image_rx.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/image_tx.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/iserdes_1_to_12_data_diff.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/iserdes_1_to_6_data_diff.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/odes2ser_7_to_1.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/sensor_controller.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/sensor_spi.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/sequencer.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/test_io_module.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1693" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/training.v\&quot; into library work</arg>
+</msg>
+
+</messages>
+

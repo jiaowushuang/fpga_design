@@ -1,0 +1,15 @@
+# Output products list for <shifter_var_w12_d16>
+_xmsgs\pn_parser.xmsgs
+shifter_var_w12_d16.asy
+shifter_var_w12_d16.gise
+shifter_var_w12_d16.ngc
+shifter_var_w12_d16.sym
+shifter_var_w12_d16.v
+shifter_var_w12_d16.veo
+shifter_var_w12_d16.vhd
+shifter_var_w12_d16.vho
+shifter_var_w12_d16.xco
+shifter_var_w12_d16.xise
+shifter_var_w12_d16_flist.txt
+shifter_var_w12_d16_readme.txt
+shifter_var_w12_d16_xmdf.tcl

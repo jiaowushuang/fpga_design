@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">usb_clk_BUFGP/N2</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">74</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">usb_clk_BUFGP/N3,
+camera_pclk_BUFGP/N2,
+camera_pclk_BUFGP/N3,
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/SRL_Q_O,
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/N2</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="1206" delta="new" >This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">camera_xclk_OBUF</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins off chip.
+<arg fmt="%s" index="4">&lt; PIN: camera_xclk.O; &gt;
+</arg>This design practice, in Spartan-6, can lead to an unroutable situation due to limitations in the global routing. If the design does route there may be excessive delay or skew on this net. It is recommended to use a Clock Forwarding technique to create a reliable and repeatable low skew solution: instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="warning" file="Place" num="1137" delta="new" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">camera_xclk_OBUF</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
+<arg fmt="%s" index="4">&lt; PIN: camera_xclk.O; &gt;
+</arg>This is not a recommended design practice in Spartan-6 due to limitations in the global routing that may cause excessive delay, skew or unroutable situations.  It is recommended to only use a BUFG resource to drive clock loads. Please pay extra attention to the timing and routing of this path to ensure the design goals are met. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="warning" file="Place" num="1137" delta="new" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">reg_config_inst/clock_20k_BUFG</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">reg_config_inst/clock_20k_BUFG</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
+<arg fmt="%s" index="4">&lt; PIN: lut1724_2891.A6; &gt;
+</arg>This is not a recommended design practice in Spartan-6 due to limitations in the global routing that may cause excessive delay, skew or unroutable situations.  It is recommended to only use a BUFG resource to drive clock loads. Please pay extra attention to the timing and routing of this path to ensure the design goals are met. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">reg_config_inst/clock_20k_BUFG</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="warning" file="Place" num="1109" delta="new" >A clock IOB / BUFGMUX clock component pair have been found that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock IOB component &lt;<arg fmt="%s" index="1">usb_clk</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">C6</arg>&gt;. The corresponding BUFG component &lt;<arg fmt="%s" index="3">usb_clk_BUFGP/BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGMUX_X2Y9</arg>&gt;. There is only a select set of IOBs that can use the fast path to the Clocker buffer, and they are not being used. You may want to analyze why this problem exists and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">usb_clk.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="warning" file="Place" num="1109" delta="new" >A clock IOB / BUFGMUX clock component pair have been found that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock IOB component &lt;<arg fmt="%s" index="1">camera_pclk</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">U17</arg>&gt;. The corresponding BUFG component &lt;<arg fmt="%s" index="3">camera_pclk_BUFGP/BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGMUX_X3Y6</arg>&gt;. There is only a select set of IOBs that can use the fast path to the Clocker buffer, and they are not being used. You may want to analyze why this problem exists and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">camera_pclk.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">icon_control0&lt;13&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2410" delta="new" >This design is using one or more 9K Block RAMs (RAMB8BWER).  9K Block RAM initialization data, both user defined and default, may be incorrect and should not be used.  For more information, please reference Xilinx Answer Record 39999.
+</msg>
+
+</messages>
+

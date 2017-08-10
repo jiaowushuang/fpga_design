@@ -1,0 +1,2 @@
+verilog work "gclk_2_gpio.v"
+verilog work "test_io_module.v"

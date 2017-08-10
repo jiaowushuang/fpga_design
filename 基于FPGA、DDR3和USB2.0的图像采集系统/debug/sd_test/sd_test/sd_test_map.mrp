@@ -1,0 +1,254 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'sd_test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Jul 26 13:17:16 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                   324 out of  54,576    1%
+    Number used as Flip Flops:                 324
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        471 out of  27,288    1%
+    Number used as logic:                      467 out of  27,288    1%
+      Number using O6 output only:             376
+      Number using O5 output only:              16
+      Number using O5 and O6:                   75
+      Number used as ROM:                        0
+    Number used as Memory:                       2 out of   6,408    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             2
+        Number using O6 output only:             2
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   146 out of   6,822    2%
+  Number of MUXCYs used:                        72 out of  13,644    1%
+  Number of LUT Flip Flop pairs used:          483
+    Number with an unused Flip Flop:           212 out of     483   43%
+    Number with an unused LUT:                  12 out of     483    2%
+    Number of fully used LUT-FF pairs:         259 out of     483   53%
+    Number of unique control sets:              21
+    Number of slice register sites lost
+      to control set restrictions:              66 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         6 out of     218    2%
+    Number of LOCed IOBs:                        6 out of       6  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       8   12%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.95
+
+Peak Memory Usage:  552 MB
+Total REAL time to MAP completion:  20 secs 
+Total CPU time to MAP completion:   20 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <bufg_insta>, driving the net, <SD_clk_OBUF>, that is driving the following
+   (first 30) non-clock load pins off chip.
+   < PIN: SD_clk.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN <bufg_insta.O> allowing your design to continue. This
+   constraint disables all clock placer rules related to the specified COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <bufg_insta>, driving the net,
+   <SD_clk_OBUF>, that is driving the following (first 30) non-clock load pins.
+   < PIN: SD_clk.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <bufg_insta.O>
+   allowing your design to continue. This constraint disables all clock placer
+   rules related to the specified COMP.PIN.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network COMS_SD has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) removed
+   2 block(s) optimized away
+   1 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "bufg_instb" (CKBUF) removed.
+ The signal "CLK2X" is loadless and has been removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SD_clk                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SD_cs                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SD_datain                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SD_dataout                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rst_n                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

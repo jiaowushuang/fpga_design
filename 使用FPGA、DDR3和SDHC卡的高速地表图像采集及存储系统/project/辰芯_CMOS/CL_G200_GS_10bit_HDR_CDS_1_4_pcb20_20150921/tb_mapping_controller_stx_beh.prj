@@ -1,0 +1,3 @@
+verilog isim_temp "mapping_controller.v"
+verilog isim_temp "tb_mapping_controller.v"
+verilog isim_temp "D:/XILINX/13.1/ISE_DS/ISE//verilog/src/glbl.v"

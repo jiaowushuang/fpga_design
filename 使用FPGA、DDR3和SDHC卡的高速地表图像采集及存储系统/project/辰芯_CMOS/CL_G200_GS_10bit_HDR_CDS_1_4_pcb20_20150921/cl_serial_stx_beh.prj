@@ -1,0 +1,6 @@
+verilog isim_temp "fifo_map.v"
+verilog isim_temp "cl_serial_out.v"
+verilog isim_temp "cl_serial_in.v"
+verilog isim_temp "cl_protocol_decoder.v"
+verilog isim_temp "cl_serial.v"
+verilog isim_temp "D:/Xilinx/ISE_DS/ISE//verilog/src/glbl.v"

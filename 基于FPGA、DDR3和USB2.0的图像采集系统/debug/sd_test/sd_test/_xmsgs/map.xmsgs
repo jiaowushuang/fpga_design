@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">COMS_SD</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="1206" delta="old" >This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">bufg_insta</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">SD_clk_OBUF</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins off chip.
+<arg fmt="%s" index="4">&lt; PIN: SD_clk.O; &gt;
+</arg>This design practice, in Spartan-6, can lead to an unroutable situation due to limitations in the global routing. If the design does route there may be excessive delay or skew on this net. It is recommended to use a Clock Forwarding technique to create a reliable and repeatable low skew solution: instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">bufg_insta</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="warning" file="Place" num="1137" delta="old" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">bufg_insta</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">SD_clk_OBUF</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
+<arg fmt="%s" index="4">&lt; PIN: SD_clk.O; &gt;
+</arg>This is not a recommended design practice in Spartan-6 due to limitations in the global routing that may cause excessive delay, skew or unroutable situations.  It is recommended to only use a BUFG resource to drive clock loads. Please pay extra attention to the timing and routing of this path to ensure the design goals are met. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">bufg_insta</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

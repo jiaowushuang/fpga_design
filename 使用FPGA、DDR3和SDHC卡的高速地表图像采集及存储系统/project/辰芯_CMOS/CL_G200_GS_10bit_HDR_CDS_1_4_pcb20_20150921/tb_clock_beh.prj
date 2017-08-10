@@ -1,0 +1,3 @@
+verilog work "clocking.v"
+verilog work "tb_clock.v"
+verilog work "D:/Xilinx/ISE_DS/ISE//verilog/src/glbl.v"

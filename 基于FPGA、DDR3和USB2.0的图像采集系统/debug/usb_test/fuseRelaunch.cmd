@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_isim_beh.exe" -prj "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_beh.prj" "USB_LOOP_Sim" "work.glbl" 

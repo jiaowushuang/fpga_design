@@ -1,0 +1,61 @@
+INFO:encore:314 - Created non-GUI application for batch mode execution.
+Wrote CGP file for project 'coregen'.
+INFO:sim:172 - Generating IP...
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Gathering HDL files for icon_pro root...
+Creating XST project for icon_pro...
+Creating XST script file for icon_pro...
+Creating XST instantiation file for icon_pro...
+Running XST for icon_pro...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Generating VHDL wrapper
+Not generating Verilog wrapper
+Creating ISE instantiation template for icon_pro...
+Skipping Verilog instantiation template for icon_pro...
+Finished Generation.
+Generating IP instantiation template...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating metadata file...
+Generating ISE project...
+XCO file found: icon_pro.xco
+XMDF file found: icon_pro_xmdf.tcl
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.n
+gc -view all -origin_type created
+Checking file
+"E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.
+ngc" for project device match ...
+File
+"E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.
+ngc" device information matches project device.
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.u
+cf -view all -origin_type created
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.v
+hd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_p
+   ro.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_icon_pro/tmp/_cg/icon_pro.v
+ho -view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/icon_pro"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.

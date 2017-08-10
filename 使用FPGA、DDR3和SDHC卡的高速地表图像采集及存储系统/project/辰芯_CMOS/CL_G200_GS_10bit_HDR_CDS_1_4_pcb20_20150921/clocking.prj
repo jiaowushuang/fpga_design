@@ -1,0 +1,3 @@
+verilog work "gclk_2_sdr_2.v"
+verilog work "gclk_2_gpio.v"
+verilog work "clocking.v"

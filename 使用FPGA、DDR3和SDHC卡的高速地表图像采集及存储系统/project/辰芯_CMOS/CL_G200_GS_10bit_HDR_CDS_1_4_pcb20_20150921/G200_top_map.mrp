@@ -1,0 +1,1020 @@
+Release 13.1 Map O.40d (nt64)
+Xilinx Mapping Report File for Design 'G200_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx150-fgg900-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off
+-r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o G200_top_map.ncd G200_top.ngd G200_top.pcf 
+Target Device  : xc6slx150
+Target Package : fgg900
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Jun 23 08:57:21 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    7
+Slice Logic Utilization:
+  Number of Slice Registers:                 4,127 out of 184,304    2%
+    Number used as Flip Flops:               4,085
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               42
+  Number of Slice LUTs:                      3,950 out of  92,152    4%
+    Number used as logic:                    3,529 out of  92,152    3%
+      Number using O6 output only:           2,414
+      Number using O5 output only:              66
+      Number using O5 and O6:                1,049
+      Number used as ROM:                        0
+    Number used as Memory:                     385 out of  21,680    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           385
+        Number using O6 output only:           385
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     36
+      Number with same-slice register load:     30
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,863 out of  23,038    8%
+  Number of LUT Flip Flop pairs used:        5,413
+    Number with an unused Flip Flop:         1,497 out of   5,413   27%
+    Number with an unused LUT:               1,463 out of   5,413   27%
+    Number of fully used LUT-FF pairs:       2,453 out of   5,413   45%
+    Number of unique control sets:             245
+    Number of slice register sites lost
+      to control set restrictions:             890 out of 184,304    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       159 out of     576   27%
+    Number of LOCed IOBs:                      144 out of     159   90%
+    IOB Flip Flops:                              4
+    IOB Master Pads:                            17
+    IOB Slave Pads:                             17
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     268    1%
+  Number of RAMB8BWERs:                         11 out of     536    2%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                      10 out of      16   62%
+    Number used as BUFGs:                       10
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     3 out of      12   25%
+    Number used as DCMs:                         3
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                  64 out of     586   10%
+    Number used as ILOGIC2s:                     0
+    Number used as ISERDES2s:                   64
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        64 out of     586   10%
+    Number used as IODELAY2s:                   64
+    Number used as IODRP2s:                      0
+    Number used as IODRP2_MCBs:                  0
+  Number of OLOGIC2/OSERDES2s:                  34 out of     586    5%
+    Number used as OLOGIC2s:                     4
+    Number used as OSERDES2s:                   30
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             2 out of       8   25%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            2 out of     180    1%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            2 out of       6   33%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.42
+
+Peak Memory Usage:  688 MB
+Total REAL time to MAP completion:  2 mins 23 secs 
+Total CPU time to MAP completion:   2 mins 14 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:MapLib:701 - Signal clk_lvds_ddr_out_p connected to top level port
+   clk_lvds_ddr_out_p has been removed.
+WARNING:MapLib:701 - Signal clk_lvds_ddr_out_n connected to top level port
+   clk_lvds_ddr_out_n has been removed.
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: pixel_read_timing<17>
+   	 Comp: pixel_read_timing<16>
+   	 Comp: pixel_read_timing<4>
+   	 Comp: pixel_read_timing<3>
+   	 Comp: pixel_read_timing<2>
+   	 Comp: pixel_read_timing<1>
+   	 Comp: pixel_read_timing<0>
+
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: pixel_read_timing<0>   IOSTANDARD = LVCMOS25
+   	 Comp: pixel_read_timing<1>   IOSTANDARD = LVCMOS25
+   	 Comp: pixel_read_timing<2>   IOSTANDARD = LVCMOS25
+   	 Comp: pixel_read_timing<3>   IOSTANDARD = LVCMOS25
+   	 Comp: pixel_read_timing<4>   IOSTANDARD = LVCMOS25
+   	 Comp: pixel_read_timing<5>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<6>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<7>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<8>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<9>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<10>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<11>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<12>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<13>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<14>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<15>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<16>   IOSTANDARD = LVCMOS33
+   	 Comp: pixel_read_timing<17>   IOSTANDARD = LVCMOS33
+
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: decoder<11>
+
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: decoder<0>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<1>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<2>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<3>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<4>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<5>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<6>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<7>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<8>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<9>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<10>   IOSTANDARD = LVCMOS33
+   	 Comp: decoder<11>   IOSTANDARD = LVCMOS25
+
+
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs (RAMB8BWER).  9K Block RAM initialization
+   data, both user defined and default, may be incorrect and should not be used.  For more information, please reference
+   Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
+INFO:LIT:243 - Logical network clk_rxio has no load.
+INFO:LIT:395 - The above info message is repeated 77 more times for the
+   following (max. 5 shown):
+   reg_window_row_start<11>,
+   timing_bram_dout<3>,
+   reg_test_image_chan_0<11>,
+   reg_test_image_chan_0<10>,
+   reg_test_image_chan_0<9>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV clocking/PLL_BASE_INST/PLL_ADV.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV image_rx/clock_generator_b1/PLL_BASE_INST/PLL_ADV.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 159 IOs, 144 are locked
+   and 15 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of
+   the DCM comp clocking/DCM_SP_DCM3, consult the device Data Sheet.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of
+   the DCM comp clocking/DCM_SP_DCM4, consult the device Data Sheet.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of
+   the DCM comp clocking/DCM_SP_DCM8, consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  55 block(s) removed
+ 218 block(s) optimized away
+  62 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "sequencer/Msub_inte_new[23]_GND_29_o_sub_150_OUT23" (ROM)
+removed.
+Loadless block "sequencer/Msub_inte_new[23]_GND_29_o_sub_24_OUT23" (ROM)
+removed.
+The signal "clocking/clk_lvds_ddr_out_unbuf" is sourceless and has been removed.
+ Sourceless block "clocking/BUFG_RXLVDS_DDR" (CKBUF) removed.
+  The signal "clocking/clk_lvds_ddr_out" is sourceless and has been removed.
+The signal "clocking/dcm_rx_fb_BUFG" is sourceless and has been removed.
+The signal "clocking/clk_rxio_unbuf" is sourceless and has been removed.
+ Sourceless block "clocking/BUFG_CLK_RXIO" (CKBUF) removed.
+  The signal "clk_rxio" is sourceless and has been removed.
+The signal "clocking/dcm_rx_fb" is sourceless and has been removed.
+ Sourceless block "clocking/dcm_rx_fb_BUFG" (CKBUF) removed.
+The signal
+"cl_serial/fifo_mapping/fifo_sensor/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gn
+tv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"cl_serial/fifo_mapping/fifo_train/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gnt
+v_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<10>" is
+sourceless and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<9>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<8>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<7>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<6>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<5>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<4>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<3>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<2>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<1>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr<0>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_din<4>" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_din<3>" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_din<2>" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_din<1>" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_bram_din<0>" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<10>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_10" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046021" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<10>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_10" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<9>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_9" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n0460111" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<9>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_9" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<8>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_8" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n0460101" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<8>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_8" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<7>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_7" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046091" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<7>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_7" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<6>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_6" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046081" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<6>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_6" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<5>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_5" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046071" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<5>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_5" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<4>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_4" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046061" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<4>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_4" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<3>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_3" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046051" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<3>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_3" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<2>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_2" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046041" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<2>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_2" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<1>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_1" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046031" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<1>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_1" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr<0>" is sourceless
+and has been removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_wr_addr_0" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/Mmux__n046011" (ROM) removed.
+  The signal "cl_serial/cl_protocol_decoder/_n0460<0>" is sourceless and has been
+removed.
+   Sourceless block "cl_serial/cl_protocol_decoder/reg_fot_rst_wr_addr_0" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/_n1021_inv" is sourceless and has been
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_din_0" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_din_1" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_din_2" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_din_3" (SFF)
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/fot_rst_bram_din_4" (SFF)
+removed.
+The signal "cl_serial/cl_protocol_decoder/_n1056_inv" is sourceless and has been
+removed.
+The signal "cl_serial/cl_protocol_decoder/N0" is sourceless and has been
+removed.
+ Sourceless block "cl_serial/cl_protocol_decoder/_n1056_inv" (ROM) removed.
+The signal "cl_serial/cl_protocol_decoder/timing_bram/doutb<20>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/timing_bram/doutb<19>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/timing_bram/doutb<18>" is sourceless
+and has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_timing/N0" is sourceless and
+has been removed.
+The signal "cl_serial/cl_protocol_decoder/fot_rst_timing/N1" is sourceless and
+has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "clk_lvds_ddr_out_p" is unused and has been removed.
+ Unused block "clk_lvds_ddr_out_p" (PAD) removed.
+The signal "clk_lvds_ddr_out_n" is unused and has been removed.
+ Unused block "clk_lvds_ddr_out_n" (PAD) removed.
+The signal "timing_bram_dout<3>" is unused and has been removed.
+The signal "fot_rst_bram_dout<4>" is unused and has been removed.
+The signal "fot_rst_bram_dout<3>" is unused and has been removed.
+The signal "fot_rst_bram_dout<2>" is unused and has been removed.
+The signal "fot_rst_bram_dout<1>" is unused and has been removed.
+The signal "fot_rst_bram_dout<0>" is unused and has been removed.
+Unused block "cl_serial/cl_protocol_decoder/_n1021_inv2" (ROM) removed.
+Unused block "cl_serial/cl_protocol_decoder/_n1056_inv_SW0" (ROM) removed.
+Unused block
+"cl_serial/cl_protocol_decoder/fot_rst_timing/U0/xst_blk_mem_generator/gnativebm
+g.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18
+.ram" (RAMB16BWER) removed.
+Unused block "cl_serial/cl_protocol_decoder/fot_rst_timing/XST_GND" (ZERO)
+removed.
+Unused block "cl_serial/cl_protocol_decoder/fot_rst_timing/XST_VCC" (ONE)
+removed.
+Unused block
+"cl_serial/fifo_mapping/fifo_sensor/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gn
+tv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF) removed.
+Unused block
+"cl_serial/fifo_mapping/fifo_train/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gnt
+v_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF) removed.
+Unused block "clocking/DCM_SP_DCM2" (DCM_SP) removed.
+Unused block "clocking/INST_CLK_LVDS_DDR_OUT" (IBUFDS) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+GND 		cl_serial/cl_protocol_decoder/XST_GND
+VCC 		cl_serial/cl_protocol_decoder/XST_VCC
+GND 		cl_serial/cl_protocol_decoder/fot_sig_timing/XST_GND
+VCC 		cl_serial/cl_protocol_decoder/fot_sig_timing/XST_VCC
+GND 		cl_serial/cl_protocol_decoder/timing_bram/XST_GND
+VCC 		cl_serial/cl_protocol_decoder/timing_bram/XST_VCC
+GND 		cl_serial/cl_serial_in/XST_GND
+VCC 		cl_serial/cl_serial_in/XST_VCC
+GND 		cl_serial/cl_serial_out/XST_GND
+VCC 		cl_serial/cl_serial_out/XST_VCC
+GND 		cl_serial/fifo_mapping/fifo_sensor/XST_GND
+VCC 		cl_serial/fifo_mapping/fifo_sensor/XST_VCC
+GND 		cl_serial/fifo_mapping/fifo_train/XST_GND
+VCC 		cl_serial/fifo_mapping/fifo_train/XST_VCC
+GND 		clocking/XST_GND
+VCC 		clocking/XST_VCC
+GND 		clocking/_i000001/XST_GND
+VCC 		clocking/_i000001/XST_VCC
+GND 		clocking/gclk_2_gpio_2/XST_GND
+VCC 		clocking/gclk_2_gpio_2/XST_VCC
+GND 		image_rx/clock_generator_b1/XST_GND
+GND 		image_rx/gen_image_val/XST_GND
+VCC 		image_rx/gen_image_val/XST_VCC
+GND 		image_rx/gen_image_val/shift_sync/U0/i_synth/i_bb_inst/XST_GND
+VCC 		image_rx/gen_image_val/shift_sync/U0/i_synth/i_bb_inst/XST_VCC
+GND 		image_rx/image_buffer/XST_GND
+VCC 		image_rx/image_buffer/XST_VCC
+GND 		image_rx/image_buffer/dram0/XST_GND
+VCC 		image_rx/image_buffer/dram0/XST_VCC
+GND 		image_rx/image_buffer/dram1/XST_GND
+VCC 		image_rx/image_buffer/dram1/XST_VCC
+GND 		image_rx/image_buffer/dram2/XST_GND
+VCC 		image_rx/image_buffer/dram2/XST_VCC
+GND 		image_rx/image_buffer/dram3/XST_GND
+VCC 		image_rx/image_buffer/dram3/XST_VCC
+GND 		image_rx/image_buffer/dram4/XST_GND
+VCC 		image_rx/image_buffer/dram4/XST_VCC
+GND 		image_rx/image_buffer/dram5/XST_GND
+VCC 		image_rx/image_buffer/dram5/XST_VCC
+GND 		image_rx/image_buffer/dram6/XST_GND
+VCC 		image_rx/image_buffer/dram6/XST_VCC
+GND 		image_rx/image_buffer/dram7/XST_GND
+VCC 		image_rx/image_buffer/dram7/XST_VCC
+GND 		image_rx/training/XST_GND
+VCC 		image_rx/training/XST_VCC
+GND 		image_rx/training/loop1[0].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[0].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[0].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[0].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[10].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[10].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[10].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[10].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[11].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[11].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[11].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[11].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[12].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[12].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[12].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[12].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[13].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[13].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[13].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[13].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[14].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[14].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[14].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[14].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[15].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[15].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[15].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[15].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[16].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[16].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[16].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[16].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[17].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[17].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[17].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[17].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[18].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[18].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[18].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[18].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[19].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[19].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[19].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[19].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[1].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[1].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[1].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[1].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[20].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[20].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[20].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[20].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[21].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[21].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[21].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[21].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[22].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[22].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[22].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[22].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[23].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[23].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[23].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[23].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[24].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[24].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[24].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[24].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[25].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[25].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[25].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[25].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[26].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[26].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[26].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[26].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[27].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[27].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[27].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[27].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[28].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[28].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[28].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[28].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[29].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[29].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[29].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[29].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[2].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[2].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[2].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[2].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[30].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[30].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[30].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[30].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[31].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[31].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_GND
+VCC
+		image_rx/training/loop1[31].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb
+_inst/XST_VCC
+GND 		image_rx/training/loop1[3].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[3].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[3].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[3].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[4].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[4].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[4].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[4].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[5].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[5].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[5].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[5].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[6].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[6].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[6].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[6].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[7].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[7].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[7].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[7].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[8].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[8].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[8].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[8].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_rx/training/loop1[9].receiver_iserdes_bank1/iserdes/XST_GND
+VCC 		image_rx/training/loop1[9].receiver_iserdes_bank1/iserdes/XST_VCC
+GND
+		image_rx/training/loop1[9].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_GND
+VCC
+		image_rx/training/loop1[9].receiver_iserdes_bank1/shifter_var/U0/i_synth/i_bb_
+inst/XST_VCC
+GND 		image_tx/XST_GND
+VCC 		image_tx/XST_VCC
+GND 		image_tx/loop[0].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[0].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[10].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[10].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[11].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[11].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[12].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[12].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[13].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[13].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[14].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[14].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[1].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[1].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[2].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[2].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[3].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[3].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[4].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[4].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[5].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[5].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[6].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[6].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[7].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[7].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[8].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[8].odes2ser_inst/XST_VCC
+GND 		image_tx/loop[9].odes2ser_inst/XST_GND
+VCC 		image_tx/loop[9].odes2ser_inst/XST_VCC
+GND 		sensor_controller/XST_GND
+VCC 		sensor_controller/XST_VCC
+GND 		sequencer/XST_GND
+VCC 		sequencer/XST_VCC
+VCC 		sequencer/mult_rd_length/blk00000001
+GND 		sequencer/mult_rd_length/blk00000002
+GND 		test/XST_GND
+VCC 		test/XST_VCC
+GND 		test/gclk_2_gpio/XST_GND
+VCC 		test/gclk_2_gpio/XST_VCC
+GND 		test/gclk_2_gpio_2/XST_GND
+VCC 		test/gclk_2_gpio_2/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cl_sertc_n                         | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| cl_sertc_p                         | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| cl_sertfg_n                        | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_sertfg_p                        | IOBM             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xclk_n                          | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xclk_p                          | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_xdata_n<0>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xdata_n<1>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xdata_n<2>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xdata_n<3>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_xdata_p<0>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_xdata_p<1>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_xdata_p<2>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_xdata_p<3>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_yclk_n                          | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_yclk_p                          | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_ydata_n<0>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_ydata_n<1>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_ydata_n<2>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_ydata_n<3>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_ydata_p<0>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_ydata_p<1>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_ydata_p<2>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_ydata_p<3>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_zclk_n                          | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_zclk_p                          | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_zdata_n<0>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_zdata_n<1>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_zdata_n<2>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_zdata_n<3>                      | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| cl_zdata_p<0>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_zdata_p<1>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_zdata_p<2>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| cl_zdata_p<3>                      | IOBM             | OUTPUT    | LVDS_33              |       |          |      | OSERDES      |          |          |
+| clk_50M                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk_col_out                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk_lvds_sdr_in_n                  | IOBS             | OUTPUT    | LVDS_33              |       |          |      |              |          |          |
+| clk_lvds_sdr_in_p                  | IOBM             | OUTPUT    | LVDS_33              |       |          |      | ODDR         |          |          |
+| clk_main                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST | ODDR         |          |          |
+| decoder<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<8>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<9>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<10>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| decoder<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fot_dout<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| fot_dout<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| fot_dout<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| fot_dout<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| fot_dout<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<0>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pixel_read_timing<1>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pixel_read_timing<2>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pixel_read_timing<3>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pixel_read_timing<4>               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pixel_read_timing<5>               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<6>               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<7>               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<8>               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<9>               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<10>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<11>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<12>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<13>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<14>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<15>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<16>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pixel_read_timing<17>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| pll_sel                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pll_sel_0                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pll_sel_1                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pll_sel_2                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pll_sel_3                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rst_n                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| sensor_data_ser_n<0>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<1>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<2>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<3>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<4>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<5>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<6>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<7>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<8>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<9>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<10>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<11>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<12>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<13>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<14>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<15>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<16>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<17>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<18>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<19>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<20>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<21>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<22>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<23>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<24>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<25>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<26>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<27>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<28>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<29>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<30>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_n<31>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      |              |          |          |
+| sensor_data_ser_p<0>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<1>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<2>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<3>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<4>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<5>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<6>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<7>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<8>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<9>               | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<10>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<11>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<12>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<13>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<14>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<15>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<16>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<17>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<18>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<19>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<20>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<21>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<22>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<23>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<24>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<25>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<26>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<27>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<28>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<29>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<30>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_data_ser_p<31>              | IOB              | INPUT     | LVDS_33              | TRUE  |          |      | ISERDES      |          | DIFF_PHA |
+| sensor_reset_n                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| spi_clk                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| spi_in                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| spi_out                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| spi_read                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| spi_write                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | ODDR         |          |          |
+| test_io<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| test_io<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST | ODDR         |          |          |
+| tx2                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

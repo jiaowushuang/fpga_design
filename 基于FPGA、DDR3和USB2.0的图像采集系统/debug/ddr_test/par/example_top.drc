@@ -1,0 +1,43 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Jul 24 16:16:47 2017
+
+drc -z example_top.ncd example_top.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net c3_control0<13> is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem6_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem1_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem2_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem3_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem4_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem5_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <gen_dbg_enable.my_vio_c3/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 9 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

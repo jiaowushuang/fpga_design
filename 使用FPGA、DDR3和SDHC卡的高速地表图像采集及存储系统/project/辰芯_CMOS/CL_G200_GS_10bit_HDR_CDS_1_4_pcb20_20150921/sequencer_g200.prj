@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "ipcore_dir/mult.v"
+verilog work "sequencer.v"

@@ -1,0 +1,643 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: sd_operation.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sd_operation.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sd_operation"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-csg324
+
+---- Source Options
+Top Module Name                    : sd_operation
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v" into library work
+Parsing module <sd_operation>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <sd_operation>.
+WARNING:HDLCompiler:1127 - "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v" Line 167: Assignment to int_errout ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v" Line 472: Assignment to trant_errout ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v" Line 1183: Assignment to int_res_longdata ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v" Line 76: Net <sd_int_sddata_dir> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sd_operation>.
+    Related source file is "D:\FPGA_Project\fpga_project\demo\16_sd_test\sd_test\sd_operation.v".
+        counter2_5us = 8'b11111010
+        counterncc = 4'b1111
+        sd_int_idle = 4'b0000
+        sd_int_sendcmd0 = 4'b0001
+        sd_int_waitcmd0 = 4'b0010
+        sd_int_sendcmd8 = 4'b0011
+        sd_int_get_res_r7 = 4'b0100
+        sd_int_send_cmd55 = 4'b0101
+        sd_int_get_res_fisrt_r1 = 4'b0110
+        sd_int_send_acmd41 = 4'b0111
+        sd_int_get_first_r3 = 4'b1000
+        sd_int_send_cmd2 = 4'b1001
+        sd_int_get_first_r2 = 4'b1010
+        sd_int_send_cmd3 = 4'b1011
+        sd_int_get_first_r6 = 4'b1100
+        sd_int_over = 4'b1101
+        sd_int_errorout = 4'b1110
+        sd_tran_idle = 4'b0000
+        sd_tran_sync = 4'b0001
+        sd_tran_send_cmd9 = 4'b0010
+        sd_tran_get_first_r2 = 4'b0011
+        sd_tran_send_cmd7 = 4'b0100
+        sd_tran_get_first_r1b = 4'b0101
+        sd_tran_send_cmd55 = 4'b0110
+        sd_tran_get_res_first_r1 = 4'b0111
+        sd_tran_send_acmd6 = 4'b1000
+        sd_tran_get_res_sec_r1 = 4'b1001
+        sd_tran_wait_req = 4'b1010
+        sd_tran_send_cmd17 = 4'b1011
+        sd_tran_getdata = 4'b1100
+        sd_tran_error = 4'b1101
+        send_cmd_idle = 2'b00
+        send_cmd_sync = 2'b01
+        send_cmd_bitdata = 2'b10
+        send_cmd_over = 2'b11
+        get_respone_idle = 3'b000
+        get_respone_bitstart = 3'b001
+        get_respone_iddata = 3'b010
+        get_respone_timeoutover = 3'b011
+        get_respone_shiftdata = 3'b100
+        get_respone_last = 3'b101
+        get_respone_sendover = 3'b110
+        get_sddata_idle = 3'b000
+        get_sddat_ready = 3'b001
+        get_sddata_wait_start = 3'b010
+        get_sddata_shiftdata = 3'b011
+        get_sddata_waitlast = 3'b100
+        get_sddata_over = 3'b101
+        counter1ms = 9'b110010000
+WARNING:Xst:647 - Input <read_ram_data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <init_repeat_req> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <write_req> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <sd_int_sddata_dir> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <id_clk_pluse>.
+    Found 1-bit register for signal <id_clk>.
+    Found 1-bit register for signal <data_clk>.
+    Found 1-bit register for signal <sd_int_req>.
+    Found 1-bit register for signal <send_int_cmd_req>.
+    Found 1-bit register for signal <send_tran_cmd_req>.
+    Found 1-bit register for signal <sd_tran_idle_flag>.
+    Found 2-bit register for signal <send_cmd_state>.
+    Found 1-bit register for signal <sd_out_command_dir>.
+    Found 1-bit register for signal <sd_command_out_temp>.
+    Found 7-bit register for signal <cmd_bit_counter>.
+    Found 8-bit register for signal <cmd_last_data>.
+    Found 1-bit register for signal <cmd_last_data_outreq>.
+    Found 38-bit register for signal <cmd_outdata>.
+    Found 3-bit register for signal <cmd_sync_counter>.
+    Found 1-bit register for signal <crc7_indata_req>.
+    Found 40-bit register for signal <crc7_indata>.
+    Found 1-bit register for signal <sd_sddata_dir>.
+    Found 8-bit register for signal <outdata>.
+    Found 8-bit register for signal <id_clk_counter>.
+    Found 8-bit adder for signal <id_clk_counter[7]_GND_1_o_add_13_OUT> created at line 108.
+    Found 3-bit adder for signal <cmd_sync_counter[2]_GND_1_o_add_198_OUT> created at line 780.
+    Found 7-bit adder for signal <cmd_bit_counter[6]_GND_1_o_add_209_OUT> created at line 822.
+    Found 2-bit 4-to-1 multiplexer for signal <send_cmd_state[1]_GND_1_o_wide_mux_230_OUT> created at line 754.
+    Found 1-bit tristate buffer for signal <sd_command> created at line 73
+    Found 1-bit tristate buffer for signal <sd_data<3>> created at line 82
+    Found 1-bit tristate buffer for signal <sd_data<2>> created at line 82
+    Found 1-bit tristate buffer for signal <sd_data<1>> created at line 82
+    Found 1-bit tristate buffer for signal <sd_data<0>> created at line 82
+    Found 8-bit comparator greater for signal <GND_1_o_id_clk_counter[7]_LessThan_12_o> created at line 101
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <send_cmd_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 126 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  16 Multiplexer(s).
+	inferred   5 Tristate(s).
+Unit <sd_operation> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 3-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 20
+ 1-bit register                                        : 12
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 38-bit register                                       : 1
+ 40-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 8
+ 2-bit 2-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 38-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 5
+ 1-bit tristate buffer                                 : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <crc7_indata_14> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_15> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_16> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_17> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_18> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_19> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_20> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_21> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_22> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_23> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_24> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_25> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_26> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_27> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_28> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_29> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_30> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_31> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_32> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_33> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_34> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_35> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_36> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_37> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_38> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_39> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_int_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_tran_idle_flag> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_int_cmd_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_tran_cmd_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_3> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_4> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_5> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_6> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_7> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_sddata_dir> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_0> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_1> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_2> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_3> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_4> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_5> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_6> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_7> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_8> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_9> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_10> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_11> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_12> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_13> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <crc7_indata<39:39>> (without init value) have a constant value of 0 in block <sd_operation>.
+
+Synthesizing (advanced) Unit <sd_operation>.
+The following registers are absorbed into counter <id_clk_counter>: 1 register on signal <id_clk_counter>.
+The following registers are absorbed into counter <cmd_sync_counter>: 1 register on signal <cmd_sync_counter>.
+Unit <sd_operation> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 2
+ 3-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 114
+ Flip-Flops                                            : 114
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 8
+ 2-bit 2-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 38-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <crc7_indata_13> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_14> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_15> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_16> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_17> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_18> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_19> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_20> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_21> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_22> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_23> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_24> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_25> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_26> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_27> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_28> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_29> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_30> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_31> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_32> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_33> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_34> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_35> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_36> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_37> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_38> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_int_cmd_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_int_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_tran_cmd_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_tran_idle_flag> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_sddata_dir> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_3> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_4> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_5> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_6> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outdata_7> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_0> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_1> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_2> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_3> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_4> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_5> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_6> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_7> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_8> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_9> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_10> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_11> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_12> (without init value) has a constant value of 1 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <id_clk_pluse> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_0> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_1> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_2> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_3> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_4> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_5> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_6> of sequential type is unconnected in block <sd_operation>.
+WARNING:Xst:2677 - Node <id_clk_counter_7> of sequential type is unconnected in block <sd_operation>.
+
+Optimizing unit <sd_operation> ...
+WARNING:Xst:1710 - FF/Latch <cmd_outdata_10> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_11> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_12> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_13> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_14> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_15> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_16> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_17> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_18> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_19> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_20> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_21> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_22> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_23> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_24> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_25> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_26> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_27> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_28> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_29> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_30> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_31> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_32> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_33> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_34> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_35> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_36> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_37> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_sync_counter_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_sync_counter_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_sync_counter_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <crc7_indata_req> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_out_command_dir> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_3> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_4> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_5> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_6> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_7> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_3> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_4> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_5> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_bit_counter_6> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_last_data_outreq> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_cmd_state_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <send_cmd_state_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sd_command_out_temp> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_0> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_1> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_2> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_3> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_4> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_5> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_6> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_7> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_8> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cmd_outdata_9> (without init value) has a constant value of 0 in block <sd_operation>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sd_operation, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sd_operation.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3
+#      GND                         : 1
+#      INV                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 1
+#      FD                          : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      OBUF                        : 65
+#      OBUFT                       : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               1  out of  54576     0%  
+ Number of Slice LUTs:                    1  out of  27288     0%  
+    Number used as Logic:                 1  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      2
+   Number with an unused Flip Flop:       1  out of      2    50%  
+   Number with an unused LUT:             1  out of      2    50%  
+   Number of fully used LUT-FF pairs:     0  out of      2     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                         151
+ Number of bonded IOBs:                  67  out of    218    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+sys_clk                            | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.260ns (Maximum Frequency: 442.478MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk'
+  Clock period: 2.260ns (frequency: 442.478MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.260ns (Levels of Logic = 1)
+  Source:            data_clk (FF)
+  Destination:       data_clk (FF)
+  Source Clock:      sys_clk rising
+  Destination Clock: sys_clk rising
+
+  Data Path: data_clk to data_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  data_clk (data_clk)
+     INV:I->O              1   0.255   0.681  data_clk_rstpot1_INV_0 (data_clk_rstpot)
+     FD:D                      0.074          data_clk
+    ----------------------------------------
+    Total                      2.260ns (0.854ns logic, 1.406ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            data_clk (FF)
+  Destination:       sd_clk (PAD)
+  Source Clock:      sys_clk rising
+
+  Data Path: data_clk to sd_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  data_clk (data_clk)
+     OBUF:I->O                 2.912          sd_clk_OBUF (sd_clk)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock sys_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk        |    2.260|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.90 secs
+ 
+--> 
+
+Total memory usage is 264748 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  186 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

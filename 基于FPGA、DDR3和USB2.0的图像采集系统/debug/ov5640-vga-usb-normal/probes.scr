@@ -1,0 +1,5 @@
+# probe script file: E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal\probes.scr
+probe script begin
+probe add data_pulse -targetpins T5  -usedpin T5 
+probe add usb_de -targetpins R5  -usedpin R5 
+probe script end

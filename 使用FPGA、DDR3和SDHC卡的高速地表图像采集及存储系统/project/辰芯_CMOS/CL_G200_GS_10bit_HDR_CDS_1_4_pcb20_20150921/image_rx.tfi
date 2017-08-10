@@ -1,0 +1,41 @@
+
+
+
+// Instantiate the module
+image_rx instance_name (
+    .clk_rxg(clk_rxg), 
+    .clk_rxio(clk_rxio), 
+    .clk_txg(clk_txg), 
+    .clk_fix(clk_fix), 
+    .rst_rx_n(rst_rx_n), 
+    .rst_tx_n(rst_tx_n), 
+    .cmd_gen_test_image(cmd_gen_test_image), 
+    .sync_x(sync_x), 
+    .cmd_start_training(cmd_start_training), 
+    .training_word(training_word), 
+    .reg_cnt_timing_cycle(reg_cnt_timing_cycle), 
+    .window_row_length(window_row_length), 
+    .reg_test_image_chan_0(reg_test_image_chan_0), 
+    .reg_test_image_chan_1(reg_test_image_chan_1), 
+    .reg_test_image_chan_2(reg_test_image_chan_2), 
+    .reg_test_image_chan_3(reg_test_image_chan_3), 
+    .sensor_data_ser_p(sensor_data_ser_p), 
+    .sensor_data_ser_n(sensor_data_ser_n), 
+    .window_column_sel(window_column_sel), 
+    .chan_0(chan_0), 
+    .chan_1(chan_1), 
+    .chan_2(chan_2), 
+    .chan_3(chan_3), 
+    .chan_4(chan_4), 
+    .chan_5(chan_5), 
+    .chan_6(chan_6), 
+    .chan_7(chan_7), 
+    .fval(fval), 
+    .lval(lval), 
+    .dval(dval), 
+    .training_done(training_done), 
+    .fifo_train_wen(fifo_train_wen), 
+    .fifo_train_din(fifo_train_din)
+    );
+
+

@@ -1,0 +1,36 @@
+##
+Net fpga_gclk LOC = V10 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+##
+NET reset_n                                 LOC = N4 | IOSTANDARD = "LVCMOS15"; 
+##
+########USB Pin define#####################
+NET usb_fifoaddr<0>           LOC = H15 | IOSTANDARD = "LVCMOS33";     ## FIFO ADDR0: U6(PA4/FIFOADR0)
+NET usb_fifoaddr<1>           LOC = K12 | IOSTANDARD = "LVCMOS33";     ## FIFO ADDR1: U6(PA5/FIFOADR1)
+//NET usb_clkout             LOC = C9 | IOSTANDARD = "LVCMOS33"; 	    ## USB CLKOUT: U6(CLKOUT/**PE1)
+//NET usb_ifclk              LOC = C6 | IOSTANDARD = "LVCMOS33";      ## USB IFCLK: U6(*IFCLK/**PE0)
+NET usb_slcs               LOC = K18 | IOSTANDARD = "LVCMOS33";        ## USB SLCS: U6(PA7/*FLAGD/SLCS#)
+NET usb_sloe               LOC = H18 | IOSTANDARD = "LVCMOS33";        ## USB SLOE: U6(PA2/*SLOE)
+NET usb_slrd               LOC = M16 | IOSTANDARD = "LVCMOS33";        ## USB SLRD: U6(RDY0/*SLRD)
+NET usb_slwr               LOC = N16 | IOSTANDARD = "LVCMOS33";        ## USB SLWR: U6(RDY1/*SLWR)
+NET usb_fd<0>              LOC = D17 | IOSTANDARD = "LVCMOS33";        ## USB FD0: U6(PD0/FD0)
+NET usb_fd<1>              LOC = H16 | IOSTANDARD = "LVCMOS33";        ## USB FD1: U6(PD1/FD1)
+NET usb_fd<2>              LOC = D18 | IOSTANDARD = "LVCMOS33";        ## USB FD2: U6(PD2/FD2)
+NET usb_fd<3>              LOC = J16 | IOSTANDARD = "LVCMOS33";        ## USB FD3: U6(PD3/FD3)
+NET usb_fd<4>              LOC = E16 | IOSTANDARD = "LVCMOS33";        ## USB FD4: U6(PD4/FD4)
+NET usb_fd<5>              LOC = H14 | IOSTANDARD = "LVCMOS33";        ## USB FD5: U6(PD5/FD5)
+NET usb_fd<6>              LOC = J13 | IOSTANDARD = "LVCMOS33";        ## USB FD6: U6(PD6/FD6)
+NET usb_fd<7>              LOC = F17 | IOSTANDARD = "LVCMOS33";        ## USB FD7: U6(PD7/FD7)
+NET usb_fd<8>              LOC = L17 | IOSTANDARD = "LVCMOS33";       ## USB FD8: U6(PD8/FD8)
+NET usb_fd<9>              LOC = K13 | IOSTANDARD = "LVCMOS33";       ## USB FD9: U6(PD9/FD9)
+NET usb_fd<10>             LOC = L18 | IOSTANDARD = "LVCMOS33";       ## USB FD10: U6(PD10/FD10)
+NET usb_fd<11>             LOC = N15 | IOSTANDARD = "LVCMOS33";       ## USB FD011 U6(PD11/FD11)
+NET usb_fd<12>             LOC = M18 | IOSTANDARD = "LVCMOS33";        ## USB FD12: U6(PD12/FD12)
+NET usb_fd<13>             LOC = H12 | IOSTANDARD = "LVCMOS33";       ## USB FD13: U6(PD13/FD13)
+NET usb_fd<14>             LOC = N17 | IOSTANDARD = "LVCMOS33";       ## USB FD14: U6(PD14/FD14)
+NET usb_fd<15>             LOC = H13 | IOSTANDARD = "LVCMOS33";       ## USB FD15: U6(PD15/FD15)
+
+NET usb_flaga              LOC = E18 | IOSTANDARD = "LVCMOS33";        ## FLAGA EP2 Empty: U6(CTL0/*FLAGA) 
+NET usb_flagb              LOC = F18 | IOSTANDARD = "LVCMOS33";        ## FLAGB EP4 Empty: U6(CTL1/*FLAGB)
+NET usb_flagc              LOC = G18 | IOSTANDARD = "LVCMOS33";        ## FLAGC EP6 Full: U6(CTL2/*FLAGC)
+#NET USB_PKTEND             LOC = B8 | IOSTANDARD = "LVCMOS33";        ## PKTEND: U6(PA6/*PKTEND)

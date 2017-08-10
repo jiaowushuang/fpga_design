@@ -1,0 +1,16 @@
+# Output products list for <fot_sig_timing>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+fot_sig_timing.asy
+fot_sig_timing.gise
+fot_sig_timing.ngc
+fot_sig_timing.sym
+fot_sig_timing.v
+fot_sig_timing.veo
+fot_sig_timing.vhd
+fot_sig_timing.vho
+fot_sig_timing.xco
+fot_sig_timing.xise
+fot_sig_timing_flist.txt
+fot_sig_timing_xmdf.tcl

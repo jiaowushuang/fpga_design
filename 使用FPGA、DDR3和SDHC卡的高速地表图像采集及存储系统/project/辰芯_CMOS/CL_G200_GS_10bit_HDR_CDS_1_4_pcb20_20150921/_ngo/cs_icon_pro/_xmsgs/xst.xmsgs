@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 163: Assignment to <arg fmt="%s" index="1">logic_1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_bscan.vhd" Line 162: Assignment to <arg fmt="%s" index="1">logic_0</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_bscan.vhd" Line 133: &lt;<arg fmt="%s" index="1">icon_bscan_bufg</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_bscan.vhd" Line 115: &lt;<arg fmt="%s" index="1">bscan_spartan6</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_cmd_decode.vhd" Line 67: Assignment to <arg fmt="%s" index="1">logic_1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_cmd_decode.vhd" Line 68: Assignment to <arg fmt="%s" index="1">logic_0</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_sync.vhd" Line 55: Assignment to <arg fmt="%s" index="1">logic_0</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_ctrl_out.vhd" Line 69: Assignment to <arg fmt="%s" index="1">logic_1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\icon_status.vhd" Line 118: Assignment to <arg fmt="%s" index="1">logic_0</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 140: Net &lt;<arg fmt="%s" index="1">iTDI_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 141: Net &lt;<arg fmt="%s" index="1">iRESET_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 142: Net &lt;<arg fmt="%s" index="1">iSHIFT_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 143: Net &lt;<arg fmt="%s" index="1">iUPDATE_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 144: Net &lt;<arg fmt="%s" index="1">iCAPTURE_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 145: Net &lt;<arg fmt="%s" index="1">iSEL_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Administrator\Desktop\Hang\G200_TEST_12_29\_ngo\cs_icon_pro\tmp\_cg\_bbx\chipscope_icon_v1_05_a\chipscope_icon.vhd" Line 146: Net &lt;<arg fmt="%s" index="1">iDRCK_IN</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">TDI_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">TDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">RESET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">SHIFT_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">UPDATE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">CAPTURE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">SEL_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">DRCK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">TAP_TDO_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/icon_pro.vhd</arg>&quot; line <arg fmt="%s" index="2">41</arg>: Output port &lt;<arg fmt="%s" index="3">TAP_TDO_OE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TDI_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TDO_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RESET_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SHIFT_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">UPDATE_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CAPTURE_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SEL_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DRCK_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">TDI_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">TDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">RESET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">SHIFT_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">UPDATE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">CAPTURE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">SEL_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/chipscope_icon.vhd</arg>&quot; line <arg fmt="%s" index="2">286</arg>: Output port &lt;<arg fmt="%s" index="3">DRCK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_ICON</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL1</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL2</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL3</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL4</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL5</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL6</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL7</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL8</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL9</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL10</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL11</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL12</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL13</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2563" delta="new" >Inout &lt;<arg fmt="%s" index="1">CONTROL14</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">TDI_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">TDO_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RESET_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SHIFT_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">UPDATE_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">CAPTURE_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SEL_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DRCK_OUT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iTDI_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iRESET_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iSHIFT_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iUPDATE_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iCAPTURE_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iSEL_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">iDRCK_IN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TDI_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RESET_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SHIFT_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">UPDATE_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CAPTURE_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SEL_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DRCK_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/icon_core.vhd</arg>&quot; line <arg fmt="%s" index="2">343</arg>: Output port &lt;<arg fmt="%s" index="3">COMMAND</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U_CMD</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TDO_EXT</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TAP_TDI_IPAD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TAP_TMS_IPAD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TAP_TCK_IPAD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/icon_bscan.vhd</arg>&quot; line <arg fmt="%s" index="2">686</arg>: Output port &lt;<arg fmt="%s" index="3">RUNTEST</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/icon_bscan.vhd</arg>&quot; line <arg fmt="%s" index="2">686</arg>: Output port &lt;<arg fmt="%s" index="3">TCK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">c:/users/administrator/desktop/hang/g200_test_12_29/_ngo/cs_icon_pro/tmp/_cg/_bbx/chipscope_icon_v1_05_a/icon_bscan.vhd</arg>&quot; line <arg fmt="%s" index="2">686</arg>: Output port &lt;<arg fmt="%s" index="3">TMS</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DRCK_EXT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SEL_EXT</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CORE_ID_SEL&lt;15:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2042" delta="new" >Unit <arg fmt="%s" index="1">chipscope_icon</arg>: <arg fmt="%d" index="2">504</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

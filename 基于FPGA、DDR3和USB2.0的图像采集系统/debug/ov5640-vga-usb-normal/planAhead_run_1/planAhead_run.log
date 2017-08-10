@@ -1,0 +1,22 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from E:/xlinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [E:/xlinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [E:/xlinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source G:/fpga-design/debug/code-ov5640-vga-usb-normal/pa.fromNetlist.tcl
+# create_project -name ov5640_vga -dir "G:/fpga-design/debug/code-ov5640-vga-usb-normal/planAhead_run_2" -part xc6slx45csg324-2
+create_project: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 494.445 ; gain = 57.832
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga_cs.ngc" [ get_property srcset [ current_run ] ]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Jul 25 14:48:23 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

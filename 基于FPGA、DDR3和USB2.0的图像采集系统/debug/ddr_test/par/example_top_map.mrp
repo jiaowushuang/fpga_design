@@ -1,0 +1,1342 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'example_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o example_top_map.ncd example_top.ngd
+example_top.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Jul 24 16:14:54 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    9
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,883 out of  54,576    3%
+    Number used as Flip Flops:               1,882
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,933 out of  27,288    7%
+    Number used as logic:                    1,603 out of  27,288    5%
+      Number using O6 output only:           1,062
+      Number using O5 output only:             216
+      Number using O5 and O6:                  325
+      Number used as ROM:                        0
+    Number used as Memory:                     225 out of   6,408    3%
+      Number used as Dual Port RAM:             28
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                 24
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           197
+        Number using O6 output only:            67
+        Number using O5 output only:             0
+        Number using O5 and O6:                130
+    Number used exclusively as route-thrus:    105
+      Number with same-slice register load:     88
+      Number with same-slice carry load:        17
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   763 out of   6,822   11%
+  Number of MUXCYs used:                       508 out of  13,644    3%
+  Number of LUT Flip Flop pairs used:        2,264
+    Number with an unused Flip Flop:           760 out of   2,264   33%
+    Number with an unused LUT:                 331 out of   2,264   14%
+    Number of fully used LUT-FF pairs:       1,173 out of   2,264   51%
+    Number of unique control sets:             171
+    Number of slice register sites lost
+      to control set restrictions:             818 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        55 out of     218   25%
+    Number of LOCed IOBs:                       54 out of      55   98%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        14 out of     116   12%
+  Number of RAMB8BWERs:                          1 out of     232    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        24 out of     376    6%
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      2
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  48 out of     376   12%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                   47
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         1 out of       4   25%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                1 out of       2   50%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       4   25%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+  Number of RPM macros:            9
+Average Fanout of Non-Clock Nets:                2.80
+
+Peak Memory Usage:  614 MB
+Total REAL time to MAP completion:  1 mins 3 secs 
+Total CPU time to MAP completion:   1 mins 3 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net c3_control0<13> is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem6_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem1_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem2_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem3_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem4_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem5_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <gen_dbg_enable.my_vio_c3/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network c3_p1_cmd_instr<2> has no load.
+INFO:LIT:395 - The above info message is repeated 1122 more times for the
+   following (max. 5 shown):
+   c3_p1_cmd_instr<1>,
+   c3_p1_cmd_instr<0>,
+   c3_p1_cmd_bl<5>,
+   c3_p1_cmd_bl<4>,
+   c3_p1_cmd_bl<3>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 55 IOs, 54 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  94 block(s) removed
+ 391 block(s) optimized away
+ 121 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_DSR" (ROM)
+removed.
+Loadless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B"
+(ROM) removed.
+Loadless block "gen_dbg_enable.my_vio_c3/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT"
+(SFF) removed.
+Loadless block
+"memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/S
+P6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_ad
+d_2_OUT31" (ROM) removed.
+Loadless block
+"memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_gen
+/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o
+_add_2_OUT31" (ROM) removed.
+The signal "c3_control0<35>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O113" (ROM) removed.
+  The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O112" is sourceless and has been removed.
+The signal "c3_control0<34>" is sourceless and has been removed.
+The signal "c3_control0<33>" is sourceless and has been removed.
+The signal "c3_control0<32>" is sourceless and has been removed.
+The signal "c3_control0<31>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O112" (ROM) removed.
+  The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O111" is sourceless and has been removed.
+The signal "c3_control0<30>" is sourceless and has been removed.
+The signal "c3_control0<29>" is sourceless and has been removed.
+The signal "c3_control0<28>" is sourceless and has been removed.
+The signal "c3_control0<27>" is sourceless and has been removed.
+The signal "c3_control0<26>" is sourceless and has been removed.
+The signal "c3_control0<25>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O19" (ROM) removed.
+  The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O18" is sourceless and has been removed.
+The signal "c3_control0<24>" is sourceless and has been removed.
+The signal "c3_control0<23>" is sourceless and has been removed.
+The signal "c3_control0<22>" is sourceless and has been removed.
+The signal "c3_control0<21>" is sourceless and has been removed.
+The signal "c3_control0<19>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O18" (ROM) removed.
+  The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O17" is sourceless and has been removed.
+The signal "c3_control0<18>" is sourceless and has been removed.
+The signal "c3_control0<17>" is sourceless and has been removed.
+The signal "c3_control0<16>" is sourceless and has been removed.
+The signal "c3_control0<15>" is sourceless and has been removed.
+The signal "c3_control0<11>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O111" (ROM) removed.
+  The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux_
+O110" is sourceless and has been removed.
+The signal "c3_control0<10>" is sourceless and has been removed.
+The signal "c3_control0<7>" is sourceless and has been removed.
+The signal "c3_control1<35>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O28"
+(ROM) removed.
+  The signal
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
+is sourceless and has been removed.
+The signal "c3_control1<34>" is sourceless and has been removed.
+The signal "c3_control1<33>" is sourceless and has been removed.
+The signal "c3_control1<32>" is sourceless and has been removed.
+The signal "c3_control1<31>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
+(ROM) removed.
+  The signal
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26"
+is sourceless and has been removed.
+The signal "c3_control1<30>" is sourceless and has been removed.
+The signal "c3_control1<29>" is sourceless and has been removed.
+The signal "c3_control1<28>" is sourceless and has been removed.
+The signal "c3_control1<27>" is sourceless and has been removed.
+The signal "c3_control1<26>" is sourceless and has been removed.
+The signal "c3_control1<25>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O24"
+(ROM) removed.
+  The signal
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
+is sourceless and has been removed.
+The signal "c3_control1<24>" is sourceless and has been removed.
+The signal "c3_control1<23>" is sourceless and has been removed.
+The signal "c3_control1<22>" is sourceless and has been removed.
+The signal "c3_control1<21>" is sourceless and has been removed.
+The signal "c3_control1<20>" is sourceless and has been removed.
+The signal "c3_control1<19>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
+(ROM) removed.
+  The signal
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O22"
+is sourceless and has been removed.
+The signal "c3_control1<18>" is sourceless and has been removed.
+The signal "c3_control1<17>" is sourceless and has been removed.
+The signal "c3_control1<16>" is sourceless and has been removed.
+The signal "c3_control1<15>" is sourceless and has been removed.
+The signal "c3_control1<14>" is sourceless and has been removed.
+The signal "c3_control1<13>" is sourceless and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26"
+(ROM) removed.
+  The signal
+"gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O25"
+is sourceless and has been removed.
+The signal "c3_control1<12>" is sourceless and has been removed.
+The signal "c3_control1<11>" is sourceless and has been removed.
+The signal "c3_control1<10>" is sourceless and has been removed.
+The signal "c3_control1<9>" is sourceless and has been removed.
+The signal "c3_control1<8>" is sourceless and has been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<7>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<6>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<5>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<4>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<3>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<2>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<1>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data<0>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<31>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<30>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<29>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<28>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<27>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<26>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<25>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<24>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<23>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<22>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<21>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<20>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<19>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<18>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<17>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<16>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<15>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<14>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<13>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<12>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<11>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<10>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<9>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<8>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<7>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<6>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<5>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<4>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<3>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<2>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<1>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/status<0>" is sourceless and has
+been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_data_valid" is sourceless and
+has been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_cmd_ready_in" is sourceless
+and has been removed.
+The signal "memc3_wrapper_inst/mcb_ui_top_inst/uo_cal_start" is sourceless and
+has been removed.
+The signal
+"memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/gen_term_calib.mcb_soft
+_calibration_top_inst/N1" is sourceless and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_ra<7>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_ra<1>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<9>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<8>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<7>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<4>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<3>" is sourceless
+and has been removed.
+The signal "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb<2>" is sourceless
+and has been removed.
+The signal
+"gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_G
+ANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I
+_USE_RPM_NE0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "gen_dbg_enable.my_icon_c3/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless
+and has been removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_LCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block
+"gen_dbg_enable.my_icon_c3/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE" (ROM)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_ra_1" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_ra_7" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_2" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_3" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_4" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_7" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_8" (FF)
+removed.
+Unused block "memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/rst_rb_9" (FF)
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		gen_dbg_enable.my_icon_c3/XST_GND
+VCC 		gen_dbg_enable.my_icon_c3/XST_VCC
+GND
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SC
+NT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SE
+T/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SC
+NT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SE
+T/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SC
+NT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SE
+T/XST_VCC
+GND
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/XST_VCC
+GND
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WC
+NT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_S
+ET/XST_VCC
+LUT4 		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+LUT6
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux
+_O110
+   optimized to 1
+LUT6
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux
+_O114
+   optimized to 1
+LUT3
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/Mmux
+_O17_SW2
+   optimized to 1
+GND
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_
+GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/
+I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_G
+ND
+VCC
+		gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_
+GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/
+I_USE_RPM_NE0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_V
+CC
+GND 		gen_dbg_enable.my_ila_c3/XST_GND
+VCC 		gen_dbg_enable.my_ila_c3/XST_VCC
+FDE 		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_DATA_OUT
+   optimized to 0
+LUT4 		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/F_STAT[4].I_STAT.U_STAT
+   optimized to 0
+LUT4 		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/F_STAT[6].I_STAT.U_STAT
+   optimized to 0
+LUT4 		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/F_STAT[7].I_STAT.U_STAT
+   optimized to 0
+LUT6
+		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O25
+   optimized to 1
+LUT6
+		gen_dbg_enable.my_vio_c3/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O29
+   optimized to 1
+GND 		gen_dbg_enable.my_vio_c3/XST_GND
+VCC 		gen_dbg_enable.my_vio_c3/XST_VCC
+GND 		memc3_infrastructure_inst/XST_GND
+VCC 		memc3_infrastructure_inst/XST_VCC
+GND 		memc3_tb_top_inst/PORT0_TG.init_mem_pattern_ctr_p0/XST_GND
+VCC 		memc3_tb_top_inst/PORT0_TG.init_mem_pattern_ctr_p0/XST_VCC
+GND 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/XST_GND
+VCC 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/XST_VCC
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT1
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT10
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT11
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT12
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT13
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT14
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT15
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT17
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT18
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT19
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT20
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT23
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT27
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT28
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT29
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT4
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT6
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_o_a
+dd_2_OUT7
+   optimized to 0
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/XST_GND
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/XST_GND
+VCC
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/rd_datagen/
+SP6_DGEN.sp6_data_gen/XST_VCC
+VCC
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_posted
+fifo/XST_VCC
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_posted
+fifo/rd_fifo/XST_GND
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/XST_GND
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT1
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT10
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT11
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT12
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT13
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT14
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT15
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT16
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT17
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT18
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT19
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT2
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT20
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT21
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT22
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT23
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT24
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT25
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT26
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT27
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT28
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT29
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT3
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT30
+   optimized to 0
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT4
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT6
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT7
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>1
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>13
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>14
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>15
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>16
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>17
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>18
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>19
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>2
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>20
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>21
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>22
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>23
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>24
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>25
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>26
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>27
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>28
+   optimized to 0
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>29
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>3
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>30
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/Madd_prbs_seed_i[31]_GND_67_
+o_add_2_OUT_lut<0>31
+   optimized to 0
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/XST_GND
+VCC
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/PRBS_PATTERN.data_prbs_gen/XST_VCC
+GND
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/XST_GND
+VCC
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/WR_PATH.write_data_path/wr_data_ge
+n/SP6_WDGEN.sp6_data_gen/XST_VCC
+GND 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/XST_GND
+VCC 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/XST_VCC
+GND 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/mcb_control/XST_GND
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT1
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT2
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT3
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT4
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT5
+   optimized to 1
+LUT2
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>10
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>5
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>6
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>7
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>8
+   optimized to 1
+LUT3
+		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/Madd_end_addr_i[31]_GND_55
+_o_add_76_OUT_lut<0>9
+   optimized to 1
+GND 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/XST_GND
+VCC 		memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/u_c_gen/XST_VCC
+VCC 		memc3_wrapper_inst/mcb_ui_top_inst/XST_VCC
+GND 		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/XST_GND
+VCC 		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/XST_VCC
+GND
+		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/gen_term_calib.mcb_sof
+t_calibration_top_inst/XST_GND
+VCC
+		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/gen_term_calib.mcb_sof
+t_calibration_top_inst/XST_VCC
+GND
+		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/gen_term_calib.mcb_sof
+t_calibration_top_inst/mcb_soft_calibration_inst/XST_GND
+VCC
+		memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/gen_term_calib.mcb_sof
+t_calibration_top_inst/mcb_soft_calibration_inst/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| c3_sys_clk                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| c3_sys_rst_i                       | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| calib_done                         | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| error                              | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| heartbeat                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| mcb3_dram_a<0>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<1>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<2>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<3>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<4>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<5>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<6>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<7>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<8>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<9>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<10>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<11>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<12>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<13>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<0>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<1>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<2>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cas_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck                       | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck_n                     | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cke                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_dm                       | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<0>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<1>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<2>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<3>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<4>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<5>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<6>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<7>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<8>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<9>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<10>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<11>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<12>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<13>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<14>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<15>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dqs                      | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_dqs_n                    | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_odt                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ras_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_reset_n                  | IOB              | OUTPUT    | LVCMOS15             |       | 12       | SLOW | OSERDES      |          |          |
+| mcb3_dram_udm                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_udqs                     | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_udqs_n                   | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_we_n                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_rzq                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| mcb3_zio                           | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          | DEFAULT  |
+| pll_locked                         | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT
+_CMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/
+MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT
+_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET
+/MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT
+_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET
+/MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CDONE_
+MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CMPRES
+ET_MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS0_MS
+ET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS1_MS
+ET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCRST_
+MSET
+gen_dbg_enable.my_ila_c3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GA
+NDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_
+USE_RPM_NE0.U_GAND_SRL_SET/MSET
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

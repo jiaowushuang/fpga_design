@@ -1,0 +1,16 @@
+Release 13.1 - WebTalk (O.40d)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=9AAAC1955E394C1CB52688C6B4B052FE
+ProjectIteration=396
+
+WebTalk Summary
+----------------
+INFO:WebTalk:2 - WebTalk is enabled.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:5 - E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at d:/Xilinx/13.1/ISE_DS/ISE/data/reports/webtalk_introduction.html

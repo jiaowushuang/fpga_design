@@ -1,0 +1,3 @@
+verilog work "rtl/sd_write.v"
+verilog work "rtl/sd_initial.v"
+verilog work "rtl/sd_test.v"

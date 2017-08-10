@@ -1,0 +1,148 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx14_7\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx45-csg324-2
+ov5640_vga_cs.ngc ov5640_vga.ngd
+
+Reading NGO file
+"E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/ov5640_vga_cs.ngc" ...
+INFO:NgdBuild:1317 - Using core chipscope_ila_v1 requires a ChipScopePro
+   license.  The following blocks are instances of core chipscope_ila_v1:
+	/ov5640_vga/U_ila_pro_0
+
+-----------------------------------------------
+INFO:Security:71 - If a license for part 'xc6slx45' is available, it will be
+possible to use 'ChipScopePro_TDP' instead of 'ChipScopePro'.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+-----------------------------------------------
+
+-----------------------------------------------
+Gathering constraint information from source properties...
+Done.
+INFO:NgdBuild:889 - Pad net 'ddr_rw_inst/mig_39_2_inst/mcb3_dram_reset_n' is not
+   connected to an external port in this design.  A new port 'mcb3_dram_reset_n'
+   has been added and is connected to this signal.
+
+Annotating constraints to design from ucf file "mig_39_2.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance u_pll_adv. The following
+   new TNM groups and period specifications were generated at the PLL_ADV
+   output(s): 
+   CLKOUT3: <TIMESPEC
+   TS_ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in =
+   PERIOD
+   "ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in"
+   TS_sys_clk_pin * 1.5625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance u_pll_adv. The following
+   new TNM groups and period specifications were generated at the PLL_ADV
+   output(s): 
+   CLKOUT1: <TIMESPEC
+   TS_ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk_2x_180 = PERIOD
+   "ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk_2x_180"
+   TS_sys_clk_pin * 12.5 PHASE 0.8 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance u_pll_adv. The following
+   new TNM groups and period specifications were generated at the PLL_ADV
+   output(s): 
+   CLKOUT0: <TIMESPEC
+   TS_ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk_2x_0 = PERIOD
+   "ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk_2x_0" TS_sys_clk_pin
+   * 12.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance u_pll_adv. The following
+   new TNM groups and period specifications were generated at the PLL_ADV
+   output(s): 
+   CLKOUT4: <TIMESPEC
+   TS_ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_camera_clk_bufg_in =
+   PERIOD
+   "ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_camera_clk_bufg_in"
+   TS_sys_clk_pin * 0.480769231 HIG...>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance u_pll_adv. The following
+   new TNM groups and period specifications were generated at the PLL_ADV
+   output(s): 
+   CLKOUT2: <TIMESPEC
+   TS_ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk0_bufg_in = PERIOD
+   "ddr_rw_inst_mig_39_2_inst_memc3_infrastructure_inst_clk0_bufg_in"
+   TS_sys_clk_pin * 2.5 HIGH 50%>
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N27' has no driver
+WARNING:NgdBuild:452 - logical net 'N28' has no driver
+WARNING:NgdBuild:452 - logical net 'N29' has no driver
+WARNING:NgdBuild:452 - logical net 'N30' has no driver
+WARNING:NgdBuild:452 - logical net 'N31' has no driver
+WARNING:NgdBuild:452 - logical net 'N32' has no driver
+WARNING:NgdBuild:452 - logical net 'N33' has no driver
+WARNING:NgdBuild:452 - logical net 'N34' has no driver
+WARNING:NgdBuild:452 - logical net 'N35' has no driver
+WARNING:NgdBuild:452 - logical net 'N36' has no driver
+WARNING:NgdBuild:452 - logical net 'N37' has no driver
+WARNING:NgdBuild:452 - logical net 'N38' has no driver
+WARNING:NgdBuild:452 - logical net 'N39' has no driver
+WARNING:NgdBuild:452 - logical net 'N40' has no driver
+WARNING:NgdBuild:452 - logical net 'N41' has no driver
+WARNING:NgdBuild:452 - logical net 'N42' has no driver
+WARNING:NgdBuild:452 - logical net 'N43' has no driver
+WARNING:NgdBuild:452 - logical net 'N44' has no driver
+WARNING:NgdBuild:452 - logical net 'N45' has no driver
+WARNING:NgdBuild:452 - logical net 'N46' has no driver
+WARNING:NgdBuild:452 - logical net 'N47' has no driver
+WARNING:NgdBuild:452 - logical net 'N48' has no driver
+WARNING:NgdBuild:452 - logical net 'N49' has no driver
+WARNING:NgdBuild:478 - clock net ddr_rw_inst/vga_clk with clock driver
+   ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK3 drives no
+   clock pins
+WARNING:NgdBuild:452 - logical net 'ddr_rw_inst/c3_p0_wr_underrun' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p0_cmd_byte_addr<29>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p0_cmd_byte_addr<28>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p0_cmd_byte_addr<27>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p1_cmd_byte_addr<29>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p1_cmd_byte_addr<28>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_rw_inst/mig_39_2_inst/c3_p1_cmd_byte_addr<27>' has no driver
+WARNING:NgdBuild:452 - logical net 'ddr_rw_inst/mig_39_2_inst/c3_p0_wr_error'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'ddr_rw_inst/mig_39_2_inst/c3_p0_rd_overflow'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'ddr_rw_inst/mig_39_2_inst/c3_p0_rd_error'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'ddr_rw_inst/mig_39_2_inst/c3_p1_wr_underrun'
+   has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  35
+
+Total memory usage is 213692 kilobytes
+
+Writing NGD file "ov5640_vga.ngd" ...
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   7 sec
+
+Writing NGDBUILD log file "ov5640_vga.bld"...

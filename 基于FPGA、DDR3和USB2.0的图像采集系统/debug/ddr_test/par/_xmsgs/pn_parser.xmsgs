@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/example_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/iodrp_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/iodrp_mcb_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/mcb_raw_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/mcb_soft_calibration.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/mcb_soft_calibration_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/mcb_controller/mcb_ui_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/memc_tb_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/memc_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/afifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/cmd_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/cmd_prbs_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/data_prbs_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/init_mem_pattern_ctr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/mcb_flow_control.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/mcb_traffic_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/rd_data_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/read_data_path.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/read_posted_fifo.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/sp6_data_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/tg_status.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/v6_data_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/wr_data_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/fpga-design/11_ddr3_test/mig_39_2/example_design/rtl/traffic_gen/write_data_path.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

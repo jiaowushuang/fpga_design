@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator O.40d
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\Hang_Wang\11\G200_GLN_HDR_10bit_full_32chan_03_18//G200_10bit_HDR_FULL -x xcf32p -ver 0 E:/Hang_Wang/11/G200_GLN_HDR_10bit_full_32chan_03_18/g200_top.bit 
+
+PROM E:\Hang_Wang\11\G200_GLN_HDR_10bit_full_32chan_03_18\G200_10bit_HDR_FULL.prm map: Wed Mar 18 10:15:49 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 1775a57a
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    002e:0947     Mar 18 10:13:07 2015 E:/Hang_Wang/11/G200_GLN_HDR_10bit_full_32chan_03_18/g200_top.bit

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj GVISION200 -o E:/Hang_Wang/G200_GLOBAL_LN_02_25/image_rx.tfi -lib work E:/Hang_Wang/G200_GLOBAL_LN_02_25//image_rx.v -module image_rx -template D:/XILINX/13.1/ISE_DS/ISE//data/tfi.tft -deleteonerror 

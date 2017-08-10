@@ -1,0 +1,16 @@
+# Output products list for <simple_dual_ram_w12_d256>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+simple_dual_ram_w12_d256.asy
+simple_dual_ram_w12_d256.gise
+simple_dual_ram_w12_d256.ngc
+simple_dual_ram_w12_d256.sym
+simple_dual_ram_w12_d256.v
+simple_dual_ram_w12_d256.veo
+simple_dual_ram_w12_d256.vhd
+simple_dual_ram_w12_d256.vho
+simple_dual_ram_w12_d256.xco
+simple_dual_ram_w12_d256.xise
+simple_dual_ram_w12_d256_flist.txt
+simple_dual_ram_w12_d256_xmdf.tcl

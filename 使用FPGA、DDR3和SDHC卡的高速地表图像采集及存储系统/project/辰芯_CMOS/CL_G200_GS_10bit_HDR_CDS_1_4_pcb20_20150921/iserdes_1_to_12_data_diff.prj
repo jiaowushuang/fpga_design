@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "iserdes_1_to_6_data_diff.v"
+verilog work "ipcore_dir/shifter_var_w12_d16.v"
+verilog work "gearbox_2_to_1.v"
+verilog work "iserdes_1_to_12_data_diff.v"

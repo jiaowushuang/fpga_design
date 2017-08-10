@@ -1,0 +1,2 @@
+verilog work "gclk_2_gpio.v"
+verilog work "sensor_spi.v"

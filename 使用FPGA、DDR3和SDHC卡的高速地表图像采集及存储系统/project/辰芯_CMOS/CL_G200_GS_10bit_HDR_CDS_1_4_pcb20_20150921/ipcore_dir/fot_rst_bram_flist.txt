@@ -1,0 +1,16 @@
+# Output products list for <fot_rst_bram>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+fot_rst_bram.asy
+fot_rst_bram.gise
+fot_rst_bram.ngc
+fot_rst_bram.sym
+fot_rst_bram.v
+fot_rst_bram.veo
+fot_rst_bram.vhd
+fot_rst_bram.vho
+fot_rst_bram.xco
+fot_rst_bram.xise
+fot_rst_bram_flist.txt
+fot_rst_bram_xmdf.tcl

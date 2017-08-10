@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+# Start of session at: Fri Nov 23 15:48:11 2012
+# Process ID: 2660
+# Log file: D:/project/Verilog_luo/USB_LOOP_TEST/planAhead_run_1/planAhead.log
+# Journal file: D:/project/Verilog_luo/USB_LOOP_TEST/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source D:/project/Verilog_luo/USB_LOOP_TEST/pa.fromNetlist.tcl
+exit

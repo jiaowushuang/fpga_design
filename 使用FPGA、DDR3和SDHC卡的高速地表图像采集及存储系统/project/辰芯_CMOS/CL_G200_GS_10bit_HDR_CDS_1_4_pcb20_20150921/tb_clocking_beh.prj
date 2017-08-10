@@ -1,0 +1,5 @@
+verilog work "gclk_2_sdr_2.v"
+verilog work "gclk_2_gpio.v"
+verilog work "clocking.v"
+verilog work "tb_clocking.v"
+verilog work "D:/Xilinx/ISE_DS/ISE//verilog/src/glbl.v"

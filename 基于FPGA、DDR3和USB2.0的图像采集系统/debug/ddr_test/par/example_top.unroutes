@@ -1,0 +1,19 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Jul 24 16:16:29 2017
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 7 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   gen_dbg_enable.my_vio_c3/U0/I_VIO/reset_f_edge/iDOUT<1>
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem1_RAMD_D1_O
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem2_RAMD_D1_O
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem3_RAMD_D1_O
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem4_RAMD_D1_O
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem5_RAMD_D1_O
+   memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_postedfifo/rd_fifo/Mram_mem6_RAMD_D1_O
+
+

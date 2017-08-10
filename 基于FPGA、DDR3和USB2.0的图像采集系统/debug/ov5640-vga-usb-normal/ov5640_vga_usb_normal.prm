@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o G:\fpga-design\debug\code-ov5640-vga-usb-normal//ov5640_vga_usb_normal -s 16384 -u 0000 G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit -spi 
+
+PROM G:\fpga-design\debug\code-ov5640-vga-usb-normal\ov5640_vga_usb_normal.prm map: Tue Jul 25 16:03:02 2017
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          16384K
+PROM start    0000:0000
+PROM end      00ff:ffff
+PROM checksum e8ae90a8
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0016:a78b     Jul 25 15:42:49 2017 G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit

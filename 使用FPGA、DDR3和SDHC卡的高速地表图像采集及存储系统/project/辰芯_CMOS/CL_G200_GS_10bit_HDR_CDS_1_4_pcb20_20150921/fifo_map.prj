@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "ipcore_dir/fifo_8_1024.v"
+verilog work "fifo_map.v"

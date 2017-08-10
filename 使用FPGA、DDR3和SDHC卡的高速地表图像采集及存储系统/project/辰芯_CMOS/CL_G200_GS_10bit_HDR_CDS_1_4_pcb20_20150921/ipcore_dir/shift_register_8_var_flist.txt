@@ -1,0 +1,15 @@
+# Output products list for <shift_register_8_var>
+_xmsgs\pn_parser.xmsgs
+shift_register_8_var.asy
+shift_register_8_var.gise
+shift_register_8_var.ngc
+shift_register_8_var.sym
+shift_register_8_var.v
+shift_register_8_var.veo
+shift_register_8_var.vhd
+shift_register_8_var.vho
+shift_register_8_var.xco
+shift_register_8_var.xise
+shift_register_8_var_flist.txt
+shift_register_8_var_readme.txt
+shift_register_8_var_xmdf.tcl

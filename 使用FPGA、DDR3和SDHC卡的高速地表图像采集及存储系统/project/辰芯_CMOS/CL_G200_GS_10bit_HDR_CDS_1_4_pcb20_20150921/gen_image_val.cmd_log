@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Administrator/Desktop/Hang/G200_TEST_1_13/gen_image_val.v -lang verilog -prj GVISION200 -o gen_image_val.spl -module gen_image_val -template D:/ISE/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 gen_image_val.spl C:/Users/Administrator/Desktop/Hang/G200_TEST_1_13/gen_image_val.sym 

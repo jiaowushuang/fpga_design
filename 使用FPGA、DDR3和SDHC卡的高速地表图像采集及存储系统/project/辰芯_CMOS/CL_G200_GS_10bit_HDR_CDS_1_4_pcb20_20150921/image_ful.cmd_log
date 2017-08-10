@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/working/Project/G200/Program/G200_TEST_1_9/image_ful.v -lang verilog -prj GVISION200 -o image_ful.spl -module image_ful -template D:/Xilinx/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 image_ful.spl E:/working/Project/G200/Program/G200_TEST_1_9/image_ful.sym 

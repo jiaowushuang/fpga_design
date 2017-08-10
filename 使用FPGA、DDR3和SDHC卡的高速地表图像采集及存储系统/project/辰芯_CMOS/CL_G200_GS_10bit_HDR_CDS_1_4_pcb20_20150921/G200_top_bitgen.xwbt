@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.ncd
+OUTFILE=E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0\G200_top.bit
+FAMILY=Spartan6
+PART=xc6slx150-3fgg900
+WORKINGDIR=E:\HangWang\HangWang\G200_GLN_HDR_chan_cho_FINAL_v2.0
+LICENSE=ISE
+USER_INFO=No user information available.

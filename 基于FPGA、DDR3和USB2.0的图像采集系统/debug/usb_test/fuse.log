@@ -1,0 +1,22 @@
+Running: D:\Xilinx1\13.1\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_isim_beh.exe -prj D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_beh.prj USB_LOOP_Sim work.glbl 
+ISim O.40d (signature 0x79f3f3a8)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file \"D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.v\" into library work
+WARNING:HDLCompiler:568 - "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.v" Line 84: Constant value is truncated to fit in <12> bits.
+Analyzing Verilog file \"D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim.v\" into library work
+Analyzing Verilog file \"D:/Xilinx1/13.1/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 59036 KB
+Fuse CPU Usage: 108 ms
+Compiling module USB_LOOP_TEST
+Compiling module USB_LOOP_Sim
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_isim_beh.exe
+Fuse Memory Usage: 64544 KB
+Fuse CPU Usage: 124 ms

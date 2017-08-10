@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator O.40d
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o "C:\Users\Administrator\Desktop\G200_TEST_1_17- ww1//G200_300M" -x xcf32p -ver 0 "C:/Users/Administrator/Desktop/G200_TEST_1_17- ww1/g200_top.bit" 
+
+PROM C:\Users\Administrator\Desktop\G200_TEST_1_17- ww1\G200_300M.prm map: Mon Jan 19 17:32:22 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 24dc88fe
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    001e:f701     Jan 19 17:31:10 2015 C:/Users/Administrator/Desktop/G200_TEST_1_17- ww1/g200_top.bit

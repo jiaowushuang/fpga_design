@@ -1,0 +1,13 @@
+CoreGen has not been configured with any user repositories.
+CoreGen has been configured with the following Xilinx repositories:
+ - 'D:\Xilinx\13.1\ISE_DS\ISE\coregen\' []
+INFO:sim:927 - Generating component instance 'simple_dual_ram_w12_d256' of
+   'xilinx.com:ip:blk_mem_gen:6.1' from
+   'D:\Xilinx\13.1\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\blk_mem_ge
+   n_v6_1\component.xml'.
+Applying current project options...
+Finished applying current project options.
+Executing Tcl generator...
+Cancelled executing Tcl generator.
+Wrote file for project
+'E:\Hang_Wang\G200_GLN_32_03_05\ipcore_dir\simple_dual_ram_w12_d256.cgp'.

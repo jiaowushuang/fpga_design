@@ -1,0 +1,209 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'example_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o example_top_map.ncd example_top.ngd
+example_top.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Jul 24 16:14:54 2017
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 13 secs 
+Total CPU  time at the beginning of Placer: 13 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:fdf8976e) REAL time: 15 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 55 IOs, 54 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:fdf8976e) REAL time: 15 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:7e4d3c08) REAL time: 15 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:aac8d794) REAL time: 38 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:aac8d794) REAL time: 38 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:aac8d794) REAL time: 38 secs 
+
+Phase 7.3  Local Placement Optimization
+...
+Phase 7.3  Local Placement Optimization (Checksum:4734b384) REAL time: 39 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:ac50a2f4) REAL time: 39 secs 
+
+Phase 9.8  Global Placement
+........................
+..........................................................................................
+...............................
+..................................
+Phase 9.8  Global Placement (Checksum:538ca348) REAL time: 52 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:538ca348) REAL time: 52 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:cc5c2956) REAL time: 57 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:cc5c2956) REAL time: 57 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:3ecabe1d) REAL time: 57 secs 
+
+Total REAL time to Placer completion: 1 mins 1 secs 
+Total CPU  time to Placer completion: 1 mins 1 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net c3_control0<13> is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem6_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem1_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem2_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem3_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem4_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <memc3_tb_top_inst/PORT0_TG.m_traffic_gen_p0/RD_PATH.read_data_path/read_post
+   edfifo/rd_fifo/Mram_mem5_RAMD_D1_O> is incomplete. The signal does not drive
+   any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <gen_dbg_enable.my_vio_c3/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    9
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,883 out of  54,576    3%
+    Number used as Flip Flops:               1,882
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,933 out of  27,288    7%
+    Number used as logic:                    1,603 out of  27,288    5%
+      Number using O6 output only:           1,062
+      Number using O5 output only:             216
+      Number using O5 and O6:                  325
+      Number used as ROM:                        0
+    Number used as Memory:                     225 out of   6,408    3%
+      Number used as Dual Port RAM:             28
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                 24
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           197
+        Number using O6 output only:            67
+        Number using O5 output only:             0
+        Number using O5 and O6:                130
+    Number used exclusively as route-thrus:    105
+      Number with same-slice register load:     88
+      Number with same-slice carry load:        17
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   763 out of   6,822   11%
+  Number of MUXCYs used:                       508 out of  13,644    3%
+  Number of LUT Flip Flop pairs used:        2,264
+    Number with an unused Flip Flop:           760 out of   2,264   33%
+    Number with an unused LUT:                 331 out of   2,264   14%
+    Number of fully used LUT-FF pairs:       1,173 out of   2,264   51%
+    Number of unique control sets:             171
+    Number of slice register sites lost
+      to control set restrictions:             818 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        55 out of     218   25%
+    Number of LOCed IOBs:                       54 out of      55   98%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        14 out of     116   12%
+  Number of RAMB8BWERs:                          1 out of     232    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        24 out of     376    6%
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      2
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  48 out of     376   12%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                   47
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         1 out of       4   25%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                1 out of       2   50%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       4   25%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+  Number of RPM macros:            9
+Average Fanout of Non-Clock Nets:                2.80
+
+Peak Memory Usage:  614 MB
+Total REAL time to MAP completion:  1 mins 3 secs 
+Total CPU time to MAP completion:   1 mins 3 secs 
+
+Mapping completed.
+See MAP report file "example_top_map.mrp" for details.

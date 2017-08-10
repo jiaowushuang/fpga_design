@@ -1,0 +1,70 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/ceshi/Desktop/G200_GLOBAL_LN/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/ceshi/Desktop/G200_GLOBAL_LN/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: cl_serial_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\ipcore_dir\bram_28_1024.v\" into library work
+Parsing module <bram_28_1024>.
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\ipcore_dir\fifo_8_1024.v\" into library work
+Parsing module <fifo_8_1024>.
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\fifo_map.v\" into library work
+Parsing module <fifo_mapping>.
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_serial_out.v\" into library work
+Parsing module <cl_serial_out>.
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_serial_in.v\" into library work
+Parsing module <cl_serial_in>.
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_protocol_decoder.v\" into library work
+Parsing module <cl_protocol_decoder>.
+WARNING:HDLCompiler:370 - "C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_protocol_decoder.v" Line 26: Empty port in module declaration
+Analyzing Verilog file \"C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_serial.v\" into library work
+Parsing module <cl_serial_top>.
+WARNING:HDLCompiler:370 - "C:\Users\ceshi\Desktop\G200_GLOBAL_LN\cl_serial.v" Line 24: Empty port in module declaration
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.87 secs
+ 
+--> 
+
+Total memory usage is 138260 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

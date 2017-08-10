@@ -1,0 +1,9 @@
+# Output products list for <icon>
+icon.asy
+icon.gise
+icon.ngc
+icon.xco
+icon.xise
+icon_flist.txt
+icon_readme.txt
+icon_xmdf.tcl

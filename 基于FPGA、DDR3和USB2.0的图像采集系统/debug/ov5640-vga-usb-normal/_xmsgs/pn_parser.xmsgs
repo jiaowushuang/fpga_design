@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/camera_capture.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/chipscope_icon.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/chipscope_ila.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/iodrp_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/iodrp_mcb_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/mcb_raw_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/mcb_soft_calibration.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/mcb_soft_calibration_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mcb_controller/mcb_ui_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/memc_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/remote_sources/_/rtl/mig_39_2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/ddr_rw.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/i2c_com.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/ov5640_vga.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/power_on_delay.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/reg_config.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/rtl/vga_disp.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;G:/gitDoc/noteboook-learn/code-ov5640-vga-usb-normal/usb_controller.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

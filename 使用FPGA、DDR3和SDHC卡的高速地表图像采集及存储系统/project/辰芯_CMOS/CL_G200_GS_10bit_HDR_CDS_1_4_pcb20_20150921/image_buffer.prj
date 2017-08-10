@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "ipcore_dir/simple_dual_ram_w24_d512.v"
+verilog work "image_buff.v"

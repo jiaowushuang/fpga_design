@@ -1,0 +1,172 @@
+Release 13.1 ngdbuild O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: d:\Xilinx\13.1\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc gvision200_evm_top.ucf
+-p xc6slx150-fgg900-3 G200_top.ngc G200_top.ngd
+
+Reading NGO file
+"E:/HangWang/HangWang/G200_GLN_HDR_chan_cho_FINAL_v2.0/G200_top.ngc" ...
+Loading design module "ipcore_dir/shifter_var_w12_d16.ngc"...
+Loading design module "ipcore_dir/shift_register_1_var.ngc"...
+Loading design module "ipcore_dir/simple_dual_ram_w24_d512.ngc"...
+Loading design module "ipcore_dir/fifo_8_1024.ngc"...
+Loading design module "ipcore_dir/bram_28_1024.ngc"...
+Loading design module "ipcore_dir/fot_rst_bram.ngc"...
+Loading design module "ipcore_dir/fot_sig_bram.ngc"...
+Loading design module "ipcore_dir/mult.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "gvision200_evm_top.ucf" ...
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'image_rx/clock_generator_b1/PLL_BASE_INST/PLL_ADV' of type PLL_ADV has been
+   changed from 'VIRTEX5' to 'SPARTAN6' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file.
+WARNING:NgdBuild:931 - The value of SIM_DEVICE on instance
+   'clocking/PLL_BASE_INST/PLL_ADV' of type PLL_ADV has been changed from
+   'VIRTEX5' to 'SPARTAN6' to correct post-ngdbuild and timing simulation for
+   this primitive.  In order for functional simulation to be correct, the value
+   of SIM_DEVICE should be changed in this same manner in the source netlist or
+   constraint file.
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk_50M', used in period specification
+   'TS_clk_50M', was traced into DCM_SP instance DCM_SP_DCM8. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_clocking_clk_dcm4_unbuf = PERIOD
+   "clocking_clk_dcm4_unbuf" TS_clk_50M / 0.357142857 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_50M', used in period specification
+   'TS_clk_50M', was traced into DCM_SP instance DCM_SP_DCM4. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_clocking_clk_lvds_sdr_in_unbuf = PERIOD
+   "clocking_clk_lvds_sdr_in_unbuf" TS_clk_50M / 3 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_50M', used in period specification
+   'TS_clk_50M', was traced into DCM_SP instance DCM_SP_DCM3. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_clocking_clk_dcm3_unbuf = PERIOD
+   "clocking_clk_dcm3_unbuf" TS_clk_50M HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_col_out', used in period specification
+   'TS_clk_col_out', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC TS_image_rx_clock_generator_b1_gclk2_unbuf = PERIOD
+   "image_rx_clock_generator_b1_gclk2_unbuf" TS_clk_col_out / 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_col_out', used in period specification
+   'TS_clk_col_out', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_image_rx_clock_generator_b1_ioclk_unbuf = PERIOD
+   "image_rx_clock_generator_b1_ioclk_unbuf" TS_clk_col_out / 12 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_col_out', used in period specification
+   'TS_clk_col_out', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC TS_clocking_clk_txg_unbuf = PERIOD
+   "clocking_clk_txg_unbuf" TS_clk_col_out / 1.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_col_out', used in period specification
+   'TS_clk_col_out', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_clocking_clk_txio_unbuf = PERIOD
+   "clocking_clk_txio_unbuf" TS_clk_col_out / 10.5 HIGH 50%>
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:478 - clock net clk_rxio with clock driver
+   clocking/BUFG_CLK_RXIO drives no clock pins
+WARNING:NgdBuild:452 - logical net 'reg_window_row_start<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_0<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_1<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_2<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_chan_3<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_camera_control<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_camera_control<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'fot_rst_timing_cycle<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'hdr_enable' has no driver
+WARNING:NgdBuild:452 - logical net 'reg_test_image_enable' has no driver
+WARNING:NgdBuild:452 - logical net 'cmd_gen_test_image' has no driver
+WARNING:NgdBuild:478 - clock net clocking/clk_lvds_ddr_out with clock driver
+   clocking/BUFG_RXLVDS_DDR drives no clock pins
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  69
+
+Total memory usage is 178676 kilobytes
+
+Writing NGD file "G200_top.ngd" ...
+Total REAL time to NGDBUILD completion:  7 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "G200_top.bld"...

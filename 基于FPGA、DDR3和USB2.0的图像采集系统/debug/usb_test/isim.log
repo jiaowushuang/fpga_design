@@ -1,0 +1,17 @@
+ISim log file
+Running: D:\project\Verilog_luo\USB_LOOP_TEST\USB_LOOP_Sim_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_Sim_isim_beh.wdb 
+ISim O.40d (signature 0x79f3f3a8)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+Stopped at time : 258881850 ns : File "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.v" Line 54

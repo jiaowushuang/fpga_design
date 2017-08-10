@@ -1,0 +1,31 @@
+Release 13.1 - netgen O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/translate
+-ofmt verilog -sim G200_top.ngd G200_top_translate.v  
+
+Reading design 'G200_top.ngd' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'E:\Hang_Wang\G200_GLOBAL_LN_02_25\netgen\translate\G200_top_translate.v' ...
+WARNING:NetListWriters - Padding or triming the value for hex property
+   FACTORY_JF:
+Triming from 16'B1100000010000000 to 0000.
+WARNING:NetListWriters - Padding or triming the value for hex property
+   FACTORY_JF:
+Triming from 16'B1100000010000000 to 0000.
+WARNING:NetListWriters - Padding or triming the value for hex property
+   FACTORY_JF:
+Triming from 16'B1100000010000000 to 0000.
+WARNING:NetListWriters - Padding or triming the value for hex property
+   FACTORY_JF:
+Triming from 16'B1100000010000000 to 0000.
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
+   simulation primitives and has to be used with SIMPRIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 4
+Number of info messages: 1
+Total memory usage is 150844 kilobytes

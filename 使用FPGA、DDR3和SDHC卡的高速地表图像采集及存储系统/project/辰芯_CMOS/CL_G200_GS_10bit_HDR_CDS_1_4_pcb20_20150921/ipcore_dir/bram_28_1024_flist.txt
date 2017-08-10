@@ -1,0 +1,16 @@
+# Output products list for <bram_28_1024>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+bram_28_1024.asy
+bram_28_1024.gise
+bram_28_1024.ngc
+bram_28_1024.sym
+bram_28_1024.v
+bram_28_1024.veo
+bram_28_1024.vhd
+bram_28_1024.vho
+bram_28_1024.xco
+bram_28_1024.xise
+bram_28_1024_flist.txt
+bram_28_1024_xmdf.tcl

@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/bram_28_1024.v"
+verilog work "ipcore_dir/simple_dual_ram_w24_d512.v"
+verilog work "image_buffer.v"
+verilog work "tb_image_buffer.v"
+verilog work "D:/Xilinx/13.1/ISE_DS/ISE//verilog/src/glbl.v"

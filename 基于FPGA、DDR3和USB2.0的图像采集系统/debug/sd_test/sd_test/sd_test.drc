@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jul 26 13:18:13 2017
+
+drc -z sd_test.ncd sd_test.pcf
+
+DRC detected 0 errors and 0 warnings.

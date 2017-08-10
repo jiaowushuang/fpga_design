@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/Hang_Wang/G200_GLN_32_03_02/mapping_controller.v -lang verilog -prj GVISION200 -o mapping_controller.spl -module mapping_controller -template D:/XILINX/13.1/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 mapping_controller.spl E:/Hang_Wang/G200_GLN_32_03_02/mapping_controller.sym 

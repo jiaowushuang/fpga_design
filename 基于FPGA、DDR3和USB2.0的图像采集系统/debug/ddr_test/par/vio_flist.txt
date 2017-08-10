@@ -1,0 +1,9 @@
+# Output products list for <vio>
+vio.cdc
+vio.gise
+vio.ngc
+vio.xco
+vio.xise
+vio_flist.txt
+vio_readme.txt
+vio_xmdf.tcl

@@ -1,0 +1,61 @@
+INFO:encore:314 - Created non-GUI application for batch mode execution.
+Wrote CGP file for project 'coregen'.
+INFO:sim:172 - Generating IP...
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Gathering HDL files for ila_pro_0 root...
+Creating XST project for ila_pro_0...
+Creating XST script file for ila_pro_0...
+Creating XST instantiation file for ila_pro_0...
+Running XST for ila_pro_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Generating VHDL wrapper
+Not generating Verilog wrapper
+Creating ISE instantiation template for ila_pro_0...
+Skipping Verilog instantiation template for ila_pro_0...
+Finished Generation.
+Generating IP instantiation template...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating metadata file...
+Generating ISE project...
+XCO file found: ila_pro_0.xco
+XMDF file found: ila_pro_0_xmdf.tcl
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_0
+.ngc -view all -origin_type created
+Checking file
+"E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_
+0.ngc" for project device match ...
+File
+"E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_
+0.ngc" device information matches project device.
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_0
+.ucf -view all -origin_type created
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_0
+.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_p
+   ro_0.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/_ngo/cs_ila_pro_0/tmp/_cg/ila_pro_0
+.vho -view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/ila_pro_0"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.

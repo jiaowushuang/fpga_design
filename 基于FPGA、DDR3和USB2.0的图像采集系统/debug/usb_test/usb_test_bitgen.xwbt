@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\fpga-design\AX545\09_VERILOG\13_usb_test\usb_test.ncd
+OUTFILE=G:\fpga-design\AX545\09_VERILOG\13_usb_test\usb_test.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=G:\fpga-design\AX545\09_VERILOG\13_usb_test
+LICENSE=WebPack
+USER_INFO=__0_0_0

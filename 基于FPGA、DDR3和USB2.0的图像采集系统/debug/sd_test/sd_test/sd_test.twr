@@ -1,0 +1,601 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\xlinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf
+
+Design file:              sd_test.ncd
+Physical constraint file: sd_test.pcf
+Device,package,speed:     xc6slx45,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk = PERIOD TIMEGRP "sys_clk" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   8.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk = PERIOD TIMEGRP "sys_clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 12.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 4.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_SP_inst/CLKIN
+  Logical resource: DCM_SP_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_SP_inst_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 12.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 4.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_SP_inst/CLKIN
+  Logical resource: DCM_SP_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_SP_inst_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 16.000ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.000ns (250.000MHz) (Tdcmper_CLKIN)
+  Physical resource: DCM_SP_inst/CLKIN
+  Logical resource: DCM_SP_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: DCM_SP_inst_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLKDV = PERIOD TIMEGRP "CLKDV" TS_sys_clk / 2 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 18118 paths analyzed, 1630 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.496ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sd_initial_inst/cnt_7 (SLICE_X32Y15.B4), 225 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.752ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_valid (FF)
+  Destination:          sd_initial_inst/cnt_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.071ns (Levels of Logic = 4)
+  Clock Path Skew:      0.008ns (0.624 - 0.616)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_valid to sd_initial_inst/cnt_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y25.DMUX    Tshcko                0.576   sd_initial_inst/en_glue_set
+                                                       sd_initial_inst/rx_valid
+    SLICE_X36Y15.D6      net (fanout=9)        1.791   sd_initial_inst/rx_valid
+    SLICE_X36Y15.D       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW1
+    SLICE_X36Y14.B5      net (fanout=2)        0.423   N18
+    SLICE_X36Y14.B       Tilo                  0.235   sd_initial_inst/cnt<5>
+                                                       sd_initial_inst/_n0229_inv1
+    SLICE_X34Y16.C5      net (fanout=9)        0.662   sd_initial_inst/_n0229_inv3
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.B4      net (fanout=2)        0.545   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.CLK     Tas                   0.349   sd_initial_inst/cnt<9>
+                                                       sd_initial_inst/cnt_7_dpot
+                                                       sd_initial_inst/cnt_7
+    -------------------------------------------------  ---------------------------
+    Total                                      5.071ns (1.650ns logic, 3.421ns route)
+                                                       (32.5% logic, 67.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.082ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_valid (FF)
+  Destination:          sd_initial_inst/cnt_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.741ns (Levels of Logic = 3)
+  Clock Path Skew:      0.008ns (0.624 - 0.616)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_valid to sd_initial_inst/cnt_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y25.DMUX    Tshcko                0.576   sd_initial_inst/en_glue_set
+                                                       sd_initial_inst/rx_valid
+    SLICE_X37Y15.A3      net (fanout=9)        2.007   sd_initial_inst/rx_valid
+    SLICE_X37Y15.A       Tilo                  0.259   N22
+                                                       sd_initial_inst/_n0229_inv21
+    SLICE_X34Y16.C4      net (fanout=11)       0.750   sd_initial_inst/_n0229_inv2
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.B4      net (fanout=2)        0.545   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.CLK     Tas                   0.349   sd_initial_inst/cnt<9>
+                                                       sd_initial_inst/cnt_7_dpot
+                                                       sd_initial_inst/cnt_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.741ns (1.439ns logic, 3.302ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.394ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_46 (FF)
+  Destination:          sd_initial_inst/cnt_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.404ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.298 - 0.315)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_46 to sd_initial_inst/cnt_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y15.CQ      Tcko                  0.476   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx_46
+    SLICE_X36Y15.B2      net (fanout=2)        0.775   sd_initial_inst/rx<46>
+    SLICE_X36Y15.B       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW0
+    SLICE_X37Y15.A2      net (fanout=4)        0.760   N14
+    SLICE_X37Y15.A       Tilo                  0.259   N22
+                                                       sd_initial_inst/_n0229_inv21
+    SLICE_X34Y16.C4      net (fanout=11)       0.750   sd_initial_inst/_n0229_inv2
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.B4      net (fanout=2)        0.545   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X32Y15.CLK     Tas                   0.349   sd_initial_inst/cnt<9>
+                                                       sd_initial_inst/cnt_7_dpot
+                                                       sd_initial_inst/cnt_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.404ns (1.574ns logic, 2.830ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sd_initial_inst/cnt_2 (SLICE_X34Y16.D5), 225 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.047ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_valid (FF)
+  Destination:          sd_initial_inst/cnt_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.763ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.005ns (0.297 - 0.302)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_valid to sd_initial_inst/cnt_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y25.DMUX    Tshcko                0.576   sd_initial_inst/en_glue_set
+                                                       sd_initial_inst/rx_valid
+    SLICE_X36Y15.D6      net (fanout=9)        1.791   sd_initial_inst/rx_valid
+    SLICE_X36Y15.D       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW1
+    SLICE_X36Y14.B5      net (fanout=2)        0.423   N18
+    SLICE_X36Y14.B       Tilo                  0.235   sd_initial_inst/cnt<5>
+                                                       sd_initial_inst/_n0229_inv1
+    SLICE_X34Y16.C5      net (fanout=9)        0.662   sd_initial_inst/_n0229_inv3
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.D5      net (fanout=2)        0.247   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.CLK     Tas                   0.339   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/cnt_2_dpot
+                                                       sd_initial_inst/cnt_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.763ns (1.640ns logic, 3.123ns route)
+                                                       (34.4% logic, 65.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.377ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_valid (FF)
+  Destination:          sd_initial_inst/cnt_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.433ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.005ns (0.297 - 0.302)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_valid to sd_initial_inst/cnt_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y25.DMUX    Tshcko                0.576   sd_initial_inst/en_glue_set
+                                                       sd_initial_inst/rx_valid
+    SLICE_X37Y15.A3      net (fanout=9)        2.007   sd_initial_inst/rx_valid
+    SLICE_X37Y15.A       Tilo                  0.259   N22
+                                                       sd_initial_inst/_n0229_inv21
+    SLICE_X34Y16.C4      net (fanout=11)       0.750   sd_initial_inst/_n0229_inv2
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.D5      net (fanout=2)        0.247   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.CLK     Tas                   0.339   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/cnt_2_dpot
+                                                       sd_initial_inst/cnt_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.433ns (1.429ns logic, 3.004ns route)
+                                                       (32.2% logic, 67.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.657ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_46 (FF)
+  Destination:          sd_initial_inst/cnt_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.096ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.062ns (0.595 - 0.657)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_46 to sd_initial_inst/cnt_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y15.CQ      Tcko                  0.476   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx_46
+    SLICE_X36Y15.B2      net (fanout=2)        0.775   sd_initial_inst/rx<46>
+    SLICE_X36Y15.B       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW0
+    SLICE_X37Y15.A2      net (fanout=4)        0.760   N14
+    SLICE_X37Y15.A       Tilo                  0.259   N22
+                                                       sd_initial_inst/_n0229_inv21
+    SLICE_X34Y16.C4      net (fanout=11)       0.750   sd_initial_inst/_n0229_inv2
+    SLICE_X34Y16.C       Tilo                  0.255   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.D5      net (fanout=2)        0.247   sd_initial_inst/_n0229_inv4_rstpot
+    SLICE_X34Y16.CLK     Tas                   0.339   sd_initial_inst/cnt<2>
+                                                       sd_initial_inst/cnt_2_dpot
+                                                       sd_initial_inst/cnt_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.096ns (1.564ns logic, 2.532ns route)
+                                                       (38.2% logic, 61.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sd_initial_inst/state_FSM_FFd4 (SLICE_X38Y15.A3), 127 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.137ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_valid (FF)
+  Destination:          sd_initial_inst/state_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.686ns (Levels of Logic = 4)
+  Clock Path Skew:      0.008ns (0.624 - 0.616)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_valid to sd_initial_inst/state_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y25.DMUX    Tshcko                0.576   sd_initial_inst/en_glue_set
+                                                       sd_initial_inst/rx_valid
+    SLICE_X36Y15.D6      net (fanout=9)        1.791   sd_initial_inst/rx_valid
+    SLICE_X36Y15.D       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW1
+    SLICE_X36Y15.C6      net (fanout=2)        0.149   N18
+    SLICE_X36Y15.C       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/_n0229_inv11
+    SLICE_X38Y15.B3      net (fanout=1)        0.623   sd_initial_inst/_n0229_inv1
+    SLICE_X38Y15.B       Tilo                  0.254   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In2_SW0
+    SLICE_X38Y15.A3      net (fanout=1)        0.484   N20
+    SLICE_X38Y15.CLK     Tas                   0.339   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In4
+                                                       sd_initial_inst/state_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.686ns (1.639ns logic, 3.047ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.933ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_46 (FF)
+  Destination:          sd_initial_inst/state_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.865ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.298 - 0.315)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_46 to sd_initial_inst/state_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y15.CQ      Tcko                  0.476   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx_46
+    SLICE_X36Y15.B2      net (fanout=2)        0.775   sd_initial_inst/rx<46>
+    SLICE_X36Y15.B       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx[47]_GND_2_o_equal_20_o<47>1_SW0
+    SLICE_X36Y15.C5      net (fanout=4)        0.444   N14
+    SLICE_X36Y15.C       Tilo                  0.235   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/_n0229_inv11
+    SLICE_X38Y15.B3      net (fanout=1)        0.623   sd_initial_inst/_n0229_inv1
+    SLICE_X38Y15.B       Tilo                  0.254   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In2_SW0
+    SLICE_X38Y15.A3      net (fanout=1)        0.484   N20
+    SLICE_X38Y15.CLK     Tas                   0.339   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In4
+                                                       sd_initial_inst/state_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.865ns (1.539ns logic, 2.326ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.991ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sd_initial_inst/rx_19 (FF)
+  Destination:          sd_initial_inst/state_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.809ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.015ns (0.298 - 0.313)
+  Source Clock:         SD_clk_OBUF rising at 0.000ns
+  Destination Clock:    SD_clk_OBUF falling at 20.000ns
+  Clock Uncertainty:    0.185ns
+
+  Clock Uncertainty:          0.185ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sd_initial_inst/rx_19 to sd_initial_inst/state_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y15.DQ      Tcko                  0.525   sd_initial_inst/rx<19>
+                                                       sd_initial_inst/rx_19
+    SLICE_X48Y15.C2      net (fanout=2)        0.520   sd_initial_inst/rx<19>
+    SLICE_X48Y15.C       Tilo                  0.255   sd_initial_inst/rx<19>
+                                                       sd_initial_inst/rx[19]_GND_2_o_equal_32_o<19>1
+    SLICE_X48Y15.B4      net (fanout=4)        0.323   sd_initial_inst/rx[19]_GND_2_o_equal_32_o
+    SLICE_X48Y15.B       Tilo                  0.254   sd_initial_inst/rx<19>
+                                                       sd_initial_inst/state_FSM_FFd4-In1
+    SLICE_X38Y15.B5      net (fanout=1)        0.855   sd_initial_inst/state_FSM_FFd4-In1
+    SLICE_X38Y15.B       Tilo                  0.254   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In2_SW0
+    SLICE_X38Y15.A3      net (fanout=1)        0.484   N20
+    SLICE_X38Y15.CLK     Tas                   0.339   sd_initial_inst/state_FSM_FFd3
+                                                       sd_initial_inst/state_FSM_FFd4-In4
+                                                       sd_initial_inst/state_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.809ns (1.627ns logic, 2.182ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLKDV = PERIOD TIMEGRP "CLKDV" TS_sys_clk / 2 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point sd_initial_inst/rx_47 (SLICE_X36Y15.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.385ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sd_initial_inst/rx_46 (FF)
+  Destination:          sd_initial_inst/rx_47 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.385ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         SD_clk_OBUF rising at 40.000ns
+  Destination Clock:    SD_clk_OBUF rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: sd_initial_inst/rx_46 to sd_initial_inst/rx_47
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y15.CQ      Tcko                  0.200   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx_46
+    SLICE_X36Y15.DX      net (fanout=2)        0.137   sd_initial_inst/rx<46>
+    SLICE_X36Y15.CLK     Tckdi       (-Th)    -0.048   sd_initial_inst/rx<47>
+                                                       sd_initial_inst/rx_47
+    -------------------------------------------------  ---------------------------
+    Total                                      0.385ns (0.248ns logic, 0.137ns route)
+                                                       (64.4% logic, 35.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sd_write_inst/rx_7 (SLICE_X43Y35.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.406ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sd_write_inst/rx_6 (FF)
+  Destination:          sd_write_inst/rx_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.406ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         SD_clk_OBUF rising at 40.000ns
+  Destination Clock:    SD_clk_OBUF rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: sd_write_inst/rx_6 to sd_write_inst/rx_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y35.CQ      Tcko                  0.198   sd_write_inst/rx<7>
+                                                       sd_write_inst/rx_6
+    SLICE_X43Y35.DX      net (fanout=3)        0.149   sd_write_inst/rx<6>
+    SLICE_X43Y35.CLK     Tckdi       (-Th)    -0.059   sd_write_inst/rx<7>
+                                                       sd_write_inst/rx_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.406ns (0.257ns logic, 0.149ns route)
+                                                       (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sd_write_inst/en (SLICE_X45Y37.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sd_write_inst/aa_2 (FF)
+  Destination:          sd_write_inst/en (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.411ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         SD_clk_OBUF rising at 40.000ns
+  Destination Clock:    SD_clk_OBUF rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: sd_write_inst/aa_2 to sd_write_inst/en
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y37.CQ      Tcko                  0.198   sd_write_inst/aa<2>
+                                                       sd_write_inst/aa_2
+    SLICE_X45Y37.C5      net (fanout=2)        0.058   sd_write_inst/aa<2>
+    SLICE_X45Y37.CLK     Tah         (-Th)    -0.155   sd_write_inst/aa<2>
+                                                       sd_write_inst/en_glue_set
+                                                       sd_write_inst/en
+    -------------------------------------------------  ---------------------------
+    Total                                      0.411ns (0.353ns logic, 0.058ns route)
+                                                       (85.9% logic, 14.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLKDV = PERIOD TIMEGRP "CLKDV" TS_sys_clk / 2 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 37.334ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: bufg_insta/I0
+  Logical resource: bufg_insta/I0
+  Location pin: BUFGMUX_X2Y2.I0
+  Clock network: CLKDV
+--------------------------------------------------------------------------------
+Slack: 38.601ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.399ns (714.796MHz) (Tcp)
+  Physical resource: sd_initial_inst/rx<43>/CLK
+  Logical resource: sd_initial_inst/Mshreg_rx_40/CLK
+  Location pin: SLICE_X38Y16.CLK
+  Clock network: SD_clk_OBUF
+--------------------------------------------------------------------------------
+Slack: 38.601ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.399ns (714.796MHz) (Tcp)
+  Physical resource: sd_initial_inst/rx<19>/CLK
+  Logical resource: sd_initial_inst/Mshreg_rx_16/CLK
+  Location pin: SLICE_X48Y15.CLK
+  Clock network: SD_clk_OBUF
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk                     |     20.000ns|      8.000ns|      5.248ns|            0|            0|            0|        18118|
+| TS_CLKDV                      |     40.000ns|     10.496ns|          N/A|            0|            0|        18118|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.049|    2.517|    5.248|    7.056|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 18118 paths, 0 nets, and 2568 connections
+
+Design statistics:
+   Minimum period:  10.496ns{1}   (Maximum frequency:  95.274MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Jul 26 13:18:06 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 298 MB
+
+
+

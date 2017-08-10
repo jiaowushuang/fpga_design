@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\project\Verilog_luo\USB_LOOP_TEST\USB_LOOP_TEST.ncd
+OUTFILE=D:\project\Verilog_luo\USB_LOOP_TEST\USB_LOOP_TEST.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=D:\project\Verilog_luo\USB_LOOP_TEST
+LICENSE=ISE
+USER_INFO=No user information available.

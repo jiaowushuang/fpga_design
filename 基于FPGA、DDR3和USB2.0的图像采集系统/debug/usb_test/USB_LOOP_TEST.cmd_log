@@ -1,0 +1,59 @@
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 
+xst -intstyle ise -ifn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.xst" -ofn "D:/project/Verilog_luo/USB_LOOP_TEST/USB_LOOP_TEST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc USB_LOOP_TEST.ucf -p xc6slx16-csg324-3 USB_LOOP_TEST.ngc USB_LOOP_TEST.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ngd USB_LOOP_TEST.pcf 
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml USB_LOOP_TEST.twx USB_LOOP_TEST.ncd -o USB_LOOP_TEST.twr USB_LOOP_TEST.pcf -ucf USB_LOOP_TEST.ucf 
+bitgen -intstyle ise -f USB_LOOP_TEST.ut USB_LOOP_TEST.ncd 

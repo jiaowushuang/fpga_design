@@ -1,0 +1,389 @@
+################################################################################
+## TIMING CONSTRAINTS
+################################################################################
+NET "clk_50M" TNM_NET = "clk_50M";
+TIMESPEC TS_clk_50M = PERIOD "clk_50M" 20 ns;
+
+NET "clk_col_out" TNM_NET = "clk_col_out";
+TIMESPEC TS_clk_col_out = PERIOD "clk_col_out" 20 ns;
+
+################################################################################
+## PIN ASSIGNMENTS
+################################################################################
+
+## global clock & reset
+NET "clk_50M" IOSTANDARD = LVCMOS33;
+NET "clk_50M" SLEW = FAST;
+NET "clk_50M" LOC = A15;
+NET "rst_n" IOSTANDARD = LVCMOS33;
+NET "rst_n" SLEW = FAST;
+NET "rst_n" PULLUP;
+NET "rst_n" LOC = E8;
+
+## sensor clock & reset
+NET "clk_col_out" IOSTANDARD = LVCMOS33;
+NET "clk_col_out" SLEW = FAST;
+NET "clk_col_out" LOC = D15;
+NET "clk_main" IOSTANDARD = LVCMOS33;
+NET "clk_main" SLEW = FAST;
+NET "clk_main" LOC = AD11;
+NET "clk_main" DRIVE=8;
+NET "sensor_reset_n" IOSTANDARD = LVCMOS33;
+NET "sensor_reset_n" SLEW = FAST;
+NET "sensor_reset_n" LOC = AA29;
+
+PIN "clocking/BUFG_INPUT_CLOCK.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "BUFG_INPUT_CLOCK.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clocking/clk_dcm4_unbuf_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
+## camera link interface
+NET "cl_sertc_n" IOSTANDARD = LVDS_33;
+NET "cl_sertc_n" LOC = A11;
+NET "cl_sertc_p" IOSTANDARD = LVDS_33;
+NET "cl_sertc_p" LOC = B11;
+NET "cl_sertfg_n" IOSTANDARD = LVDS_33;
+NET "cl_sertfg_n" LOC = A12;
+NET "cl_sertfg_p" LOC = C12;
+NET "cl_sertfg_p" IOSTANDARD = LVDS_33;
+NET "cl_xclk_n" IOSTANDARD = LVDS_33;
+NET "cl_xclk_p" LOC = B9;
+NET "cl_xclk_n" LOC = A9;
+NET "cl_xclk_p" IOSTANDARD = LVDS_33;
+NET "cl_xdata_n[0]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[0]" LOC = C6;
+NET "cl_xdata_n[0]" LOC = A6;
+NET "cl_xdata_n[1]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[1]" LOC = B7;
+NET "cl_xdata_n[1]" LOC = A7;
+NET "cl_xdata_n[2]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[2]" LOC = C8;
+NET "cl_xdata_n[2]" LOC = A8;
+NET "cl_xdata_n[3]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_n[3]" LOC = A10;
+NET "cl_xdata_p[3]" LOC = C10;
+NET "cl_xdata_p[0]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[1]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[2]" IOSTANDARD = LVDS_33;
+NET "cl_xdata_p[3]" IOSTANDARD = LVDS_33;
+NET "cl_yclk_n" IOSTANDARD = LVDS_33;
+NET "cl_yclk_n" LOC = A19;
+NET "cl_yclk_p" LOC = B19;
+NET "cl_yclk_p" IOSTANDARD = LVDS_33;
+NET "cl_ydata_n[0]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[0]" LOC = C16;
+NET "cl_ydata_n[0]" LOC = A16;
+NET "cl_ydata_n[1]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[1]" LOC = B17;
+NET "cl_ydata_n[1]" LOC = A17;
+NET "cl_ydata_n[2]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[2]" LOC = C18;
+NET "cl_ydata_n[2]" LOC = A18;
+NET "cl_ydata_n[3]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[3]" LOC = C20;
+NET "cl_ydata_n[3]" LOC = A20;
+NET "cl_ydata_p[0]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[1]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[2]" IOSTANDARD = LVDS_33;
+NET "cl_ydata_p[3]" IOSTANDARD = LVDS_33;
+
+NET "cl_zdata_p[0]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[0]" LOC = B21;
+NET "cl_zdata_n[0]" LOC = A21;
+NET "cl_zdata_n[0]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[1]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[1]" LOC = C22;
+NET "cl_zdata_n[1]" LOC = A22;
+NET "cl_zdata_n[1]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[2]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[2]" LOC = B23;
+NET "cl_zdata_n[2]" LOC = A23;
+NET "cl_zdata_n[2]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[3]" IOSTANDARD = LVDS_33;
+NET "cl_zdata_p[3]" LOC = B25;
+NET "cl_zdata_n[3]" LOC = A25;
+NET "cl_zdata_n[3]" IOSTANDARD = LVDS_33;
+NET "cl_zclk_p" IOSTANDARD = LVDS_33;
+NET "cl_zclk_p" LOC = C24;
+NET "cl_zclk_n" LOC = A24;
+NET "cl_zclk_n" IOSTANDARD = LVDS_33;
+
+
+##############################################
+//PIN "clocking/BUFG_INST11.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#################################################
+## sensor sequencer
+NET "decoder[0]" IOSTANDARD = LVCMOS33;
+NET "decoder[0]" SLEW = FAST;
+NET "decoder[0]" LOC = AE9;
+NET "decoder[1]" IOSTANDARD = LVCMOS33;
+NET "decoder[1]" SLEW = FAST;
+NET "decoder[1]" LOC = AE10;
+NET "decoder[2]" IOSTANDARD = LVCMOS33;
+NET "decoder[2]" SLEW = FAST;
+NET "decoder[2]" LOC = AJ2;
+NET "decoder[3]" IOSTANDARD = LVCMOS33;
+NET "decoder[3]" SLEW = FAST;
+NET "decoder[3]" LOC = AE8;
+NET "decoder[4]" IOSTANDARD = LVCMOS33;
+NET "decoder[4]" SLEW = FAST;
+NET "decoder[4]" LOC = AG7;
+NET "decoder[5]" IOSTANDARD = LVCMOS33;
+NET "decoder[5]" SLEW = FAST;
+NET "decoder[5]" LOC = AH1;
+NET "decoder[6]" IOSTANDARD = LVCMOS33;
+NET "decoder[6]" SLEW = FAST;
+NET "decoder[6]" LOC = AK2;
+NET "decoder[7]" IOSTANDARD = LVCMOS33;
+NET "decoder[7]" SLEW = FAST;
+NET "decoder[7]" LOC = AG6;
+NET "decoder[8]" IOSTANDARD = LVCMOS33;
+NET "decoder[8]" SLEW = FAST;
+NET "decoder[8]" LOC = AJ1;
+NET "decoder[9]" IOSTANDARD = LVCMOS33;
+NET "decoder[9]" SLEW = FAST;
+NET "decoder[9]" LOC = AH6;
+NET "decoder[10]" IOSTANDARD = LVCMOS33;
+NET "decoder[10]" SLEW = FAST;
+NET "decoder[10]" LOC = AE3;
+NET "fot_dout[4]" IOSTANDARD = LVCMOS33;
+NET "fot_dout[4]" SLEW = FAST;
+NET "fot_dout[4]" LOC = AG5;
+NET "fot_dout[0]" IOSTANDARD = LVCMOS33;
+NET "fot_dout[0]" SLEW = FAST;
+NET "fot_dout[0]" LOC = AB28; // rst
+NET "fot_dout[1]" IOSTANDARD = LVCMOS33;
+NET "fot_dout[1]" SLEW = FAST;
+NET "fot_dout[1]" LOC = AC30; // sel
+NET "fot_dout[2]" IOSTANDARD = LVCMOS33;
+NET "fot_dout[2]" SLEW = FAST;
+NET "fot_dout[2]" LOC = AA30; // tx1
+NET "tx2" IOSTANDARD = LVCMOS33;
+NET "tx2" SLEW = FAST;
+NET "tx2" LOC = AB30;
+NET "fot_dout[3]" IOSTANDARD = LVCMOS33;
+NET "fot_dout[3]" SLEW = FAST;
+NET "fot_dout[3]" LOC = AD30; // hdr
+NET "pixel_read_timing[5]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[5]" SLEW = FAST;
+NET "pixel_read_timing[5]" LOC = AE13;//SYNC
+NET "pixel_read_timing[6]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[6]" SLEW = FAST;
+NET "pixel_read_timing[6]" LOC = AB12;//BLSUN_HG_LG
+NET "pixel_read_timing[7]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[7]" SLEW = FAST;
+NET "pixel_read_timing[7]" LOC = AD15;//TREF_TSIG
+NET "pixel_read_timing[8]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[8]" SLEW = FAST;
+NET "pixel_read_timing[8]" LOC = AE15;//VTZERO
+NET "pixel_read_timing[9]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[9]" SLEW = FAST;
+NET "pixel_read_timing[9]" LOC = AE14;//READ
+NET "pixel_read_timing[10]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[10]" SLEW = FAST;
+NET "pixel_read_timing[10]" LOC = AC1;//ADC_PC
+NET "pixel_read_timing[11]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[11]" SLEW = FAST;
+NET "pixel_read_timing[11]" LOC = AD1;//SAMPLE_BOT
+NET "pixel_read_timing[12]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[12]" SLEW = FAST;
+NET "pixel_read_timing[12]" LOC = AE1;//SAMPLE_TOP
+NET "pixel_read_timing[13]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[13]" SLEW = FAST;
+NET "pixel_read_timing[13]" LOC = AF1;//COL_INIT_BOT
+NET "pixel_read_timing[14]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[14]" SLEW = FAST;
+NET "pixel_read_timing[14]" LOC = AG1;//COL_INIT_TOP
+NET "pixel_read_timing[15]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[15]" SLEW = FAST;
+NET "pixel_read_timing[15]" LOC = AD2;//COL_PC
+
+NET "pixel_read_timing[16]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[16]" SLEW = FAST;
+NET "pixel_read_timing[17]" IOSTANDARD = LVCMOS33;
+NET "pixel_read_timing[17]" SLEW = FAST;
+
+
+## sensor_data_p
+NET "sensor_data_ser_p[0]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[0]" LOC = AG8;//TOP0
+NET "sensor_data_ser_n[0]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[0]" LOC = AH8;
+NET "sensor_data_ser_p[1]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[1]" LOC = AF9;//TOP1
+NET "sensor_data_ser_n[1]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[1]" LOC = AG9;
+NET "sensor_data_ser_p[2]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[2]" LOC = AH7;//TOP2
+NET "sensor_data_ser_n[2]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[2]" LOC = AK7;
+NET "sensor_data_ser_p[3]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[3]" LOC = AF15;//TOP3
+NET "sensor_data_ser_n[3]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[3]" LOC = AG15;
+NET "sensor_data_ser_p[4]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[4]" LOC = AH9;//TOP4
+NET "sensor_data_ser_n[4]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[4]" LOC = AK9;
+NET "sensor_data_ser_p[5]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[5]" LOC = AG10;//TOP5
+NET "sensor_data_ser_n[5]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[5]" LOC = AH10;
+NET "sensor_data_ser_p[6]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[6]" LOC = AH15;//TOP6
+NET "sensor_data_ser_n[6]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[6]" LOC = AK15;
+NET "sensor_data_ser_p[7]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[7]" LOC = AG14;//TOP7
+NET "sensor_data_ser_n[7]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[7]" LOC = AH14;
+NET "sensor_data_ser_p[8]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[8]" LOC = AJ14;//TOP8
+NET "sensor_data_ser_n[8]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[8]" LOC = AK14;
+NET "sensor_data_ser_p[9]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[9]" LOC = AF11;//TOP9
+NET "sensor_data_ser_n[9]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[9]" LOC = AG11;
+NET "sensor_data_ser_p[10]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[10]" LOC = AH13;//TOP10
+NET "sensor_data_ser_n[10]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[10]" LOC = AK13;
+NET "sensor_data_ser_p[11]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[11]" LOC = AH11;//TOP11
+NET "sensor_data_ser_n[11]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[11]" LOC = AK11;
+NET "sensor_data_ser_p[12]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[12]" LOC = AF13;//TOP12
+NET "sensor_data_ser_n[12]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[12]" LOC = AG13;
+NET "sensor_data_ser_p[13]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[13]" LOC = AG12;//TOP13
+NET "sensor_data_ser_n[13]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[13]" LOC = AH12;
+NET "sensor_data_ser_p[14]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[14]" LOC = AJ10;//TOP14
+NET "sensor_data_ser_n[14]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[14]" LOC = AK10;
+NET "sensor_data_ser_p[15]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[15]" LOC = AJ12;//TOP15
+NET "sensor_data_ser_n[15]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[15]" LOC = AK12;
+NET "sensor_data_ser_p[16]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[16]" LOC = AJ24;//BOT0
+NET "sensor_data_ser_n[16]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[16]" LOC = AK24;
+NET "sensor_data_ser_p[17]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[17]" LOC = AG24;//BOT1
+NET "sensor_data_ser_n[17]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[17]" LOC = AH24;
+NET "sensor_data_ser_p[18]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[18]" LOC = AF25;//BOT2
+NET "sensor_data_ser_n[18]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[18]" LOC = AG25;
+NET "sensor_data_ser_p[19]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[19]" LOC = AJ18;//BOT3
+NET "sensor_data_ser_n[19]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[19]" LOC = AK18;
+NET "sensor_data_ser_p[20]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[20]" LOC = AF23;//BOT4
+NET "sensor_data_ser_n[20]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[20]" LOC = AG23;
+NET "sensor_data_ser_p[21]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[21]" LOC = AH23;//BOT5
+NET "sensor_data_ser_n[21]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[21]" LOC = AK23;
+NET "sensor_data_ser_p[22]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[22]" LOC = AH17;//BOT6
+NET "sensor_data_ser_n[22]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[22]" LOC = AK17;
+NET "sensor_data_ser_p[23]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[23]" LOC = AH19;//BOT7
+NET "sensor_data_ser_n[23]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[23]" LOC = AK19;
+NET "sensor_data_ser_p[24]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[24]" LOC = AG18;//BOT8
+NET "sensor_data_ser_n[24]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[24]" LOC = AH18;
+NET "sensor_data_ser_p[25]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[25]" LOC = AG22;//BOT9
+NET "sensor_data_ser_n[25]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[25]" LOC = AH22;
+NET "sensor_data_ser_p[26]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[26]" LOC = AF19;//BOT10
+NET "sensor_data_ser_n[26]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[26]" LOC = AG19;
+NET "sensor_data_ser_p[27]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[27]" LOC = AF21;//BOT11
+NET "sensor_data_ser_n[27]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[27]" LOC = AG21;
+NET "sensor_data_ser_p[28]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[28]" LOC = AJ20;//BOT12
+NET "sensor_data_ser_n[28]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[28]" LOC = AK20;
+NET "sensor_data_ser_p[29]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[29]" LOC = AH21;//BOT13
+NET "sensor_data_ser_n[29]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[29]" LOC = AK21;
+NET "sensor_data_ser_p[30]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[30]" LOC = AD22;//BOT14
+NET "sensor_data_ser_n[30]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[30]" LOC = AE22;
+NET "sensor_data_ser_p[31]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_p[31]" LOC = AG20;//BOT15
+NET "sensor_data_ser_n[31]" IOSTANDARD = LVDS_33;
+NET "sensor_data_ser_n[31]" LOC = AH20;
+
+## sensor spi
+NET "spi_clk" IOSTANDARD = LVCMOS33;
+NET "spi_clk" SLEW = FAST;
+NET "spi_clk" LOC = AJ30;
+NET "spi_in" IOSTANDARD = LVCMOS33;
+NET "spi_in" SLEW = FAST;
+NET "spi_in" LOC = AH30;
+NET "spi_out" IOSTANDARD = LVCMOS33;
+NET "spi_out" SLEW = FAST;
+NET "spi_out" LOC = AF30;
+NET "spi_read" IOSTANDARD = LVCMOS33;
+NET "spi_read" SLEW = FAST;
+NET "spi_read" LOC = AE30;
+NET "spi_write" IOSTANDARD = LVCMOS33;
+NET "spi_write" SLEW = FAST;
+NET "spi_write" LOC = AG30;
+
+## test io
+NET "test_io[0]" IOSTANDARD = LVCMOS33;
+NET "test_io[0]" SLEW = FAST;
+NET "test_io[0]" LOC = Y30;
+NET "test_io[1]" IOSTANDARD = LVCMOS33;
+NET "test_io[1]" SLEW = FAST;
+NET "test_io[1]" LOC = W30;
+NET "test_io[2]" IOSTANDARD = LVCMOS33;
+NET "test_io[2]" SLEW = FAST;
+NET "test_io[2]" LOC = V30;
+NET "test_io[3]" IOSTANDARD = LVCMOS33;
+NET "test_io[3]" SLEW = FAST;
+NET "test_io[3]" LOC = U30;
+NET "test_io[4]" IOSTANDARD = LVCMOS33;
+NET "test_io[4]" SLEW = FAST;
+NET "test_io[4]" LOC = T30;
+NET "test_io[5]" IOSTANDARD = LVCMOS33;
+NET "test_io[5]" SLEW = FAST;
+NET "test_io[5]" LOC = R30;
+NET "test_io[6]" IOSTANDARD = LVCMOS33;
+NET "test_io[6]" SLEW = FAST;
+NET "test_io[6]" LOC = P30;
+NET "test_io[7]" IOSTANDARD = LVCMOS33;
+NET "test_io[7]" SLEW = FAST;
+NET "test_io[7]" LOC = N30;
+
+
+################################################################################
+## TIMING CONSTRAINTS
+################################################################################
+
+# PlanAhead Generated physical constraints 
+#
+#INST "image_rx\/training\/loop[1].receiver_lvds\/data_par_iserdes_0" BEL = AFF;
+#INST "image_rx\/training\/loop[7].receiver_lvds\/data_par_iserdes_0" BEL = DFF;
+#INST "image_rx\/training\/loop[1].receiver_lvds\/data_par_iserdes_0" LOC = SLICE_X101Y34;
+#INST "image_rx\/training\/loop[7].receiver_lvds\/data_par_iserdes_0" LOC = SLICE_X70Y27;

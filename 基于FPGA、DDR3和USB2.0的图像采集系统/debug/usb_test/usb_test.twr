@@ -1,0 +1,296 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\xlinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf
+usb_test.ucf
+
+Design file:              usb_test.ncd
+Physical constraint file: usb_test.pcf
+Device,package,speed:     xc6slx45,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 325 paths analyzed, 158 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.207ns.
+--------------------------------------------------------------------------------
+
+Paths for end point usb_state_FSM_FFd3 (SLICE_X54Y63.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     8.660ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               access_req (FF)
+  Destination:          usb_state_FSM_FFd3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      1.275ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.030ns (0.576 - 0.606)
+  Source Clock:         fpga_gclk_BUFGP falling at 10.000ns
+  Destination Clock:    fpga_gclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: access_req to usb_state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y64.AQ      Tcko                  0.391   access_req
+                                                       access_req
+    SLICE_X54Y63.C4      net (fanout=2)        0.543   access_req
+    SLICE_X54Y63.CLK     Tas                   0.341   usb_state_FSM_FFd3
+                                                       usb_state_FSM_FFd3-In33
+                                                       usb_state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.275ns (0.732ns logic, 0.543ns route)
+                                                       (57.4% logic, 42.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point bus_busy (SLICE_X55Y63.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     8.834ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               access_req (FF)
+  Destination:          bus_busy (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      1.101ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.030ns (0.576 - 0.606)
+  Source Clock:         fpga_gclk_BUFGP falling at 10.000ns
+  Destination Clock:    fpga_gclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: access_req to bus_busy
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y64.AQ      Tcko                  0.391   access_req
+                                                       access_req
+    SLICE_X55Y63.B5      net (fanout=2)        0.388   access_req
+    SLICE_X55Y63.CLK     Tas                   0.322   bus_busy
+                                                       usb_state[4]_access_req_Select_42_o1
+                                                       bus_busy
+    -------------------------------------------------  ---------------------------
+    Total                                      1.101ns (0.713ns logic, 0.388ns route)
+                                                       (64.8% logic, 35.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point access_req (SLICE_X55Y64.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     8.838ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bus_busy (FF)
+  Destination:          access_req (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      1.097ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.030ns (0.576 - 0.606)
+  Source Clock:         fpga_gclk_BUFGP rising at 0.000ns
+  Destination Clock:    fpga_gclk_BUFGP falling at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bus_busy to access_req
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y63.BQ      Tcko                  0.391   bus_busy
+                                                       bus_busy
+    SLICE_X55Y64.A5      net (fanout=2)        0.384   bus_busy
+    SLICE_X55Y64.CLK     Tas                   0.322   access_req
+                                                       usb_flaga_bus_busy_AND_2_o1
+                                                       access_req
+    -------------------------------------------------  ---------------------------
+    Total                                      1.097ns (0.713ns logic, 0.384ns route)
+                                                       (65.0% logic, 35.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point data_reg_11 (SLICE_X58Y55.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               data_reg_11 (FF)
+  Destination:          data_reg_11 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         fpga_gclk_BUFGP rising at 20.000ns
+  Destination Clock:    fpga_gclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: data_reg_11 to data_reg_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y55.DQ      Tcko                  0.200   data_reg<11>
+                                                       data_reg_11
+    SLICE_X58Y55.D6      net (fanout=2)        0.025   data_reg<11>
+    SLICE_X58Y55.CLK     Tah         (-Th)    -0.190   data_reg<11>
+                                                       data_reg_11_dpot
+                                                       data_reg_11
+    -------------------------------------------------  ---------------------------
+    Total                                      0.415ns (0.390ns logic, 0.025ns route)
+                                                       (94.0% logic, 6.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point data_reg_12 (SLICE_X58Y62.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               data_reg_12 (FF)
+  Destination:          data_reg_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         fpga_gclk_BUFGP rising at 20.000ns
+  Destination Clock:    fpga_gclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: data_reg_12 to data_reg_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y62.AQ      Tcko                  0.200   data_reg<15>
+                                                       data_reg_12
+    SLICE_X58Y62.A6      net (fanout=2)        0.025   data_reg<12>
+    SLICE_X58Y62.CLK     Tah         (-Th)    -0.190   data_reg<15>
+                                                       data_reg_12_dpot
+                                                       data_reg_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.415ns (0.390ns logic, 0.025ns route)
+                                                       (94.0% logic, 6.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point data_reg_15 (SLICE_X58Y62.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               data_reg_15 (FF)
+  Destination:          data_reg_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         fpga_gclk_BUFGP rising at 20.000ns
+  Destination Clock:    fpga_gclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: data_reg_15 to data_reg_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y62.DQ      Tcko                  0.200   data_reg<15>
+                                                       data_reg_15
+    SLICE_X58Y62.D6      net (fanout=2)        0.025   data_reg<15>
+    SLICE_X58Y62.CLK     Tah         (-Th)    -0.190   data_reg<15>
+                                                       data_reg_15_dpot
+                                                       data_reg_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.415ns (0.390ns logic, 0.025ns route)
+                                                       (94.0% logic, 6.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.270ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: fpga_gclk_BUFGP/BUFG/I0
+  Logical resource: fpga_gclk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: fpga_gclk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 19.570ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: usb_state_FSM_FFd3/CLK
+  Logical resource: usb_slwr/CK
+  Location pin: SLICE_X54Y63.CLK
+  Clock network: fpga_gclk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.570ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.215ns (Trpw)
+  Physical resource: usb_state_FSM_FFd3/SR
+  Logical resource: usb_slwr/SR
+  Location pin: SLICE_X54Y63.SR
+  Clock network: reset_n_inv
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock fpga_gclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+fpga_gclk      |    3.207|    1.340|    1.162|         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 325 paths, 0 nets, and 220 connections
+
+Design statistics:
+   Minimum period:   3.207ns{1}   (Maximum frequency: 311.818MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Jul 25 13:58:23 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 297 MB
+
+
+

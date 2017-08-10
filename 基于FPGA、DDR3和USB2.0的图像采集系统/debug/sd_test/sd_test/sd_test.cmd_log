@@ -1,0 +1,309 @@
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX516/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx16-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX545/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX545/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX545/verilog/sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX545/verilog/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX545/CD/09_VERILOG/16_sd_test/sd_test/sd_test.xst" -ofn "E:/Project/AX545/CD/09_VERILOG/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/BaiduYunDownload/AX545.160330/AX545/09_VERILOG/16_sd_test/sd_test/sd_test.xst" -ofn "E:/BaiduYunDownload/AX545.160330/AX545/09_VERILOG/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "E:/BaiduYunDownload/AX545.160330/AX545/09_VERILOG/16_sd_test/sd_test/sd_test.xst" -ofn "E:/BaiduYunDownload/AX545.160330/AX545/09_VERILOG/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.xst" -ofn "D:/FPGA_Project/fpga_project/demo/16_sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.xst" -ofn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.xst" -ofn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.xst" -ofn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.xst" -ofn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.xst" -ofn "G:/gitDoc/noteboook-learn/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/fpga-design/debug/sd_test/sd_test/sd_test.xst" -ofn "G:/fpga-design/debug/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/fpga-design/debug/sd_test/sd_test/sd_test.xst" -ofn "G:/fpga-design/debug/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 
+xst -intstyle ise -ifn "G:/fpga-design/debug/sd_test/sd_test/sd_test.xst" -ofn "G:/fpga-design/debug/sd_test/sd_test/sd_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rtl/sd_test.ucf -p xc6slx45-csg324-2 sd_test.ngc sd_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sd_test_map.ncd sd_test.ngd sd_test.pcf 
+par -w -intstyle ise -ol high -mt off sd_test_map.ncd sd_test.ncd sd_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sd_test.twx sd_test.ncd -o sd_test.twr sd_test.pcf 
+bitgen -intstyle ise -f sd_test.ut sd_test.ncd 

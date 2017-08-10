@@ -1,0 +1,13 @@
+# PROMGEN: Xilinx Prom Generator O.40d
+# Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION O.40d
+DATE            05/18/2015 - 10:36
+SOURCE          E:\Hang\G200_GLN_HDR_10bit_full_32chan_cho_frame0_NEWPCB_debug_02_wending_FINAL\G200_GLN_HDR_CHANNEL_CHOOSE.mcs
+DEVICE          XCF32P
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x1D76D0EF
+BLOCK 0 VERSION 0 0x0D86D0EF
+BLOCK 1 VERSION 0 0x0D86D0EF
+BLOCK 2 VERSION 0 END 0x0D86D0EF

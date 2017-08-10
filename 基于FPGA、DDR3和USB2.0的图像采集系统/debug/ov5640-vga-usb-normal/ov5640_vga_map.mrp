@@ -1,0 +1,1117 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'ov5640_vga'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off
+-ir off -pr b -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd
+ov5640_vga.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Jun 25 16:22:39 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    7
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,459 out of  54,576    4%
+    Number used as Flip Flops:               2,456
+    Number used as Latches:                      3
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,016 out of  27,288    7%
+    Number used as logic:                    1,256 out of  27,288    4%
+      Number using O6 output only:             970
+      Number using O5 output only:             133
+      Number using O5 and O6:                  153
+      Number used as ROM:                        0
+    Number used as Memory:                     122 out of   6,408    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           122
+        Number using O6 output only:           120
+        Number using O5 output only:             2
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:    638
+      Number with same-slice register load:    625
+      Number with same-slice carry load:        13
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   848 out of   6,822   12%
+  Number of MUXCYs used:                       412 out of  13,644    3%
+  Number of LUT Flip Flop pairs used:        2,524
+    Number with an unused Flip Flop:           741 out of   2,524   29%
+    Number with an unused LUT:                 508 out of   2,524   20%
+    Number of fully used LUT-FF pairs:       1,275 out of   2,524   50%
+    Number of unique control sets:             129
+    Number of slice register sites lost
+      to control set restrictions:             491 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       116 out of     218   53%
+    Number of LOCed IOBs:                      116 out of     116  100%
+    IOB Flip Flops:                             13
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         6 out of     116    5%
+  Number of RAMB8BWERs:                          1 out of     232    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       7 out of      16   43%
+    Number used as BUFGs:                        6
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                  12 out of     376    3%
+    Number used as ILOGIC2s:                    12
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:        24 out of     376    6%
+    Number used as IODELAY2s:                    0
+    Number used as IODRP2s:                      2
+    Number used as IODRP2_MCBs:                 22
+  Number of OLOGIC2/OSERDES2s:                  47 out of     376   12%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                   46
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         1 out of       4   25%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                1 out of       2   50%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       4   25%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+  Number of RPM macros:           15
+Average Fanout of Non-Clock Nets:                2.68
+
+Peak Memory Usage:  533 MB
+Total REAL time to MAP completion:  1 mins 38 secs 
+Total CPU time to MAP completion:   1 mins 33 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Place:1206 - This design contains a global buffer instance,
+   <ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2>, driving
+   the net, <camera_xclk_OBUF>, that is driving the following (first 30)
+   non-clock load pins off chip.
+   < PIN: camera_xclk.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN
+   <ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2.O> allowing
+   your design to continue. This constraint disables all clock placer rules
+   related to the specified COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance,
+   <ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2>, driving
+   the net, <camera_xclk_OBUF>, that is driving the following (first 30)
+   non-clock load pins.
+   < PIN: camera_xclk.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <ddr_rw_inst/mig_39_2_inst/memc3_infrastructure_inst/U_BUFG_CLK2.O> allowing
+   your design to continue. This constraint disables all clock placer rules
+   related to the specified COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <reg_config_inst/clock_20k_BUFG>, driving
+   the net, <reg_config_inst/clock_20k_BUFG>, that is driving the following
+   (first 30) non-clock load pins.
+   < PIN: lut1724_2891.A6; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <reg_config_inst/clock_20k_BUFG.O> allowing your design to continue. This
+   constraint disables all clock placer rules related to the specified COMP.PIN.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <usb_clk> is placed at site <C6>. The corresponding BUFG
+   component <usb_clk_BUFGP/BUFG> is placed at site <BUFGMUX_X2Y9>. There is
+   only a select set of IOBs that can use the fast path to the Clocker buffer,
+   and they are not being used. You may want to analyze why this problem exists
+   and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <usb_clk.PAD> allowing your design to
+   continue. This constraint disables all clock placer rules related to the
+   specified COMP.PIN. The use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <camera_pclk> is placed at site <U17>. The corresponding BUFG
+   component <camera_pclk_BUFGP/BUFG> is placed at site <BUFGMUX_X3Y6>. There is
+   only a select set of IOBs that can use the fast path to the Clocker buffer,
+   and they are not being used. You may want to analyze why this problem exists
+   and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <camera_pclk.PAD> allowing your design to
+   continue. This constraint disables all clock placer rules related to the
+   specified COMP.PIN. The use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network usb_clk_BUFGP/N2 has no load.
+INFO:LIT:395 - The above info message is repeated 74 more times for the
+   following (max. 5 shown):
+   usb_clk_BUFGP/N3,
+   camera_pclk_BUFGP/N2,
+   camera_pclk_BUFGP/N3,
+   U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match
+   /I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_
+   NE0.U_GAND_SRL_SET/SRL_Q_O,
+   U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match
+   /I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_
+   NE0.U_GAND_SRL_SET/N2
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  67 block(s) removed
+  41 block(s) optimized away
+  74 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "usb_clk_BUFGP/N2" is sourceless and has been removed.
+The signal "usb_clk_BUFGP/N3" is sourceless and has been removed.
+The signal "camera_pclk_BUFGP/N2" is sourceless and has been removed.
+The signal "camera_pclk_BUFGP/N3" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N2" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N3" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N2" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N3" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N1" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N1" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N1" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N2" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N3" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[4].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[5].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[6].U_GAND_SRL_SLICE/N11" is sourceless
+and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/N1" is sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAN
+D.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/N1" is
+sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/N1" is
+sourceless and has been removed.
+The signal
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/N1" is
+sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/IOBUF_RZQ/N2" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/IOBUF_RZQ/N3" is sourceless and
+has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/gen_zio.IOBUF_ZIO/N2" is
+sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/gen_zio.IOBUF_ZIO/N3" is
+sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[5].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[5].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[4].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[4].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[7].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[7].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[6].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[6].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[3].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[3].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[2].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[2].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[1].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[1].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[0].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[0].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[9].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[9].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[8].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[8].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[11].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[11].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[10].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[10].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[13].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[13].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[12].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[12].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[15].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[15].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[14].gen_iob_dq_inst/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[14].gen_iob_dq_inst/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dqs_iobufds.iob_dqs/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dqs_iobufds.iob_dqs/N3" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_udqs_iobufds.iob_udqs/N2" is sourceless and has been removed.
+The signal
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_udqs_iobufds.iob_udqs/N3" is sourceless and has been removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAN
+D.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_GND"
+(ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_GND"
+(ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_GND"
+(ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_VCC" (ONE) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_VCC" (ONE) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_VCC" (ONE) removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[4].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[5].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[6].U_GAND_SRL_SLICE/XST_VCC" (ONE)
+removed.
+Unused block
+"U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I
+_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U
+_GAND_SRL_SET/XST_GND" (ZERO) removed.
+Unused block "camera_pclk_BUFGP/XST_GND" (ZERO) removed.
+Unused block "camera_pclk_BUFGP/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[0].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[0].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[10].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[10].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[11].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[11].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[12].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[12].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[13].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[13].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[14].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[14].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[15].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[15].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[1].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[1].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[2].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[2].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[3].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[3].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[4].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[4].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[5].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[5].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[6].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[6].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[7].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[7].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[8].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[8].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[9].gen_iob_dq_inst/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dq_iobuft[9].gen_iob_dq_inst/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dqs_iobufds.iob_dqs/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_dqs_iobufds.iob_dqs/XST_VCC" (ONE) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/IOBUF_RZQ/XST_GND" (ZERO)
+removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/IOBUF_RZQ/XST_VCC" (ONE)
+removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/gen_zio.IOBUF_ZIO/XST_GND"
+(ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_term_calib.mcb_soft_calibration_top_inst/gen_zio.IOBUF_ZIO/XST_VCC" (ONE)
+removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_udqs_iobufds.iob_udqs/XST_GND" (ZERO) removed.
+Unused block
+"ddr_rw_inst/mig_39_2_inst/memc3_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_in
+st/gen_udqs_iobufds.iob_udqs/XST_VCC" (ONE) removed.
+Unused block "usb_clk_BUFGP/XST_GND" (ZERO) removed.
+Unused block "usb_clk_BUFGP/XST_VCC" (ONE) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_SL
+ICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_SL
+ICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GA
+ND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_S
+LICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_S
+LICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_S
+LICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/I_PARTIAL_S
+LICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_G
+AND.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[4].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[5].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[6].U_GAND_SRL_SLICE/XST_GND
+GND
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[7].U_GAND_SRL_SLICE/XST_GND
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[7].U_GAND_SRL_SLICE/XST_VCC
+VCC
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/
+I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.
+U_GAND_SRL_SET/XST_VCC
+GND 		U_ila_pro_0/XST_GND
+VCC 		U_ila_pro_0/XST_VCC
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| USB_DATA<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<5>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<6>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<7>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<8>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<9>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<10>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<11>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<12>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<13>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<14>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_DATA<15>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_FIFO_ADR<0>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_FIFO_ADR<1>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_SLOE                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_SLRD                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| USB_SLWR                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| camera_data<0>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<1>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<2>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<3>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<4>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<5>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<6>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_data<7>                     | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_href                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| camera_pclk                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| camera_pwnd                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| camera_reset                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| camera_vsync                       | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| camera_xclk                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| clk_50M                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| flagA_EP6EF                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| flagB_EP6FF                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| flagC_EP8EF                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| flagD_EP8FF                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| i2c_sclk                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| i2c_sdat                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | TFF          |          |          |
+| key1                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| mcb3_dram_a<0>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<1>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<2>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<3>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<4>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<5>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<6>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<7>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<8>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<9>                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<10>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<11>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<12>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_a<13>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_ba<0>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<1>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ba<2>                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cas_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck                       | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ck_n                     | IOB              | OUTPUT    | DIFF_SSTL15_II       |       |          |      | OSERDES      |          |          |
+| mcb3_dram_cke                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_dm                       | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<0>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<1>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<2>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<3>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<4>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<5>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<6>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<7>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<8>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<9>                    | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<10>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<11>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<12>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<13>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<14>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dq<15>                   | IOB              | BIDIR     | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_dqs                      | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_dqs_n                    | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_odt                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_ras_n                    | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_dram_reset_n                  | IOB              | OUTPUT    | LVCMOS15             |       | 12       | SLOW | OSERDES      |          |          |
+| mcb3_dram_udm                      | IOB              | OUTPUT    | SSTL15_II            |       |          |      |              |          |          |
+| mcb3_dram_udqs                     | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLDOWN |          |
+| mcb3_dram_udqs_n                   | IOB              | BIDIR     | DIFF_SSTL15_II       |       |          |      |              | PULLUP   |          |
+| mcb3_dram_we_n                     | IOB              | OUTPUT    | SSTL15_II            |       |          |      | OSERDES      |          |          |
+| mcb3_rzq                           | IOB              | BIDIR     | SSTL15_II            |       |          |      | IFF          |          | DEFAULT  |
+| mcb3_zio                           | IOB              | BIDIR     | SSTL15_II            |       |          |      | IFF          |          | DEFAULT  |
+| reset_n                            | IOB              | INPUT     | LVCMOS15             |       |          |      | IFF          |          |          |
+| usb_clk                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| vga_b<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_b<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_b<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_b<3>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_b<4>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<3>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<4>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_g<5>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_hsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_r<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_r<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_r<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_r<3>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_r<4>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| vga_vsync                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND
+.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/U_ila_pro_0U0/
+I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/
+I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAN
+D.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/U_ila_pro_0U0
+/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SR
+L/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAN
+D.U_CS_GAND_SRL/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/U_ila_pro_0U0
+/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SR
+L/I_S6.U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[4].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[5].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GANDX.U_match/I_
+CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_USE_RPM_NE0.U_
+GAND_SRL_SET/U_ila_pro_0U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[6].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/U_CS_GAND_SRL_S6/I_US
+E_RPM_NE0.U_GAND_SRL_SET/MSET
+U_ila_pro_0/U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CDONE_MS
+ET
+U_ila_pro_0/U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CMPRESET
+_MSET
+U_ila_pro_0/U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS0_MSET
+U_ila_pro_0/U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS1_MSET
+U_ila_pro_0/U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCRST_MS
+ET
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

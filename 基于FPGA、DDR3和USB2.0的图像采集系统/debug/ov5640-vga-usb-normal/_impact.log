@@ -1,0 +1,318 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Tue Jul 25 16:01:57 2017
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project:'G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project.ipf'already exists.
+Original project has been renamed to'G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project_1.ipf'.
+Project:G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project.ipfcreated.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "ov5640_vga_usb_normal" -path"G:\fpga-design\debug\code-ov5640-vga-usb-normal"
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "TRUE"
+// *** BATCH CMD : addPromDevice -p 1 -size 16384 -name 16M
+'1': Added Device 16M successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : ov5640_vga_usb_normal
+      File Location : G:\fpga-design\debug\code-ov5640-vga-usb-normal/
+      Auto Select : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : 16M   PROM Size : 16777216 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr name -value "0000"
+// *** BATCH CMD : addDevice -p 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit"
+'1': Loading file'G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+Add one device.16a8b5INFO:iMPACT - Current time: 2017/7/25 16:03:01
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffspi
+Total configuration bit size = 11877472  bits.
+// *** BATCH CMD : generate
+Total configuration byte size = 1484684 bytes.
+0x16a78c (1484684) bytes loaded up from 0x0
+Using user-specified prom size of 16384K
+Writing file"G:\fpga-design\debug\code-ov5640-vga-usb-normal\ov5640_vga_usb_normal.mcs".
+Writing file"G:\fpga-design\debug\code-ov5640-vga-usb-normal\ov5640_vga_usb_normal.prm".
+Writing file"G:\fpga-design\debug\code-ov5640-vga-usb-normal\ov5640_vga_usb_normal.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: found 1 device(s).
+INFO:iMPACT - Digilent Plugin: opening device: "JtagHs1", SN:210512180081
+INFO:iMPACT - Digilent Plugin: User Name: JtagHs1
+INFO:iMPACT - Digilent Plugin: Product Name: Digilent JTAG-HS1
+INFO:iMPACT - Digilent Plugin: Serial Number: 210512180081
+INFO:iMPACT - Digilent Plugin: Product ID: 30900152
+INFO:iMPACT - Digilent Plugin: Firmware Version: 0108
+INFO:iMPACT - Digilent Plugin: JTAG Port Number: 0
+INFO:iMPACT - Digilent Plugin: JTAG Clock Frequency: 10000000 Hz
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 2017/7/25 16:03:22
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx45, Version : 3
+INFO:iMPACT:1777 - 
+   Reading E:/xlinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx45.bsd...
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+Selected part: W25Q128BV
+// *** BATCH CMD : attachflash -position 1 -spi "W25Q128BV"
+Unprotect sectors: FALSE
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga_usb_normal.mcs"
+INFO:iMPACT - Current time: 2017/7/25 16:04:17
+// *** BATCH CMD : Program -p 1 -dataWidth 1 -spionly -e -v -loadfpga 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': IDCODE is '000000' (in hex).
+'1': ID Check failed.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - SPI Device not found.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - '1': Flash was not programmed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : cutDevice -p 1
+Unprotect sectors: FALSE
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 2017/7/25 16:05:13
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx45, Version : 3
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+Selected part: W25Q128BV
+// *** BATCH CMD : attachflash -position 1 -spi "W25Q128BV"
+Unprotect sectors: FALSE
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga_usb_normal.mcs"
+INFO:iMPACT - Current time: 2017/7/25 16:05:44
+// *** BATCH CMD : Program -p 1 -dataWidth 1 -spionly -e -v -loadfpga 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': IDCODE is '000000' (in hex).
+'1': ID Check failed.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - SPI Device not found.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - '1': Flash was not programmed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : cutDevice -p 1
+Unprotect sectors: FALSE
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 2017/7/25 16:06:43
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx45, Version : 3
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit"
+'1': Loading file'G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = 1.
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : cutDevice -p 1
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 2017/7/25 16:07:06
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx45, Version : 3
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+Selected part: W25Q128BV
+// *** BATCH CMD : attachflash -position 1 -spi "W25Q128BV"
+Unprotect sectors: FALSE
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640.mcs"
+INFO:iMPACT - Current time: 2017/7/25 16:07:43
+// *** BATCH CMD : Program -p 1 -dataWidth 1 -spionly -e -v -loadfpga 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': IDCODE is '000000' (in hex).
+'1': ID Check failed.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - SPI Device not found.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+INFO:iMPACT - '1': Flash was not programmed successfully.
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : cutDevice -p 1
+Unprotect sectors: FALSE
+// *** BATCH CMD : addDevice -p 1 -file"G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit"
+'1': Loading file'G:/fpga-design/debug/code-ov5640-vga-usb-normal/ov5640_vga.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = 1.
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 2017/7/25 16:12:26
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        0
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0001 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 2017/7/25 16:14:12
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        0
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0001 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Backup of auto project'G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project_1.ipf' created.
+Project:'G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project.ipf'created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   G:\gitDoc\noteboook-learn\code-ov5640-vga-usb-normal_debug1\webtalk.log for   details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1

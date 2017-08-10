@@ -1,0 +1,26 @@
+Running: D:\Xilinx\13.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer_isim_beh.exe -prj E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer_beh.prj work.tb_image_buffer work.glbl 
+ISim O.40d (signature 0xc4ca3437)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file \"E:/Hang_Wang/G200_GLN_32_03_05/ipcore_dir/bram_28_1024.v\" into library work
+Analyzing Verilog file \"E:/Hang_Wang/G200_GLN_32_03_05/ipcore_dir/simple_dual_ram_w24_d512.v\" into library work
+Analyzing Verilog file \"E:/Hang_Wang/G200_GLN_32_03_05/image_buffer.v\" into library work
+Analyzing Verilog file \"E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer.v\" into library work
+Analyzing Verilog file \"D:/Xilinx/13.1/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module BLK_MEM_GEN_V6_1_output_stage(C_...
+Compiling module BLK_MEM_GEN_V6_1_softecc_output_...
+Compiling module BLK_MEM_GEN_V6_1_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V6_1(C_FAMILY="spart...
+Compiling module simple_dual_ram_w24_d512
+Compiling module image_buffer
+Compiling module tb_image_buffer
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable E:/Hang_Wang/G200_GLN_32_03_05/tb_image_buffer_isim_beh.exe
+Fuse Memory Usage: 23972 KB
+Fuse CPU Usage: 483 ms

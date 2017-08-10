@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+128M
+FF
+ov5640
+G:\fpga-design\debug\code-ov5640-vga-usb-normal/
+
+MCS
+No

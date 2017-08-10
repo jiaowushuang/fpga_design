@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ov5640_vga -o E:/05_USB/26_ov5640_vga/26_ov5640_vga/usb_controller.tfi -lib work E:/05_USB/26_ov5640_vga/26_ov5640_vga//usb_controller.v -module usb_controller -template C:/Xilinx14_7/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

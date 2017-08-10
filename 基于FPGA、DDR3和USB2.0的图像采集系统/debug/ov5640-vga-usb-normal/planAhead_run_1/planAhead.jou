@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Jul 25 14:47:17 2017
+# Process ID: 11184
+# Log file: G:/fpga-design/debug/code-ov5640-vga-usb-normal/planAhead_run_1/planAhead.log
+# Journal file: G:/fpga-design/debug/code-ov5640-vga-usb-normal/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/fpga-design/debug/code-ov5640-vga-usb-normal/pa.fromNetlist.tcl

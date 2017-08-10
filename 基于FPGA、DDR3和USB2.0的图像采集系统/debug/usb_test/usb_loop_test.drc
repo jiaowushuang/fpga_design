@@ -1,0 +1,11 @@
+Release 13.1 Drc O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Fri Nov 23 18:13:25 2012
+
+drc -z USB_LOOP_TEST.ncd USB_LOOP_TEST.pcf
+
+WARNING:PhysDesignRules:367 - The signal <USB_FLAGB_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

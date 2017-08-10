@@ -1,0 +1,22 @@
+xst -intstyle ise -ifn "E:/Project/AX545/verilog/ddr3_test/mig_39_2/example_design/par/example_top.xst" -ofn "E:/Project/AX545/verilog/ddr3_test/mig_39_2/example_design/par/example_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc example_top.ucf -p xc6slx45-csg324-2 example_top.ngc example_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o example_top_map.ncd example_top.ngd example_top.pcf 
+par -w -intstyle ise -ol high -mt off example_top_map.ncd example_top.ncd example_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml example_top.twx example_top.ncd -o example_top.twr example_top.pcf -ucf example_top.ucf 
+bitgen -intstyle ise -f example_top.ut example_top.ncd 
+xst -intstyle ise -ifn "E:/Project/AX545/verilog/ddr3_test/mig_39_2/example_design/par/example_top.xst" -ofn "E:/Project/AX545/verilog/ddr3_test/mig_39_2/example_design/par/example_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc example_top.ucf -p xc6slx45-csg324-2 example_top.ngc example_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o example_top_map.ncd example_top.ngd example_top.pcf 
+par -w -intstyle ise -ol high -mt off example_top_map.ncd example_top.ncd example_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml example_top.twx example_top.ncd -o example_top.twr example_top.pcf -ucf example_top.ucf 
+bitgen -intstyle ise -f example_top.ut example_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc example_top.ucf -p xc6slx45-csg324-2 example_top.ngc example_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o example_top_map.ncd example_top.ngd example_top.pcf 
+par -w -intstyle ise -ol high -mt off example_top_map.ncd example_top.ncd example_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml example_top.twx example_top.ncd -o example_top.twr example_top.pcf -ucf example_top.ucf 
+bitgen -intstyle ise -f example_top.ut example_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc example_top.ucf -p xc6slx45-csg324-2 example_top.ngc example_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o example_top_map.ncd example_top.ngd example_top.pcf 
+par -w -intstyle ise -ol high -mt off example_top_map.ncd example_top.ncd example_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml example_top.twx example_top.ncd -o example_top.twr example_top.pcf -ucf example_top.ucf 
+bitgen -intstyle ise -f example_top.ut example_top.ncd 

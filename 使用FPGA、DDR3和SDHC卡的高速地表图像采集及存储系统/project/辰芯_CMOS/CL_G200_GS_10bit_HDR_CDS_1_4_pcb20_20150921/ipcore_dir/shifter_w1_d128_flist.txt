@@ -1,0 +1,15 @@
+# Output products list for <shifter_w1_d128>
+_xmsgs\pn_parser.xmsgs
+shifter_w1_d128.asy
+shifter_w1_d128.gise
+shifter_w1_d128.ngc
+shifter_w1_d128.sym
+shifter_w1_d128.v
+shifter_w1_d128.veo
+shifter_w1_d128.vhd
+shifter_w1_d128.vho
+shifter_w1_d128.xco
+shifter_w1_d128.xise
+shifter_w1_d128_flist.txt
+shifter_w1_d128_readme.txt
+shifter_w1_d128_xmdf.tcl

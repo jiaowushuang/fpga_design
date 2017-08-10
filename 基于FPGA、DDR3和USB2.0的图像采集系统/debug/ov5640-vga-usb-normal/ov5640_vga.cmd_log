@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/ov5640_vga.xst" -ofn "E:/05_USB/26_ov5640_vga/26_ov5640_vga_normal/ov5640_vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mig_39_2.ucf -p xc6slx45-csg324-2 ov5640_vga_cs.ngc ov5640_vga.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr b -lc off -power off -o ov5640_vga_map.ncd ov5640_vga.ngd ov5640_vga.pcf 
+par -w -intstyle ise -ol high -mt off ov5640_vga_map.ncd ov5640_vga.ncd ov5640_vga.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ov5640_vga.twx ov5640_vga.ncd -o ov5640_vga.twr ov5640_vga.pcf -ucf mig_39_2.ucf 
+bitgen -intstyle ise -f ov5640_vga.ut ov5640_vga.ncd 

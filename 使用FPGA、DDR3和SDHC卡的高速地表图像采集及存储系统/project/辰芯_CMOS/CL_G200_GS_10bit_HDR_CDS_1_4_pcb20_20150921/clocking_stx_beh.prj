@@ -1,0 +1,2 @@
+verilog isim_temp "clocking.v"
+verilog isim_temp "D:/Xilinx/ISE_DS/ISE//verilog/src/glbl.v"

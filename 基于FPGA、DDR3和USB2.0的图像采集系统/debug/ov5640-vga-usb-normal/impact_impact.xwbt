@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal\impact.xsl
+OUTFILE=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal
+LICENSE=iMPACT
+USER_INFO=iMPACT

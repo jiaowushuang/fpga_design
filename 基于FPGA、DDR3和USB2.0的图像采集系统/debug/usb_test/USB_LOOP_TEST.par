@@ -1,0 +1,187 @@
+Release 13.1 par O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+DELL-AE1D713E33::  Fri Nov 23 18:13:05 2012
+
+par -w -intstyle ise -ol high -mt off USB_LOOP_TEST_map.ncd USB_LOOP_TEST.ncd
+USB_LOOP_TEST.pcf 
+
+
+Constraints file: USB_LOOP_TEST.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment D:\Xilinx1\13.1\ISE_DS\ISE\.
+   "USB_LOOP_TEST" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.17 2011-02-03".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                    35 out of  18,224    1%
+    Number used as Flip Flops:                  35
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         57 out of   9,112    1%
+    Number used as logic:                       57 out of   9,112    1%
+      Number using O6 output only:              40
+      Number using O5 output only:               0
+      Number using O5 and O6:                   17
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    17 out of   2,278    1%
+  Number of LUT Flip Flop pairs used:           57
+    Number with an unused Flip Flop:            22 out of      57   38%
+    Number with an unused LUT:                   0 out of      57    0%
+    Number of fully used LUT-FF pairs:          35 out of      57   61%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        27 out of     232   11%
+    Number of LOCed IOBs:                       27 out of      27  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
+
+WARNING:Par:288 - The signal USB_FLAGB_IBUF has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 304 unrouted;      REAL time: 5 secs 
+
+Phase  2  : 274 unrouted;      REAL time: 6 secs 
+
+Phase  3  : 117 unrouted;      REAL time: 6 secs 
+
+Phase  4  : 117 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Updating file: USB_LOOP_TEST.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|    FPGA_GCLK1_BUFGP | BUFGMUX_X3Y13| No   |   12 |  0.038     |  0.901      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |    16.273ns|     3.727ns|       0|           0
+  pin" 50 MHz HIGH 50%                      | HOLD        |     0.412ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 8 secs 
+Total CPU time to PAR completion: 8 secs 
+
+Peak Memory Usage:  174 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 3
+Number of info messages: 0
+
+Writing design to file USB_LOOP_TEST.ncd
+
+
+
+PAR done!

@@ -1,0 +1,14 @@
+[Inputs]
+clk_rxg
+rst_rx_n
+sync_x
+=reg_cnt_timing_cycle[9:0]=
+=window_row_length[11:0]=
+[Outputs]
+fval
+lval
+dval
+[BiDir]
+[ATTRIBUTES]
+VeriModel gen_image_val
+

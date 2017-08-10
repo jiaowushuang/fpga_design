@@ -1,0 +1,55 @@
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX516/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX516/verilog/usb_test/usb_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx16-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+xst -intstyle ise -ifn "E:/Project/AX545/verilog/usb_test/usb_test.xst" -ofn "E:/Project/AX545/verilog/usb_test/usb_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx45-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+xst -intstyle ise -ifn "E:/BaiduYunDownload/AX545.160128/AX545/09_VERILOG/13_usb_test/usb_test.xst" -ofn "E:/BaiduYunDownload/AX545.160128/AX545/09_VERILOG/13_usb_test/usb_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx45-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx45-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx45-csg324-3 usb_test.ngc usb_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc usb_test.ucf -p xc6slx45-csg324-3 usb_test.ngc usb_test.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_test_map.ncd usb_test.ngd usb_test.pcf 
+par -w -intstyle ise -ol high -mt off usb_test_map.ncd usb_test.ncd usb_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml usb_test.twx usb_test.ncd -o usb_test.twr usb_test.pcf -ucf usb_test.ucf 
+bitgen -intstyle ise -f usb_test.ut usb_test.ncd 

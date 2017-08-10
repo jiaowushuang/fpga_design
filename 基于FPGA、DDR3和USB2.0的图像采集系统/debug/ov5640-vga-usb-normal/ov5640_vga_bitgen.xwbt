@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal\ov5640_vga.ncd
+OUTFILE=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal\ov5640_vga.bit
+FAMILY=Spartan6
+PART=xc6slx45-2csg324
+WORKINGDIR=E:\05_USB\26_ov5640_vga\26_ov5640_vga_normal
+LICENSE=WebPack
+USER_INFO=135256_15690819_173552794_661
